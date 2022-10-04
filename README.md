@@ -20,5 +20,5 @@
 - add denoising techniques
 
 
-### Materials
+## Materials
 - learn orthogonal matrices: https://arxiv.org/pdf/2208.06496.pdf
