@@ -62,10 +62,20 @@ def full_preproccessing(data = None, userid='userid', itemid='movieid', rating='
     test_users_val = np.intersect1d(testset_valid_.userid.unique(), holdout_valid_.userid.unique())
     testset_valid = testset_valid_.query('userid in @test_users_val').sort_values('userid')
     holdout_valid = holdout_valid_.query('userid in @test_users_val').sort_values('userid')
+    
+    # labels, levels = pd.factorize(testset_valid.userid)
+    # testset_valid.userid = labels
+    # labels, levels = pd.factorize(holdout_valid.userid)
+    # holdout_valid.userid = labels
 
     test_users = np.intersect1d(testset_.userid.unique(), holdout_.userid.unique())
     testset = testset_.query('userid in @test_users').sort_values('userid')
     holdout = holdout_.query('userid in @test_users').sort_values('userid')
+
+    # labels, levels = pd.factorize(testset.userid)
+    # testset.userid = labels
+    # labels, levels = pd.factorize(holdout.userid)
+    # holdout.userid = labels
     
     assert holdout_valid.set_index('userid')['timestamp'].ge(
         testset_valid
@@ -80,9 +90,7 @@ def full_preproccessing(data = None, userid='userid', itemid='movieid', rating='
         n_users = len(data_index['users']),
         n_items = len(data_index['items']),
         n_ratings = training['rating'].nunique(),
-        min_rating = training['rating'].min(),
-        test_users = holdout_valid[data_index['users'].name].drop_duplicates().values, # NEW
-        n_test_users = holdout[data_index['users'].name].nunique() # NEW CHECK
+        min_rating = training['rating'].min()
     )
 
     return training, testset_valid, holdout_valid, testset, holdout, data_description, data_index

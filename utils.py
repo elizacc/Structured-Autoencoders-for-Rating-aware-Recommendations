@@ -65,40 +65,49 @@ def model_evaluate(recommended_items, holdout, holdout_description, alpha=3, top
     
     # DCG calculation
     if dcg:
-        pos_hit_rank = np.where(hits_mask[pos_mask])[1] + 1.0
-        neg_hit_rank = np.where(hits_mask[neg_mask])[1] + 1.0
-        ndcg = np.mean(1 / np.log2(pos_hit_rank+1))
-        ndcl = np.mean(1 / np.log2(neg_hit_rank+1))
+        ndcg = np.sum(1 / np.log2(hit_rank+1)) / n_test_users
+        ndcg_pos = np.sum(1 / np.log2(pos_hit_rank+1)) / n_test_users
+        ndcg_neg = np.sum(1 / np.log2(neg_hit_rank+1)) / n_test_users
     
     # coverage calculation
     n_items = holdout_description['n_items']
     cov = np.unique(recommended_items).size / n_items
     if dcg:
-        return hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C, ndcg, ndcl
+        return hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C, ndcg, ndcg_pos, ndcg_neg
     else:
         return hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C
     
 
-def make_prediction(tf_scores, holdout, data_description):
+def make_prediction(tf_scores, holdout, data_description, disp=True, dcg=False, alpha=3):
     for n in [5, 10, 20]:
         tf_recs = topn_recommendations(tf_scores, n)
-        hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C = model_evaluate(tf_recs, holdout, data_description, topn=n)
+        if dcg:
+            hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C, ndcg, ndcg_pos, ndcg_neg = model_evaluate(tf_recs, holdout, data_description, topn=n, dcg=dcg, alpha=alpha)
+        else:
+            hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C = model_evaluate(tf_recs, holdout, data_description, topn=n, alpha=alpha)
         if n == 10:
             mrr10 = mrr
             hr10 = hr
             c10 = C
-        results = pd.DataFrame({f"HR@{n}": hr, f"MRR@{n}": mrr, f"Coverage@{n}": cov,
-                                f"HR_pos@{n}": hr_pos, f"HR_neg@{n}": hr_neg,
-                                f"MRR_pos@{n}": mrr_pos, f"MRR_neg@{n}": mrr_neg,
-                                f"Matthews@{n}": C}, index=[n])
-        display(results)
-#         print(f"HR@{n} = {hr:.4f}, MRR@{n} = {mrr:.4f}, Coverage@{n} = {cov:.4f}")
-#         print(f"HR_pos@{n} = {hr_pos:.4f}, HR_neg@{n} = {hr_neg:.4f}")
-#         print(f"MRR_pos@{n} = {mrr_pos:.4f}, MRR_neg@{n} = {mrr_neg:.4f}")
-#         print(f"Matthews@{n} = {C:.4f}")
-#         print("-------------------------------------")
-    
-    return mrr10, hr10, c10
+            ndcg10 = ndcg
+        if dcg:
+            results = pd.DataFrame({f"HR@{n}": hr, f"MRR@{n}": mrr, f"Coverage@{n}": cov, f"NCDG@{n}": ndcg,
+                                    f"HR_pos@{n}": hr_pos, f"HR_neg@{n}": hr_neg,
+                                    f"MRR_pos@{n}": mrr_pos, f"MRR_neg@{n}": mrr_neg,
+                                    f"NCDG_pos@{n}": ndcg_pos, f"NDCG_neg@{n}": ndcg_neg,
+                                    f"Matthews@{n}": C}, index=[n])
+        else:
+            results = pd.DataFrame({f"HR@{n}": hr, f"MRR@{n}": mrr, f"Coverage@{n}": cov,
+                                    f"HR_pos@{n}": hr_pos, f"HR_neg@{n}": hr_neg,
+                                    f"MRR_pos@{n}": mrr_pos, f"MRR_neg@{n}": mrr_neg,
+                                    f"Matthews@{n}": C}, index=[n])
+        if disp:
+            display(results)
+
+    if dcg:
+        return mrr10, hr10, c10, ndcg10
+    else:
+        return mrr10, hr10, c10
 
 def valid_mlrank(mlrank):
     '''
