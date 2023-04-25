@@ -153,7 +153,7 @@ def predict_and_check(model, scores, holdout, data_description, hrs, mrrs, cs, n
     else:
         prev_matt.append(cs[-1])
         
-    return prev_matt
+    return prev_matt, hrs, mrrs, cs, ndcgs
 
 def check_test(model, criterion, user_tensor_test, target_test, testset, holdout, data_description, test_num_batches, alpha, h, device, batch_size=16, dcg=True):
     test_loss = 0
@@ -171,7 +171,7 @@ def check_test(model, criterion, user_tensor_test, target_test, testset, holdout
             test_loss += criterion(output, target)
             scores[batch * batch_size: (batch+1) * batch_size] = output
 
-    test_loss = test_loss / test_num_batches
+    test_loss = test_loss / user_tensor_test.shape[0]
     scores = scores.detach().cpu().numpy()
     downvote_seen_items(scores, testset, data_description)
     print(f'Results for alpha={alpha}')
@@ -182,7 +182,7 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
     user_tensor_val, target_val = prepare_tensor(testset_valid, data_description, tensor_model)
     
     num_batches = int(np.ceil(user_tensor_train.shape[0] / batch_size))
-    val_num_batches = int(np.ceil(target_val.shape[0] / batch_size))
+    val_num_batches = int(np.ceil(user_tensor_val.shape[0] / batch_size))
 
     for h in tqdm(grid):
         print('Hidden sizes:', h)
@@ -222,6 +222,7 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
             train_loss = 0
             shuffle = np.random.choice(user_tensor_train.shape[0], size=user_tensor_train.shape[0], replace=False)
             user_tensor_train = user_tensor_train[shuffle]
+            target_train = target_train[shuffle]
 
             for batch in range(num_batches):
                 optimizer.zero_grad()
@@ -238,7 +239,7 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
                 train_loss += loss.data.item()
 
             scheduler.step()
-            history.append(train_loss / num_batches)
+            history.append(train_loss / user_tensor_train.shape[0])
 
             test_loss = 0
             scores = torch.zeros((testset_valid.userid.nunique(), data_description['n_items']))
@@ -257,15 +258,15 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
                 model.train()
 
             scores = scores.detach().cpu().numpy()
-            val_loss = test_loss / val_num_batches
+            val_loss = test_loss / user_tensor_val.shape[0]
             val_history.append(val_loss.item())
 
             downvote_seen_items(scores, testset_valid, data_description)
 
-            prev_matt2 = predict_and_check(model, scores, holdout_valid, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch, h)
-            prev_matt3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch, h)
-            prev_matt4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
-            prev_matt5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
+            prev_matt2, hrs2, mrrs2, cs2, ndcgs2 = predict_and_check(model, scores, holdout_valid, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch, h)
+            prev_matt3, hrs3, mrrs3, cs3, ndcgs3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch, h)
+            prev_matt4, hrs4, mrrs4, cs4, ndcgs4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
+            prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
 
             # stop = epoch if epoch < early_stop else epoch-early_stop
             if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop:
@@ -273,11 +274,10 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
                 break
 
         # Testing the AE
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 2, h, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, h, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, h, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, h, batch_size=batch_size, dcg=True)
-
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 2, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
         # our
         plt.figure(figsize=(10,6))
         plt.plot(history, label='train')
@@ -297,7 +297,7 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
             axes[i].plot(hrs[i], label='HR@10')
             axes[i].plot(mrrs[i], label='MRR@10')
             axes[i].plot(cs[i], label='Matthews@10')
-            axes[i].plot(ndcgs[i], label='NDCG@10')
+            axes[i].plot(ndcgs[i], label='nDCG@10')
             axes[i].legend()
 
         plt.show()
@@ -308,7 +308,7 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
         print()
         print()
 
-def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, model_init, grid, device, MVDataset, batch_size=16, early_stop=50, n_epochs=1000):
+def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, model_init, device, grid, MVDataset, batch_size=16, early_stop=50, n_epochs=1000):
     train_dataset = MVDataset(training, data_description, augment=True)
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     
@@ -351,8 +351,6 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
 
         for epoch in range(1, n_epochs+1):
             train_loss = 0
-            shuffle = np.random.choice(user_tensor_train.shape[0], size=user_tensor_train.shape[0], replace=False)
-            user_tensor_train = user_tensor_train[shuffle]
 
             for batch in train_dataloader:
                 optimizer.zero_grad()
@@ -393,10 +391,10 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
 
             downvote_seen_items(scores, testset_valid, data_description)
 
-            prev_matt2 = predict_and_check(model, scores, holdout_valid, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch)
-            prev_matt3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch)
-            prev_matt4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch)
-            prev_matt5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch)
+            prev_matt2, hrs2, mrrs2, cs2, ndcgs2 = predict_and_check(model, scores, holdout_valid, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch, h)
+            prev_matt3, hrs3, mrrs3, cs3, ndcgs3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch, h)
+            prev_matt4, hrs4, mrrs4, cs4, ndcgs4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
+            prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
 
             # stop = epoch if epoch < early_stop else epoch-early_stop
             if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop:
@@ -404,10 +402,10 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
                 break
 
         # Testing the AE
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 2, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 2, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
 
         # our
         plt.figure(figsize=(10,6))
