@@ -437,8 +437,7 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
         print()
         print()
 
-def training_testing_pipeline(training, testset_valid, holdout_valid, testset, holdout, data_description, model_init, h, device, batch_size=16, tensor_model=False, early_stop=50, n_epochs=1000):
-    train_val = pd.concat((training, testset_valid, holdout_valid))
+def training_testing_pipeline(train_val, testset, holdout, data_description, model_init, h, device, batch_size=16, tensor_model=False, early_stop=50, n_epochs=1000):
     user_tensor_train, target_train = prepare_tensor(train_val, data_description, tensor_model)
     user_tensor_val, target_val = prepare_tensor(testset, data_description)
     
@@ -482,6 +481,7 @@ def training_testing_pipeline(training, testset_valid, holdout_valid, testset, h
         train_loss = 0
         shuffle = np.random.choice(user_tensor_train.shape[0], size=user_tensor_train.shape[0], replace=False)
         user_tensor_train = user_tensor_train[shuffle]
+        target_train = user_tensor_train[shuffle]
 
         for batch in range(num_batches):
             optimizer.zero_grad()
@@ -498,7 +498,7 @@ def training_testing_pipeline(training, testset_valid, holdout_valid, testset, h
             train_loss += loss.data.item()
 
         scheduler.step()
-        history.append(train_loss / num_batches)
+        history.append(train_loss / user_tensor_train.shape[0])
 
         test_loss = 0
         scores = torch.zeros((testset.userid.nunique(), data_description['n_items']))
@@ -517,15 +517,15 @@ def training_testing_pipeline(training, testset_valid, holdout_valid, testset, h
             model.train()
 
         scores = scores.detach().cpu().numpy()
-        val_loss = test_loss / val_num_batches
+        val_loss = test_loss / testset.userid.nunique()
         val_history.append(val_loss.item())
 
         downvote_seen_items(scores, testset, data_description)
-
-        prev_matt2 = predict_and_check(model, scores, holdout, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch)
-        prev_matt3 = predict_and_check(model, scores, holdout, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch)
-        prev_matt4 = predict_and_check(model, scores, holdout, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch)
-        prev_matt5 = predict_and_check(model, scores, holdout, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch)
+        
+        prev_matt2, hrs2, mrrs2, cs2, ndcgs2 = predict_and_check(model, scores, holdout, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch, h)
+        prev_matt3, hrs3, mrrs3, cs3, ndcgs3 = predict_and_check(model, scores, holdout, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch, h)
+        prev_matt4, hrs4, mrrs4, cs4, ndcgs4 = predict_and_check(model, scores, holdout, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
+        prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
 
         # stop = epoch if epoch < early_stop else epoch-early_stop
         if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop:
@@ -533,10 +533,10 @@ def training_testing_pipeline(training, testset_valid, holdout_valid, testset, h
             break
 
     # Testing the AE
-    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 2, batch_size=batch_size, dcg=True)
-    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 3, batch_size=batch_size, dcg=True)
-    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 4, batch_size=batch_size, dcg=True)
-    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 5, batch_size=batch_size, dcg=True)
+    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 2, h, device, batch_size=batch_size, dcg=True)
+    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 3, h, device, batch_size=batch_size, dcg=True)
+    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
+    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description, val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
 
     # our
     plt.figure(figsize=(10,6))
