@@ -439,7 +439,7 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
 
 def training_testing_pipeline(train_val, testset, holdout, data_description, model_init, h, device, batch_size=16, tensor_model=False, early_stop=50, n_epochs=1000):
     user_tensor_train, target_train = prepare_tensor(train_val, data_description, tensor_model)
-    user_tensor_val, target_val = prepare_tensor(testset, data_description)
+    user_tensor_val, target_val = prepare_tensor(testset, data_description, tensor_model)
     
     num_batches = int(np.ceil(user_tensor_train.shape[0] / batch_size))
     val_num_batches = int(np.ceil(target_val.shape[0] / batch_size))
@@ -481,7 +481,7 @@ def training_testing_pipeline(train_val, testset, holdout, data_description, mod
         train_loss = 0
         shuffle = np.random.choice(user_tensor_train.shape[0], size=user_tensor_train.shape[0], replace=False)
         user_tensor_train = user_tensor_train[shuffle]
-        target_train = user_tensor_train[shuffle]
+        target_train = target_train[shuffle]
 
         for batch in range(num_batches):
             optimizer.zero_grad()
