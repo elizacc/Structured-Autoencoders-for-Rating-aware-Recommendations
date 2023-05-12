@@ -28,6 +28,7 @@ set_random_seed(42)
 
 # %%
 # answer = binary matrix (no ratings)
+# answer = binary matrix (no ratings)
 class MVDataset(Dataset):
     def __init__(self, data, data_description, augment=False):
         useridx = data[data_description['users']].values
@@ -47,15 +48,16 @@ class MVDataset(Dataset):
 
     def __getitem__(self, idx):
         if self.augment:
-            num_noise = np.random.randint(0, int(0.1*self.matrix.shape[1]))
-            idxs = torch.randint(0, self.matrix.shape[1], size=(num_noise,))
+            num_noise = np.random.randint(0, int(0.1*self.tensor.shape[1]))
+            idxs = torch.randint(0, self.tensor.shape[1], size=(num_noise,))
             noised_input = self.tensor[idx].detach().clone().to_dense()
             noised_input[idxs] = 0
             
-            useridx = np.zeros_like(noised_input)
-            itemidx = np.arange(self.matrix.shape[1])
-            noised_input = torch.sparse_coo_tensor(np.array([itemidx,]), noised_input,
-                                                   size=torch.Size((data_description["n_items"],)), dtype=torch.float32)
+            itemidx = np.arange(self.tensor.shape[1])
+            ratingidx = np.arange(self.tensor.shape[2])
+            itemidx, ratingidx = np.meshgrid(itemidx, ratingidx)
+            noised_input = torch.sparse_coo_tensor(np.array([itemidx.flatten(), ratingidx.T.flatten()]), noised_input.flatten(),
+                                                   size=torch.Size((data_description["n_items"],data_description['n_ratings'])), dtype=torch.float32)
             return noised_input, self.matrix[idx]
         else:
             return self.tensor[idx], self.matrix[idx]
