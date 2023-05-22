@@ -1,8 +1,6 @@
 # %%
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from tqdm.notebook import tqdm
 
 from polara.lib.tensor import hooi
 from polara.lib.sparse import tensor_outer_at
@@ -93,26 +91,11 @@ grid1 = 2**np.arange(4, 12)
 grid2 = np.arange(2, 5)
 grid = np.meshgrid(grid1, grid2)
 
-# %%
-hr_tf = {}
-mrr_tf = {}
-c_tf = {}
-for params in grid:
-    r, f = params
-    svd_config = {'rank': int(r), 'f': f}
-    svd_params = build_svd_model(svd_config, training, data_description)
-    svd_scores = svd_model_scoring(svd_params, testset_valid, data_description)
-    downvote_seen_items(svd_scores, testset_valid, data_description)
-    svd_recs = topn_recommendations(svd_scores, topn=10)
-    for alpha in [2,3,4,5]:
-        hr, hr_pos, hr_neg, mrr, mrr_pos, mrr_neg, cov, C = model_evaluate(svd_recs, holdout_valid, data_description, alpha=alpha)
-        hr_tf[f'r={r}, f={f:.2f}, alpha={alpha}'] = hr
-        mrr_tf[f'r={r}, f={f:.2f}, alpha={alpha}'] = mrr
-        c_tf[f'r={r}, f={f:.2f}, alpha={alpha}'] = C
 
 # %%
 hr_tf = {}
 mrr_tf = {}
+c_tf = {}
 for r12, r3 in zip(grid[0].flatten(), grid[1].flatten()):
     config['mlrank'] = (r12, r12, r3)
     tf_params = tf_model_build(config, training, data_description)
