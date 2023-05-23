@@ -1,0 +1,1024 @@
+failed to get console mode for stdout: The handle is invalid.
+Looking in indexes: https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/simple
+Collecting torch==1.13.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/torch/1.13.1/torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 47.8 MB/s eta 0:00:00
+Collecting scipy==1.10.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/scipy/1.10.1/scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.5/34.5 MB 139.3 MB/s eta 0:00:00
+Collecting numpy==1.22.2
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/numpy/1.22.2/numpy-1.22.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 128.9 MB/s eta 0:00:00
+Collecting scikit-learn==1.2.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/scikit-learn/1.2.1/scikit_learn-1.2.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.8/9.8 MB 188.4 MB/s eta 0:00:00
+Collecting tqdm==4.64.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/tqdm/4.64.1/tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 250.2 MB/s eta 0:00:00
+Collecting pandas==1.5.3
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pandas/1.5.3/pandas-1.5.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 240.6 MB/s eta 0:00:00
+Collecting numba>=0.21.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/numba/0.57.0/numba-0.57.0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 139.4 MB/s eta 0:00:00
+Requirement already satisfied: requests>=2.7.0 in /usr/local/lib/python3.8/dist-packages (from -r /home/requirements.txt (line 8)) (2.28.1)
+Collecting ipython==8.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/ipython/8.0.0/ipython-8.0.0-py3-none-any.whl (747 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 747.4/747.4 kB 52.3 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cuda-runtime-cu11/11.7.99/nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 234.8 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from torch==1.13.1->-r /home/requirements.txt (line 1)) (4.4.0)
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cublas-cu11/11.10.3.66/nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 177.3 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cuda-nvrtc-cu11/11.7.99/nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 134.7 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cudnn-cu11/8.5.0.96/nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 140.2 MB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/threadpoolctl/3.1.0/threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting joblib>=1.1.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/joblib/1.2.0/joblib-1.2.0-py3-none-any.whl (297 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.0/298.0 kB 22.0 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pytz/2023.3/pytz-2023.3-py2.py3-none-any.whl (502 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.3/502.3 kB 82.5 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/python-dateutil/2.8.2/python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 73.0 MB/s eta 0:00:00
+Collecting matplotlib-inline
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/matplotlib-inline/0.1.6/matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Requirement already satisfied: pexpect>4.3 in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (4.8.0)
+Collecting stack-data
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/stack-data/0.6.2/stack_data-0.6.2-py3-none-any.whl (24 kB)
+Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/prompt-toolkit/3.0.38/prompt_toolkit-3.0.38-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.8/385.8 kB 24.6 MB/s eta 0:00:00
+Requirement already satisfied: setuptools>=18.5 in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (65.5.0)
+Collecting black
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/black/23.3.0/black-23.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 79.3 MB/s eta 0:00:00
+Collecting decorator
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/decorator/5.1.1/decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting backcall
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/backcall/0.2.0/backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Collecting traitlets>=5
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/traitlets/5.9.0/traitlets-5.9.0-py3-none-any.whl (117 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.4/117.4 kB 245.6 MB/s eta 0:00:00
+Collecting jedi>=0.16
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/jedi/0.18.2/jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 56.4 MB/s eta 0:00:00
+Collecting pickleshare
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pickleshare/0.7.5/pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Requirement already satisfied: pygments in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.13.0)
+Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r /home/requirements.txt (line 1)) (0.38.0)
+Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.8/dist-packages (from numba>=0.21.0->-r /home/requirements.txt (line 7)) (4.13.0)
+Collecting llvmlite<0.41,>=0.40.0dev0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/llvmlite/0.40.0/llvmlite-0.40.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 MB 171.0 MB/s eta 0:00:00
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (1.26.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2019.11.28)
+Requirement already satisfied: charset-normalizer<3,>=2 in /usr/local/lib/python3.8/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2.1.1)
+Collecting parso<0.9.0,>=0.8.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/parso/0.8.3/parso-0.8.3-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 208.3 MB/s eta 0:00:00
+Requirement already satisfied: ptyprocess>=0.5 in /usr/local/lib/python3.8/dist-packages (from pexpect>4.3->ipython==8.0.0->-r /home/requirements.txt (line 9)) (0.7.0)
+Collecting wcwidth
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/wcwidth/0.2.6/wcwidth-0.2.6-py2.py3-none-any.whl (29 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.1->pandas==1.5.3->-r /home/requirements.txt (line 6)) (1.14.0)
+Collecting tomli>=1.1.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/tomli/2.0.1/tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting mypy-extensions>=0.4.3
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/mypy-extensions/1.0.0/mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Collecting pathspec>=0.9.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pathspec/0.11.1/pathspec-0.11.1-py3-none-any.whl (29 kB)
+Requirement already satisfied: platformdirs>=2 in /usr/local/lib/python3.8/dist-packages (from black->ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.5.2)
+Collecting click>=8.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/click/8.1.3/click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 19.3 MB/s eta 0:00:00
+Collecting packaging>=22.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/packaging/23.1/packaging-23.1-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 kB 205.6 MB/s eta 0:00:00
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.8/dist-packages (from importlib-metadata->numba>=0.21.0->-r /home/requirements.txt (line 7)) (3.10.0)
+Collecting asttokens>=2.1.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/asttokens/2.2.1/asttokens-2.2.1-py2.py3-none-any.whl (26 kB)
+Collecting pure-eval
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pure-eval/0.2.2/pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting executing>=1.2.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/executing/1.2.0/executing-1.2.0-py2.py3-none-any.whl (24 kB)
+Installing collected packages: wcwidth, pytz, pure-eval, pickleshare, executing, backcall, traitlets, tqdm, tomli, threadpoolctl, python-dateutil, prompt-toolkit, pathspec, parso, packaging, nvidia-cuda-nvrtc-cu11, numpy, mypy-extensions, llvmlite, joblib, decorator, click, asttokens, stack-data, scipy, pandas, nvidia-cuda-runtime-cu11, nvidia-cublas-cu11, numba, matplotlib-inline, jedi, black, scikit-learn, nvidia-cudnn-cu11, ipython, torch
+  Attempting uninstall: packaging
+    Found existing installation: packaging 21.3
+    Uninstalling packaging-21.3:
+      Successfully uninstalled packaging-21.3
+Successfully installed asttokens-2.2.1 backcall-0.2.0 black-23.3.0 click-8.1.3 decorator-5.1.1 executing-1.2.0 ipython-8.0.0 jedi-0.18.2 joblib-1.2.0 llvmlite-0.40.0 matplotlib-inline-0.1.6 mypy-extensions-1.0.0 numba-0.57.0 numpy-1.22.2 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 packaging-23.1 pandas-1.5.3 parso-0.8.3 pathspec-0.11.1 pickleshare-0.7.5 prompt-toolkit-3.0.38 pure-eval-0.2.2 python-dateutil-2.8.2 pytz-2023.3 scikit-learn-1.2.1 scipy-1.10.1 stack-data-0.6.2 threadpoolctl-3.1.0 tomli-2.0.1 torch-1.13.1 tqdm-4.64.1 traitlets-5.9.0 wcwidth-0.2.6
+Looking in indexes: https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/simple
+Collecting polara
+  Cloning https://github.com/evfro/polara.git (to revision develop) to /tmp/pip-install-4u92f3y4/polara_166ea0a4e2b046e6aa17d086b487967a
+  Resolved https://github.com/evfro/polara.git to commit 8e48cfd88e616ca53f8bbda1702a3e2c8abaf38e
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: polara
+  Building wheel for polara (setup.py): started
+  Building wheel for polara (setup.py): finished with status 'done'
+  Created wheel for polara: filename=polara-0.7.2.dev0-py3-none-any.whl size=89447 sha256=e01d051812c53c5eb9c9c4c1c64a255ecff689ff1c3ddb63082e133d86404243
+  Stored in directory: /tmp/pip-ephem-wheel-cache-iux1_w5z/wheels/5e/e1/4c/eaa6d1a342974af58b0efac692b6846b8c034f8904e428626b
+Successfully built polara
+Installing collected packages: polara
+Successfully installed polara-0.7.2.dev0
+device: cuda:0
+There are 24303 users
+Filtered 17693 invalid observations.
+batch size 16
+Hidden sizes: 16
+Current epoch 104
+Results for alpha=2
+HR@5:0.01576971214017522, MRR@5: 0.00803921568627451, Coverage@5: 0.007369271148798708, NCDG@5: 0.009949953685524317, HR_pos@5: 0.015519399249061327, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.007914059240717563, MRR_neg@5: 0.00012515644555694618, NCDG_pos@5: 0.00979202383481807, NDCG_neg@5: 0.00015792985070624718, Matthews@5: 0.016510438440761034
+HR@10:0.02528160200250313, MRR@10: 0.009272900649621552, Coverage@10: 0.010498687664041995, NCDG@10: 0.012989813737475792, HR_pos@10: 0.025031289111389236, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.009147744204064607, MRR_neg@10: 0.00012515644555694618, NCDG_pos@10: 0.012831883886769544, NDCG_neg@10: 0.00015792985070624718, Matthews@10: 0.025798703758633208
+HR@20:0.039799749687108886, MRR@20: 0.010252260590870773, Coverage@20: 0.01584898041590955, NCDG@20: 0.016626094579468016, HR_pos@20: 0.03904881101376721, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.010099205494911041, MRR_neg@20: 0.00015305509595973295, NCDG_pos@20: 0.01635021962745316, NDCG_neg@20: 0.00027587495201485563, Matthews@20: 0.023517575851540108
+Results for alpha=3
+HR@5:0.01702127659574468, MRR@5: 0.008785982478097623, Coverage@5: 0.00898445386634363, NCDG@5: 0.01079592374216121, HR_pos@5: 0.016270337922403004, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.008452231956612433, MRR_neg@5: 0.0003337505214851898, NCDG_pos@5: 0.010354907595191771, NDCG_neg@5: 0.00044101614696944054, Matthews@5: 0.019697059499505207
+HR@10:0.024780976220275343, MRR@10: 0.009788326678189007, Coverage@10: 0.012214819301433475, NCDG@10: 0.0132711285688315, HR_pos@10: 0.024030037546933666, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.009454576156703816, MRR_neg@10: 0.0003337505214851898, NCDG_pos@10: 0.012830112421862059, NDCG_neg@10: 0.00044101614696944054, Matthews@10: 0.031710990067271176
+HR@20:0.03904881101376721, MRR@20: 0.010793460211066199, Coverage@20: 0.018978396931152837, NCDG@20: 0.016896697957070075, HR_pos@20: 0.03704630788485607, HR_neg@20: 0.002002503128911139, MRR_pos@20: 0.010374155928331621, MRR_neg@20: 0.00041930428273457675, NCDG_pos@20: 0.01614092994463519, NDCG_neg@20: 0.0007557680124348823, Matthews@20: 0.025025530222302396
+Results for alpha=4
+HR@5:0.013266583229036295, MRR@5: 0.007146433041301626, Coverage@5: 0.005451241671714113, NCDG@5: 0.008660576810775896, HR_pos@5: 0.012015018773466833, HR_neg@5: 0.0012515644555694619, MRR_pos@5: 0.006420525657071339, MRR_neg@5: 0.0007259073842302879, NCDG_pos@5: 0.007808352688613057, NDCG_neg@5: 0.0008522241221628388, Matthews@5: 0.02809196817352629
+HR@10:0.021526908635794744, MRR@10: 0.008224765083338302, Coverage@10: 0.007874015748031496, NCDG@10: 0.011307129603206954, HR_pos@10: 0.02002503128911139, HR_neg@10: 0.001501877346683354, MRR_pos@10: 0.007471045155650912, MRR_neg@10: 0.000753719927687387, NCDG_pos@10: 0.010379553792517463, NDCG_neg@10: 0.0009275758106894925, Matthews@10: 0.04523998041219752
+HR@20:0.034292866082603256, MRR@20: 0.009098659066556243, Coverage@20: 0.012719563900666263, NCDG@20: 0.014520430844240425, HR_pos@20: 0.03128911138923655, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.008234666421883804, MRR_neg@20: 0.0008639926446724419, NCDG_pos@20: 0.013205730081957079, NDCG_neg@20: 0.0013147007622833443, Matthews@20: 0.04890090609735652
+Results for alpha=5
+HR@5:0.014518147684605758, MRR@5: 0.007776387150604922, Coverage@5: 0.006359781950333132, NCDG@5: 0.00945481281268037, HR_pos@5: 0.009762202753441803, HR_neg@5: 0.004755944931163955, MRR_pos@5: 0.004910304547350855, MRR_neg@5: 0.002866082603254068, NCDG_pos@5: 0.006117258056907655, NDCG_neg@5: 0.0033375547557727182, Matthews@5: 0.016495196401463085
+HR@10:0.024530663329161453, MRR@10: 0.00907930548105767, Coverage@10: 0.009489198465576418, NCDG@10: 0.01266011015484667, HR_pos@10: 0.018022528160200252, HR_neg@10: 0.006508135168961202, MRR_pos@10: 0.00597065776665276, MRR_neg@10: 0.003108647714404911, NCDG_pos@10: 0.008747067133549034, NDCG_neg@10: 0.003913043021297638, Matthews@10: 0.041763549661364155
+HR@20:0.03804755944931164, MRR@20: 0.009978708972739824, Coverage@20: 0.013628104179285281, NCDG@20: 0.016029964822720774, HR_pos@20: 0.026032540675844807, HR_neg@20: 0.012015018773466833, MRR_pos@20: 0.006506121519111829, MRR_neg@20: 0.003472587453627996, NCDG_pos@20: 0.010747316167983394, NDCG_neg@20: 0.005282648654737381, Matthews@20: 0.03182930342563987
+Time spent: 27.630433122316997 minutes
+------------------------------
+
+Hidden sizes: 32
+Current epoch 87
+Results for alpha=2
+HR@5:0.01476846057571965, MRR@5: 0.008831873174801837, Coverage@5: 0.005955986270946901, NCDG@5: 0.010281492081656735, HR_pos@5: 0.014267834793491864, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.008531497705465166, MRR_neg@5: 0.00030037546933667084, NCDG_pos@5: 0.009934344945928436, NDCG_neg@5: 0.00034714713572829575, Matthews@5: 0.004974116590323508
+HR@10:0.025281602002503126, MRR@10: 0.010264715815404175, Coverage@10: 0.009186351706036745, NCDG@10: 0.013711905969952923, HR_pos@10: 0.024780976220275343, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.009964340346067503, MRR_neg@10: 0.00030037546933667084, NCDG_pos@10: 0.013364758834224628, NDCG_neg@10: 0.00034714713572829575, Matthews@10: 0.017854063234795964
+HR@20:0.0392991239048811, MRR@20: 0.011197721697485336, Coverage@20: 0.014334746618211184, NCDG@20: 0.017207167263544827, HR_pos@20: 0.03829787234042553, HR_neg@20: 0.0010012515644555694, MRR_pos@20: 0.010866292373236037, MRR_neg@20: 0.0003314293242492966, NCDG_pos@20: 0.016738033585145803, NDCG_neg@20: 0.0004691336783990278, Matthews@20: 0.016702446427711848
+Results for alpha=3
+HR@5:0.01476846057571965, MRR@5: 0.008831873174801837, Coverage@5: 0.005955986270946901, NCDG@5: 0.010281492081656735, HR_pos@5: 0.014017521902377972, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.008448060075093867, MRR_neg@5: 0.0003838130997079683, NCDG_pos@5: 0.00980918850037149, NDCG_neg@5: 0.000472303581285242, Matthews@5: 0.015389148619985134
+HR@10:0.02528160200250313, MRR@10: 0.010264715815404175, Coverage@10: 0.009186351706036745, NCDG@10: 0.013711905969952923, HR_pos@10: 0.02428035043804756, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.00983918390051056, MRR_neg@10: 0.000425531914893617, NCDG_pos@10: 0.013150439137827126, NDCG_neg@10: 0.0005614668321257982, Matthews@10: 0.02669817811084737
+HR@20:0.039299123904881106, MRR@20: 0.011197721697485336, Coverage@20: 0.014334746618211184, NCDG@20: 0.017207167263544827, HR_pos@20: 0.03704630788485607, HR_neg@20: 0.0022528160200250315, MRR_pos@20: 0.01068243784645285, MRR_neg@20: 0.0005152838510324841, NCDG_pos@20: 0.016325568086323187, NDCG_neg@20: 0.0008815991772216426, Matthews@20: 0.020752094336154613
+Results for alpha=4
+HR@5:0.02027534418022528, MRR@5: 0.011222361284939506, Coverage@5: 0.01746416313345447, NCDG@5: 0.013471957800622391, HR_pos@5: 0.018272841051314142, HR_neg@5: 0.002002503128911139, MRR_pos@5: 0.009678765123070504, MRR_neg@5: 0.0015435961618690027, NCDG_pos@5: 0.011812150603232787, NDCG_neg@5: 0.0016598071973896015, Matthews@5: 0.03322710062114918
+HR@10:0.03153942428035044, MRR@10: 0.012646661501480022, Coverage@10: 0.02604482132041187, NCDG@10: 0.01703390113045617, HR_pos@10: 0.02828535669586984, HR_neg@10: 0.003254067584480601, MRR_pos@10: 0.010941752587559845, MRR_neg@10: 0.0017049089139201782, NCDG_pos@10: 0.014975702438068873, NDCG_neg@10: 0.0020581986923872988, Matthews@10: 0.03965039004984061
+HR@20:0.051814768460575714, MRR@20: 0.013993137209977533, Coverage@20: 0.03886533414092469, NCDG@20: 0.022084898248020932, HR_pos@20: 0.04505632040050062, HR_neg@20: 0.006758448060075094, MRR_pos@20: 0.012056658681658198, MRR_neg@20: 0.0019364785283193357, NCDG_pos@20: 0.019155146945557065, NDCG_neg@20: 0.002929751302463867, Matthews@20: 0.035093036437704624
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345014, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0005632040050062579, MRR_neg@5: 0.0002085940759282436, NCDG_pos@5: 0.000673976486912718, NDCG_neg@5: 0.0002830862962631934, Matthews@5: 0.004814564446620437
+HR@10:0.005757196495619525, MRR@10: 0.0012952698810020458, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0022878993517545187, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0010588632616167033, MRR_neg@10: 0.00023640661938534278, NCDG_pos@10: 0.0019294613669646715, NDCG_neg@10: 0.000358437984789847, Matthews@10: 0.04104422362218856
+HR@20:0.01702127659574468, MRR@20: 0.0021563038725261625, Coverage@20: 0.002826569755703614, NCDG@20: 0.005233878607028691, HR_pos@20: 0.01276595744680851, HR_neg@20: 0.00425531914893617, MRR_pos@20: 0.0016541125471018483, MRR_neg@20: 0.000502191325424314, NCDG_pos@20: 0.003960884848311169, NDCG_neg@20: 0.001272993758717523, Matthews@20: 0.03877759534321687
+Time spent: 22.77977438767751 minutes
+------------------------------
+
+Hidden sizes: 64
+Current epoch 85
+Results for alpha=2
+HR@5:0.029036295369211516, MRR@5: 0.016508135168961203, Coverage@5: 0.03078942055320008, NCDG@5: 0.019588439993094196, HR_pos@5: 0.028785982478097622, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.01625782227784731, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.01933812710198031, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.028804660739773773
+HR@10:0.044055068836045055, MRR@10: 0.01838885908973518, Coverage@10: 0.04502321825156471, NCDG@10: 0.02432126372411066, HR_pos@10: 0.04355444305381727, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.018107257087232057, MRR_neg@10: 0.00028160200250312893, NCDG_pos@10: 0.023991985907643645, NDCG_neg@10: 0.000329277816467016, Matthews@10: 0.03282435142899195
+HR@20:0.06758448060075094, MRR@20: 0.019911717531362057, Coverage@20: 0.06390066626287098, NCDG@20: 0.030133028914216948, HR_pos@20: 0.06533166458072591, HR_neg@20: 0.0022528160200250315, MRR_pos@20: 0.0195174555494925, MRR_neg@20: 0.00039426198186955633, NCDG_pos@20: 0.02937239605183302, NDCG_neg@20: 0.0007606328623839277, Matthews@20: 0.011695799302915866
+Results for alpha=3
+HR@5:0.030287859824780976, MRR@5: 0.01730913642052566, Coverage@5: 0.04239854633555421, NCDG@5: 0.02049896912600109, HR_pos@5: 0.029036295369211516, HR_neg@5: 0.0012515644555694619, MRR_pos@5: 0.016458072590738424, MRR_neg@5: 0.0008510638297872341, NCDG_pos@5: 0.019554361963430602, NDCG_neg@5: 0.000944607162570484, Matthews@5: 0.028215010051654957
+HR@10:0.04755944931163955, MRR@10: 0.019533047261457777, Coverage@10: 0.05955986270946901, NCDG@10: 0.02600036128160006, HR_pos@10: 0.04555694618272841, HR_neg@10: 0.002002503128911139, MRR_pos@10: 0.018590202038262112, MRR_neg@10: 0.0009428452231956614, NCDG_pos@10: 0.024821877563399087, NDCG_neg@10: 0.0011784837182009715, Matthews@10: 0.03505154762218121
+HR@20:0.07284105131414269, MRR@20: 0.021266877261890377, Coverage@20: 0.08419139915202907, NCDG@20: 0.03236795370585286, HR_pos@20: 0.0690863579474343, HR_neg@20: 0.0037546933667083854, MRR_pos@20: 0.020189786054489223, MRR_neg@20: 0.0010770912074011536, NCDG_pos@20: 0.0307307467515239, NDCG_neg@20: 0.0016372069543289652, Matthews@20: 0.03453281661136877
+Results for alpha=4
+HR@5:0.030037546933667083, MRR@5: 0.01709637046307885, Coverage@5: 0.04280234201494044, NCDG@5: 0.020281565184202977, HR_pos@5: 0.027033792240300374, HR_neg@5: 0.003003754693366708, MRR_pos@5: 0.015110554860241971, MRR_neg@5: 0.0019858156028368795, NCDG_pos@5: 0.018048168956706974, NDCG_neg@5: 0.002233396227496005, Matthews@5: 0.0400910962761967
+HR@10:0.04730913642052565, MRR@10: 0.019343524643900115, Coverage@10: 0.05996365838885524, NCDG@10: 0.025807254863694593, HR_pos@10: 0.04355444305381727, HR_neg@10: 0.0037546933667083854, MRR_pos@10: 0.01726592764765481, MRR_neg@10: 0.0020775969962453064, NCDG_pos@10: 0.023339982080568106, NDCG_neg@10: 0.0024672727831264924, Matthews@10: 0.06250745869097808
+HR@20:0.07359198998748435, MRR@20: 0.021144691547894855, Coverage@20: 0.08560468402988088, NCDG@20: 0.03242473394308835, HR_pos@20: 0.06533166458072591, HR_neg@20: 0.008260325406758449, MRR_pos@20: 0.018739454414727685, MRR_neg@20: 0.0024052371331671693, NCDG_pos@20: 0.028800363727608275, NDCG_neg@20: 0.0036243702154800726, Matthews@20: 0.05539979386182057
+Results for alpha=5
+HR@5:0.030287859824780973, MRR@5: 0.01730913642052566, Coverage@5: 0.04239854633555421, NCDG@5: 0.02049896912600109, HR_pos@5: 0.021026282853566957, HR_neg@5: 0.009261576971214018, MRR_pos@5: 0.011777221526908636, MRR_neg@5: 0.00553191489361702, NCDG_pos@5: 0.014055476236025651, NDCG_neg@5: 0.006443492889975434, Matthews@5: 0.03190323762698649
+HR@10:0.04755944931163955, MRR@10: 0.019533047261457777, Coverage@10: 0.05955986270946901, NCDG@10: 0.02600036128160006, HR_pos@10: 0.034292866082603256, HR_neg@10: 0.013266583229036295, MRR_pos@10: 0.013493255458211652, MRR_neg@10: 0.00603979180324612, NCDG_pos@10: 0.018289049618145255, NDCG_neg@10: 0.007711311663454804, Matthews@10: 0.052611987050336345
+HR@20:0.07284105131414267, MRR@20: 0.021266877261890377, Coverage@20: 0.08419139915202907, NCDG@20: 0.03236795370585286, HR_pos@20: 0.049061326658322905, HR_neg@20: 0.023779724655819776, MRR_pos@20: 0.014467058314388761, MRR_neg@20: 0.006799818947501615, NCDG_pos@20: 0.02196009350602876, NDCG_neg@20: 0.010407860199824101, Matthews@20: 0.03873804536283901
+Time spent: 21.92546451886495 minutes
+------------------------------
+
+Hidden sizes: 128
+Current epoch 100
+Results for alpha=2
+HR@5:0.013016270337922402, MRR@5: 0.008948685857321653, Coverage@5: 0.006662628709872804, NCDG@5: 0.009953946084776668, HR_pos@5: 0.01276595744680851, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.008698372966207759, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.009703633193662775, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.013057830383894594
+HR@10:0.02678347934918648, MRR@10: 0.010711107137890618, Coverage@10: 0.010195840904502321, NCDG@10: 0.014331555128417743, HR_pos@10: 0.026282853566958697, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.010419075431591075, MRR_neg@10: 0.0002920317062995411, NCDG_pos@10: 0.013992078986463293, NDCG_neg@10: 0.0003394761419544486, Matthews@10: 0.019308683897780766
+HR@20:0.04555694618272841, MRR@20: 0.011987272289778904, Coverage@20: 0.01635372501514234, NCDG@20: 0.01904445009631513, HR_pos@20: 0.04430538172715895, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.011643036290680212, MRR_neg@20: 0.0003442359990986951, NCDG_pos@20: 0.01851509463551527, NDCG_neg@20: 0.0005293554607998536, Matthews@20: 0.015870619002937257
+Results for alpha=3
+HR@5:0.04005006257822278, MRR@5: 0.021401752190237797, Coverage@5: 0.09135877246113466, NCDG@5: 0.02600600135326918, HR_pos@5: 0.03804755944931164, HR_neg@5: 0.002002503128911139, MRR_pos@5: 0.02016270337922403, MRR_neg@5: 0.0012390488110137672, NCDG_pos@5: 0.024576634988808025, NDCG_neg@5: 0.0014293663644611534, Matthews@5: 0.026291053640981037
+HR@10:0.0690863579474343, MRR@10: 0.025347259471164355, Coverage@10: 0.12618614980819706, NCDG@10: 0.03546498211886892, HR_pos@10: 0.06508135168961202, HR_neg@10: 0.004005006257822278, MRR_pos@10: 0.02381697359794982, MRR_neg@10: 0.0015302858732145343, NCDG_pos@10: 0.03336437914938133, NDCG_neg@10: 0.0021006029694875927, Matthews@10: 0.027324047004406625
+HR@20:0.10362953692115144, MRR@20: 0.027704042486219896, Coverage@20: 0.17484352917423784, NCDG@20: 0.04414611168321673, HR_pos@20: 0.09737171464330413, HR_neg@20: 0.006257822277847309, MRR_pos@20: 0.02601723325873483, MRR_neg@20: 0.0016868092274850723, NCDG_pos@20: 0.041475581200224036, NDCG_neg@20: 0.002670530482992694, Matthews@20: 0.031175988006112817
+Results for alpha=4
+HR@5:0.043304130162703375, MRR@5: 0.022874426366291202, Coverage@5: 0.10710680395719765, NCDG@5: 0.027906773138004975, HR_pos@5: 0.037797246558197745, HR_neg@5: 0.005506883604505632, MRR_pos@5: 0.02018773466833542, MRR_neg@5: 0.0026866916979557784, NCDG_pos@5: 0.024520578396745835, NDCG_neg@5: 0.0033861947412591343, Matthews@5: 0.03371337879433483
+HR@10:0.07058823529411765, MRR@10: 0.026537437670103504, Coverage@10: 0.14809206541490005, NCDG@10: 0.03675160790407006, HR_pos@10: 0.061827284105131414, HR_neg@10: 0.008760951188986232, MRR_pos@10: 0.023398593479945173, MRR_neg@10: 0.0031388441901583327, NCDG_pos@10: 0.03229487922600069, NDCG_neg@10: 0.0044567286780693655, Matthews@10: 0.04581918505040198
+HR@20:0.10763454317897372, MRR@20: 0.02904818566529994, Coverage@20: 0.1999798102160307, NCDG@20: 0.04604518621644226, HR_pos@20: 0.0918648310387985, HR_neg@20: 0.01576971214017522, MRR_pos@20: 0.025414738698497034, MRR_neg@20: 0.0036334469668029036, NCDG_pos@20: 0.03980577948751578, NDCG_neg@20: 0.006239406728926485, Matthews@20: 0.037882279861714184
+Results for alpha=5
+HR@5:0.034793491864831036, MRR@5: 0.01968293700458907, Coverage@5: 0.05703613971330507, NCDG@5: 0.023419702161323826, HR_pos@5: 0.024030037546933666, HR_neg@5: 0.010763454317897372, MRR_pos@5: 0.013984146850229452, MRR_neg@5: 0.005698790154359616, NCDG_pos@5: 0.016477515186312533, NDCG_neg@5: 0.006942186975011291, Matthews@5: 0.03288754282905919
+HR@10:0.055819774718397996, MRR@10: 0.0224359814847925, Coverage@10: 0.08166767615586513, NCDG@10: 0.03016583241633437, HR_pos@10: 0.03904881101376721, HR_neg@10: 0.016770963704630788, MRR_pos@10: 0.015968174503844086, MRR_neg@10: 0.006467806980948407, NCDG_pos@10: 0.021314100817652466, NDCG_neg@10: 0.008851731598681906, Matthews@10: 0.04654787187122859
+HR@20:0.08911138923654568, MRR@20: 0.024664458470173428, Coverage@20: 0.11599030890369473, NCDG@20: 0.0384812445139312, HR_pos@20: 0.057571964956195244, HR_neg@20: 0.03153942428035044, MRR_pos@20: 0.017190412751979647, MRR_neg@20: 0.0074740457181937826, NCDG_pos@20: 0.02591895064682946, NDCG_neg@20: 0.01256229386710173, Matthews@20: 0.025642533155647327
+Time spent: 25.37975114186605 minutes
+------------------------------
+
+Hidden sizes: 256
+Current epoch 109
+Results for alpha=2
+HR@5:0.05056320400500626, MRR@5: 0.02846057571964956, Coverage@5: 0.24268120331112458, NCDG@5: 0.033896031812557174, HR_pos@5: 0.05006257822277847, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.02827284105131414, MRR_neg@5: 0.00018773466833541926, NCDG_pos@5: 0.03363029806746459, NDCG_neg@5: 0.0002657337450925784, Matthews@5: 0.03696744502522998
+HR@10:0.07734668335419273, MRR@10: 0.03193058783797207, Coverage@10: 0.323137492428831, NCDG@10: 0.04244984266697043, HR_pos@10: 0.07584480600750938, HR_neg@10: 0.001501877346683354, MRR_pos@10: 0.031627431114289686, MRR_neg@10: 0.00030315672368238074, NCDG_pos@10: 0.04187847073024999, NDCG_neg@10: 0.0005713719367204449, Matthews@10: 0.03265252053009568
+HR@20:0.11539424280350438, MRR@20: 0.03445233308474706, Coverage@20: 0.4220674338784575, NCDG@20: 0.05192300564490032, HR_pos@20: 0.11214017521902378, HR_neg@20: 0.003254067584480601, MRR_pos@20: 0.034032740550194646, MRR_neg@20: 0.0004195925345524109, NCDG_pos@20: 0.050914526788062346, NDCG_neg@20: 0.0010084788568379846, Matthews@20: 0.02492837228010916
+Results for alpha=3
+HR@5:0.05056320400500626, MRR@5: 0.02846057571964956, Coverage@5: 0.24268120331112458, NCDG@5: 0.033896031812557174, HR_pos@5: 0.04856070087609512, HR_neg@5: 0.002002503128911139, MRR_pos@5: 0.02763037129745515, MRR_neg@5: 0.0008302044221944096, NCDG_pos@5: 0.03277807394530175, NDCG_neg@5: 0.0011179578672554172, Matthews@5: 0.03825631864377193
+HR@10:0.07734668335419274, MRR@10: 0.03193058783797207, Coverage@10: 0.323137492428831, NCDG@10: 0.04244984266697043, HR_pos@10: 0.07434292866082604, HR_neg@10: 0.003003754693366708, MRR_pos@10: 0.030984961360430698, MRR_neg@10: 0.0009456264775413711, NCDG_pos@10: 0.04102624660808716, NDCG_neg@10: 0.0014235960588832837, Matthews@10: 0.048791421676803386
+HR@20:0.11539424280350438, MRR@20: 0.03445233308474706, Coverage@20: 0.4220674338784575, NCDG@20: 0.05192300564490032, HR_pos@20: 0.10888610763454318, HR_neg@20: 0.006508135168961202, MRR_pos@20: 0.03327855026331644, MRR_neg@20: 0.0011737828214306166, NCDG_pos@20: 0.04963134584586269, NDCG_neg@20: 0.0022916597990376405, Matthews@20: 0.03824983737735906
+Results for alpha=4
+HR@5:0.03454317897371714, MRR@5: 0.017701293283270754, Coverage@5: 0.03977387441954371, NCDG@5: 0.021836365452856277, HR_pos@5: 0.03078848560700876, HR_neg@5: 0.0037546933667083854, MRR_pos@5: 0.01541927409261577, MRR_neg@5: 0.0022820191906549854, NCDG_pos@5: 0.01919013973516689, NDCG_neg@5: 0.0026462257176893852, Matthews@5: 0.03889390767534466
+HR@10:0.052565707133917394, MRR@10: 0.020057313705624094, Coverage@10: 0.058146577831617204, NCDG@10: 0.02761447056327873, HR_pos@10: 0.047058823529411764, HR_neg@10: 0.005506883604505632, MRR_pos@10: 0.01759103641456583, MRR_neg@10: 0.002466277291058267, NCDG_pos@10: 0.024452144969734742, NDCG_neg@10: 0.0031623255935439914, Matthews@10: 0.05079880216191115
+HR@20:0.08060075093867335, MRR@20: 0.021962155346406945, Coverage@20: 0.08600847970926712, NCDG@20: 0.03465372639505626, HR_pos@20: 0.06833541927409262, HR_neg@20: 0.012265331664580726, MRR_pos@20: 0.019053279082533917, MRR_neg@20: 0.002908876263873028, NCDG_pos@20: 0.029814851103920632, NDCG_neg@20: 0.00483887529113563, Matthews@20: 0.02801587225791569
+Results for alpha=5
+HR@5:0.007759699624530663, MRR@5: 0.0031956612432206934, Coverage@5: 0.001110438118312134, NCDG@5: 0.0043264927830873314, HR_pos@5: 0.005506883604505632, HR_neg@5: 0.0022528160200250315, MRR_pos@5: 0.00231122236128494, MRR_neg@5: 0.000884438881935753, NCDG_pos@5: 0.003105182225652341, NDCG_neg@5: 0.00122131055743499, Matthews@5: 0.018762200396946146
+HR@10:0.010763454317897372, MRR@10: 0.003553350418181457, Coverage@10: 0.0020189783969311527, NCDG@10: 0.0052544651516500665, HR_pos@10: 0.008260325406758449, HR_neg@10: 0.0025031289111389237, MRR_pos@10: 0.0026410989927886045, MRR_neg@10: 0.0009122514253928521, NCDG_pos@10: 0.003957802905688423, NDCG_neg@10: 0.0012966622459616437, Matthews@10: 0.0344618618450567
+HR@20:0.018022528160200252, MRR@20: 0.004052056788633469, Coverage@20: 0.004138905713708864, NCDG@20: 0.007084292792519356, HR_pos@20: 0.013016270337922404, HR_neg@20: 0.0050062578222778474, MRR_pos@20: 0.0029641972506892667, MRR_neg@20: 0.0010878595379442027, NCDG_pos@20: 0.0051519174394300815, NDCG_neg@20: 0.001932375353089275, Matthews@20: 0.03222071937701524
+Time spent: 28.18207483291626 minutes
+------------------------------
+
+Hidden sizes: 512
+Current epoch 107
+Results for alpha=2
+HR@5:0.05131414267834794, MRR@5: 0.030483938256153524, Coverage@5: 0.397536846355744, NCDG@5: 0.03561841404757413, HR_pos@5: 0.05081351689612015, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.03035043804755945, MRR_neg@5: 0.00013350020859407592, NCDG_pos@5: 0.03539642335740279, NDCG_neg@5: 0.0002219906901713496, Matthews@5: 0.03742357469380742
+HR@10:0.07209011264080101, MRR@10: 0.03329022389097483, Coverage@10: 0.5399757722592369, NCDG@10: 0.04237048835171273, HR_pos@10: 0.07133917396745933, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0331150048671951, MRR_neg@10: 0.00017521902377972464, NCDG_pos@10: 0.042059334410700824, NDCG_neg@10: 0.0003111539410119058, Matthews@10: 0.04393372663701364
+HR@20:0.10438047559449312, MRR@20: 0.03550565559236421, Coverage@20: 0.6761558651322431, NCDG@20: 0.050502978590034546, HR_pos@20: 0.10137672090112641, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.0351818381221137, MRR_neg@20: 0.0003238174702505115, NCDG_pos@20: 0.04963182871800262, NDCG_neg@20: 0.0008711498720319307, Matthews@20: 0.022580549883215208
+Results for alpha=3
+HR@5:0.05156445556946183, MRR@5: 0.030600750938673343, Coverage@5: 0.40379567938623057, NCDG@5: 0.03576523870434197, HR_pos@5: 0.049561952440550686, HR_neg@5: 0.002002503128911139, MRR_pos@5: 0.02967459324155194, MRR_neg@5: 0.0009261576971214017, NCDG_pos@5: 0.034568832679824094, NDCG_neg@5: 0.0011964060245178761, Matthews@5: 0.03929282065478021
+HR@10:0.07058823529411765, MRR@10: 0.03317033196257226, Coverage@10: 0.544720371492025, NCDG@10: 0.041949338852699906, HR_pos@10: 0.06808510638297872, HR_neg@10: 0.0025031289111389237, MRR_pos@10: 0.03216669646582038, MRR_neg@10: 0.0010036354967518923, NCDG_pos@10: 0.04058033194697017, NDCG_neg@10: 0.0013690069057297294, Matthews@10: 0.04975587615208686
+HR@20:0.10413016270337923, MRR@20: 0.035529055262380975, Coverage@20: 0.6825156470825762, NCDG@20: 0.050468067883318694, HR_pos@20: 0.0986232790988736, HR_neg@20: 0.005506883604505632, MRR_pos@20: 0.03430915236192344, MRR_neg@20: 0.0012199029004575411, NCDG_pos@20: 0.0483304928833804, NDCG_neg@20: 0.0021375749999383038, Matthews@20: 0.04037723343347479
+Results for alpha=4
+HR@5:0.05106382978723405, MRR@5: 0.030483938256153524, Coverage@5: 0.40692509590147385, NCDG@5: 0.03556195099200825, HR_pos@5: 0.044806007509386736, HR_neg@5: 0.006257822277847309, MRR_pos@5: 0.026750104297037967, MRR_neg@5: 0.003733833959115561, NCDG_pos@5: 0.03120934533280126, NDCG_neg@5: 0.004352605659206992, Matthews@5: 0.03949418989184899
+HR@10:0.07008760951188986, MRR@10: 0.03305520789876234, Coverage@10: 0.5497678174843529, NCDG@10: 0.04174752880925267, HR_pos@10: 0.061827284105131414, HR_neg@10: 0.008260325406758449, MRR_pos@10: 0.02905169159862526, MRR_neg@10: 0.004003516300137076, NCDG_pos@10: 0.03674470139668889, NDCG_neg@10: 0.005002827412563784, Matthews@10: 0.05002912748045629
+HR@20:0.10613266583229036, MRR@20: 0.0355677610548928, Coverage@20: 0.6878659398344438, NCDG@20: 0.05087256106153762, HR_pos@20: 0.09261576971214018, HR_neg@20: 0.013516896120150187, MRR_pos@20: 0.03117075990850097, MRR_neg@20: 0.004397001146391831, NCDG_pos@20: 0.044505607165508276, NDCG_neg@20: 0.006366953896029348, Matthews@20: 0.05443460427497298
+Results for alpha=5
+HR@5:0.030037546933667083, MRR@5: 0.01768877763871506, Coverage@5: 0.02947708459519483, NCDG@5: 0.02078089975850395, HR_pos@5: 0.021026282853566957, HR_neg@5: 0.009011264080100126, MRR_pos@5: 0.012932832707551105, MRR_neg@5: 0.004755944931163955, NCDG_pos@5: 0.014966600056044933, NDCG_neg@5: 0.005814299702459017, Matthews@5: 0.033850489419282634
+HR@10:0.04881101376720901, MRR@10: 0.020153167650038738, Coverage@10: 0.04502321825156471, NCDG@10: 0.026809552357301543, HR_pos@10: 0.03454317897371715, HR_neg@10: 0.014267834793491864, MRR_pos@10: 0.01471601406520055, MRR_neg@10: 0.00543715358483819, NCDG_pos@10: 0.019316219287708523, NDCG_neg@10: 0.007493333069593019, Matthews@10: 0.04714097534548067
+HR@20:0.07559449311639549, MRR@20: 0.021942372418645006, Coverage@20: 0.06874621441550575, NCDG@20: 0.03349365369075144, HR_pos@20: 0.04981226533166458, HR_neg@20: 0.025782227784730914, MRR_pos@20: 0.01575469351143859, MRR_neg@20: 0.006187678907206412, NCDG_pos@20: 0.023149998695524313, NDCG_neg@20: 0.01034365499522712, Matthews@20: 0.030978218015082642
+Time spent: 28.4662069161733 minutes
+------------------------------
+
+Hidden sizes: 1024
+Current epoch 71
+Results for alpha=2
+HR@5:0.04881101376720901, MRR@5: 0.02873174801835628, Coverage@5: 0.3944074298405007, NCDG@5: 0.033658349180074175, HR_pos@5: 0.047809762202753445, HR_neg@5: 0.0010012515644555694, MRR_pos@5: 0.028456403838130997, MRR_neg@5: 0.00027534418022528165, NCDG_pos@5: 0.03320991659552472, NDCG_neg@5: 0.0004484325845494574, Matthews@5: 0.02431078488828922
+HR@10:0.07409261576971214, MRR@10: 0.03213630132904226, Coverage@10: 0.5405814657783161, NCDG@10: 0.041864436618018176, HR_pos@10: 0.07309136420525657, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.031860957148816975, MRR_neg@10: 0.00027534418022528165, NCDG_pos@10: 0.04141600403346872, NDCG_neg@10: 0.0004484325845494574, Matthews@10: 0.04022315636543634
+HR@20:0.10888610763454318, MRR@20: 0.03443446199461846, Coverage@20: 0.6911972541893802, NCDG@20: 0.05051663379671137, HR_pos@20: 0.10638297872340426, HR_neg@20: 0.0025031289111389237, MRR_pos@20: 0.03405264373843519, MRR_neg@20: 0.00038181825618327123, NCDG_pos@20: 0.049685783736979114, NDCG_neg@20: 0.0008308500597322498, Matthews@20: 0.03320228219569932
+Results for alpha=3
+HR@5:0.04881101376720901, MRR@5: 0.02873174801835628, Coverage@5: 0.3944074298405007, NCDG@5: 0.033658349180074175, HR_pos@5: 0.04630788485607009, HR_neg@5: 0.0025031289111389237, MRR_pos@5: 0.027538589904046725, MRR_neg@5: 0.0011931581143095535, NCDG_pos@5: 0.03214311822077055, NDCG_neg@5: 0.0015152309593036292, Matthews@5: 0.028122605327302017
+HR@10:0.07409261576971214, MRR@10: 0.03213630132904226, Coverage@10: 0.5405814657783161, NCDG@10: 0.041864436618018176, HR_pos@10: 0.07083854818523154, HR_neg@10: 0.003254067584480601, MRR_pos@10: 0.030844806007509384, MRR_neg@10: 0.0012914953215328686, NCDG_pos@10: 0.04010783817763701, NDCG_neg@10: 0.0017565984403811736, Matthews@10: 0.04254334561219442
+HR@20:0.10888610763454318, MRR@20: 0.03443446199461846, Coverage@20: 0.6911972541893802, NCDG@20: 0.05051663379671137, HR_pos@20: 0.10337922403003755, HR_neg@20: 0.005506883604505632, MRR_pos@20: 0.032979757754263046, MRR_neg@20: 0.001454704240355422, NCDG_pos@20: 0.048182022149668935, NDCG_neg@20: 0.002334611647042428, Matthews@20: 0.04427740875044562
+Results for alpha=4
+HR@5:0.04881101376720901, MRR@5: 0.02873174801835628, Coverage@5: 0.3944074298405007, NCDG@5: 0.033658349180074175, HR_pos@5: 0.04180225281602003, HR_neg@5: 0.007008760951188986, MRR_pos@5: 0.025156445556946183, MRR_neg@5: 0.0035753024614100953, NCDG_pos@5: 0.02924554607578594, NDCG_neg@5: 0.004412803104288236, Matthews@5: 0.026398927089981927
+HR@10:0.07409261576971214, MRR@10: 0.03213630132904226, Coverage@10: 0.5405814657783161, NCDG@10: 0.041864436618018176, HR_pos@10: 0.06533166458072591, HR_neg@10: 0.008760951188986232, MRR_pos@10: 0.028322903629536923, MRR_neg@10: 0.003813397699505334, NCDG_pos@10: 0.0368806179532232, NDCG_neg@10: 0.004983818664794982, Matthews@10: 0.051270963716885255
+HR@20:0.10888610763454318, MRR@20: 0.03443446199461846, Coverage@20: 0.6911972541893802, NCDG@20: 0.05051663379671137, HR_pos@20: 0.09411764705882353, HR_neg@20: 0.01476846057571965, MRR_pos@20: 0.030217767803255857, MRR_neg@20: 0.004216694191362604, NCDG_pos@20: 0.04403111367544668, NDCG_neg@20: 0.006485520121264682, Matthews@20: 0.04783768678389063
+Results for alpha=5
+HR@5:0.05156445556946183, MRR@5: 0.03034626616604089, Coverage@5: 0.4041994750656168, NCDG@5: 0.035589691922425885, HR_pos@5: 0.03554443053817272, HR_neg@5: 0.01602002503128911, MRR_pos@5: 0.020571547768043392, MRR_neg@5: 0.009774718397997496, NCDG_pos@5: 0.024275925222037004, NDCG_neg@5: 0.01131376670038888, Matthews@5: 0.03975579794627016
+HR@10:0.07884856070087609, MRR@10: 0.033960903510340305, Coverage@10: 0.5632949727437916, NCDG@10: 0.04438667560671228, HR_pos@10: 0.056320400500625784, HR_neg@10: 0.02252816020025031, MRR_pos@10: 0.023297574348888492, MRR_neg@10: 0.010663329161451815, NCDG_pos@10: 0.0309484295479488, NDCG_neg@10: 0.01343824605876348, Matthews@10: 0.06483200302970121
+HR@20:0.1111389236545682, MRR@20: 0.036156256335427676, Coverage@20: 0.7146174035937816, NCDG@20: 0.05249174621500822, HR_pos@20: 0.07309136420525657, HR_neg@20: 0.03804755944931164, MRR_pos@20: 0.024460762278390353, MRR_neg@20: 0.011695494057037317, NCDG_pos@20: 0.035186753012453095, NDCG_neg@20: 0.01730499320255513, Matthews@20: 0.03737702632275341
+Time spent: 20.27917151451111 minutes
+------------------------------
+
+batch size 32
+Hidden sizes: 16
+Current epoch 78
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.006508135168961202, MRR@10: 0.001241830065359477, Coverage@10: 0.0019180294770845953, NCDG@10: 0.0023938688555815973, HR_pos@10: 0.006508135168961202, HR_neg@10: 0.0, MRR_pos@10: 0.001241830065359477, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023938688555815973, NDCG_neg@10: 0.0, Matthews@10: 0.016957879084944612
+HR@20:0.01702127659574468, MRR@20: 0.0020147456086439413, Coverage@20: 0.003331314354936402, NCDG@20: 0.005103838577011136, HR_pos@20: 0.016770963704630788, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0019919898912699506, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005034015561829377, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.01792922756041985
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.006508135168961202, MRR@10: 0.001241830065359477, Coverage@10: 0.0019180294770845953, NCDG@10: 0.0023938688555815973, HR_pos@10: 0.006508135168961202, HR_neg@10: 0.0, MRR_pos@10: 0.001241830065359477, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023938688555815973, NDCG_neg@10: 0.0, Matthews@10: 0.024843880370544216
+HR@20:0.01702127659574468, MRR@20: 0.0020147456086439413, Coverage@20: 0.003331314354936402, NCDG@20: 0.005103838577011136, HR_pos@20: 0.016770963704630788, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0019919898912699506, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005034015561829377, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.03349380758410645
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.005256570713391739, MRR@10: 0.0011183622385124257, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0020335632624932545, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.0011183622385124257, MRR_neg@10: 0.0, NCDG_pos@10: 0.0020335632624932545, NDCG_neg@10: 0.0, Matthews@10: 0.03511972768145915
+HR@20:0.016770963704630788, MRR@20: 0.0019492510281305872, Coverage@20: 0.0030284675953967293, NCDG@20: 0.004984414400056712, HR_pos@20: 0.015519399249061327, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.0018547939624595036, MRR_neg@20: 9.44570656710832e-05, NCDG_pos@20: 0.004658129411243707, NDCG_neg@20: 0.0003262849888130048, Matthews@20: 0.03821407693955154
+Results for alpha=5
+HR@5:0.007759699624530663, MRR@5: 0.006161869002920317, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0065667178073362045, HR_pos@5: 0.005506883604505632, HR_neg@5: 0.0022528160200250315, MRR_pos@5: 0.004096787651230705, MRR_neg@5: 0.002065081351689612, NCDG_pos@5: 0.004456410784038734, NDCG_neg@5: 0.0021103070232974704, Matthews@5: 0.018762200396946146
+HR@10:0.011514392991239047, MRR@10: 0.006595645350338716, Coverage@10: 0.0024227740763173833, NCDG@10: 0.007712619601275541, HR_pos@10: 0.008760951188986232, HR_neg@10: 0.002753441802252816, MRR_pos@10: 0.004463515902815027, MRR_neg@10: 0.0021321294475236904, NCDG_pos@10: 0.00543991002225365, NDCG_neg@10: 0.002272709579021891, Matthews@10: 0.03420561429022711
+HR@20:0.019774718397997496, MRR@20: 0.007148832627255734, Coverage@20: 0.003937007874015748, NCDG@20: 0.009777267389554353, HR_pos@20: 0.014518147684605758, HR_neg@20: 0.005256570713391739, MRR_pos@20: 0.004854576835322892, MRR_neg@20: 0.0022942557919328416, NCDG_pos@20: 0.006886025776707036, NDCG_neg@20: 0.0028912416128473173, Matthews@20: 0.03725586201690596
+Time spent: 20.07334403594335 minutes
+------------------------------
+
+Hidden sizes: 32
+Current epoch 99
+Results for alpha=2
+HR@5:0.008760951188986232, MRR@5: 0.0071297455152273675, Coverage@5: 0.0026246719160104987, NCDG@5: 0.007531778298617045, HR_pos@5: 0.00851063829787234, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.006879432624113476, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.007281465407503153, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.006314600322268598
+HR@10:0.015018773466833541, MRR@10: 0.007926078232711523, Coverage@10: 0.004643650312941652, NCDG@10: 0.009515567204890012, HR_pos@10: 0.01476846057571965, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.007675765341597631, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.00926525431377612, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.015618118622471465
+HR@20:0.026032540675844804, MRR@20: 0.008678466681213923, Coverage@20: 0.007369271148798708, NCDG@20: 0.012284449977347227, HR_pos@20: 0.02553191489361702, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.008408898952322042, MRR_neg@20: 0.0002695677288918841, NCDG_pos@20: 0.011968392521768456, NDCG_neg@20: 0.0003160574555787719, Matthews@20: 0.01858954645105166
+Results for alpha=3
+HR@5:0.008760951188986232, MRR@5: 0.0071297455152273675, Coverage@5: 0.0026246719160104987, NCDG@5: 0.007531778298617045, HR_pos@5: 0.00851063829787234, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.006879432624113476, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.007281465407503153, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.019282320426753097
+HR@10:0.014518147684605756, MRR@10: 0.007860619425074994, Coverage@10: 0.004643650312941652, NCDG@10: 0.009355789422335094, HR_pos@10: 0.014267834793491864, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.007610306533961103, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.009105476531221204, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.029796784712394032
+HR@20:0.026032540675844804, MRR@20: 0.008646230829978315, Coverage@20: 0.0072683222289521504, NCDG@20: 0.012248837237764125, HR_pos@20: 0.024780976220275343, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.008323313585909634, MRR_neg@20: 0.0003229172440686833, NCDG_pos@20: 0.011741452658526337, NDCG_neg@20: 0.0005073845792377877, Matthews@20: 0.022164204586877696
+Results for alpha=4
+HR@5:0.008760951188986232, MRR@5: 0.0071297455152273675, Coverage@5: 0.0026246719160104987, NCDG@5: 0.007531778298617045, HR_pos@5: 0.008010012515644555, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.00637880684188569, MRR_neg@5: 0.000750938673341677, NCDG_pos@5: 0.006780839625275367, NDCG_neg@5: 0.000750938673341677, Matthews@5: 0.024846806938818126
+HR@10:0.014518147684605758, MRR@10: 0.007860619425074994, Coverage@10: 0.004643650312941652, NCDG@10: 0.009355789422335094, HR_pos@10: 0.01376720901126408, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.007109680751733318, MRR_neg@10: 0.000750938673341677, NCDG_pos@10: 0.008604850748993417, NDCG_neg@10: 0.000750938673341677, Matthews@10: 0.04261118261603232
+HR@20:0.026032540675844804, MRR@20: 0.008646230829978315, Coverage@20: 0.0072683222289521504, NCDG@20: 0.012248837237764125, HR_pos@20: 0.024030037546933666, HR_neg@20: 0.002002503128911139, MRR_pos@20: 0.007806000277607588, MRR_neg@20: 0.0008402305523707276, NCDG_pos@20: 0.011178248653520078, NDCG_neg@20: 0.0010705885842440454, Matthews@20: 0.04687791709326226
+Results for alpha=5
+HR@5:0.00851063829787234, MRR@5: 0.0069211514392991235, Coverage@5: 0.002523722996163941, NCDG@5: 0.007314238812652453, HR_pos@5: 0.005506883604505632, HR_neg@5: 0.003003754693366708, MRR_pos@5: 0.004618272841051314, MRR_neg@5: 0.0023028785982478098, NCDG_pos@5: 0.004841363799648001, NDCG_neg@5: 0.002472875013004452, Matthews@5: 0.007783611062401806
+HR@10:0.013516896120150189, MRR@10: 0.0075329280648429595, Coverage@10: 0.004037956793862305, NCDG@10: 0.008875338700035078, HR_pos@10: 0.010012515644555695, HR_neg@10: 0.003504380475594493, MRR_pos@10: 0.005163299362298111, MRR_neg@10: 0.0023696287025448477, NCDG_pos@10: 0.006240943783795104, NDCG_neg@10: 0.002634394916239974, Matthews@10: 0.03227642408827405
+HR@20:0.025782227784730914, MRR@20: 0.008346374588319824, Coverage@20: 0.006965475469412477, NCDG@20: 0.011927157215173349, HR_pos@20: 0.01902377972465582, HR_neg@20: 0.006758448060075094, MRR_pos@20: 0.005749526772118868, MRR_neg@20: 0.0025968478162009547, NCDG_pos@20: 0.008468524841346959, NDCG_neg@20: 0.003458632373826389, Matthews@20: 0.04389863233929738
+Time spent: 25.50996494690577 minutes
+------------------------------
+
+Hidden sizes: 64
+Current epoch 100
+Results for alpha=2
+HR@5:0.018523153942428035, MRR@5: 0.009853984146850231, Coverage@5: 0.007470220068645265, NCDG@5: 0.01198298163190714, HR_pos@5: 0.018022528160200252, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.009678765123070506, MRR_neg@5: 0.00017521902377972464, NCDG_pos@5: 0.011728217536586491, NDCG_neg@5: 0.0002547640953206506, Matthews@5: 0.010284434136603713
+HR@10:0.02978723404255319, MRR@10: 0.011261994159365876, Coverage@10: 0.011710074702200686, NCDG@10: 0.015529658914837732, HR_pos@10: 0.029286608260325406, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.011086775135586152, MRR_neg@10: 0.00017521902377972464, NCDG_pos@10: 0.01527489481951708, NDCG_neg@10: 0.0002547640953206506, Matthews@10: 0.022039634376432294
+HR@20:0.04655819774718398, MRR@20: 0.01243891793378962, Coverage@20: 0.01746416313345447, NCDG@20: 0.019785854704863107, HR_pos@20: 0.04505632040050062, HR_neg@20: 0.001501877346683354, MRR_pos@20: 0.012189688648264965, MRR_neg@20: 0.00024922928552465476, NCDG_pos@20: 0.019272565109270817, NDCG_neg@20: 0.0005132895955922947, Matthews@20: 0.01078366085364362
+Results for alpha=3
+HR@5:0.011764705882352941, MRR@5: 0.007780559032123486, Coverage@5: 0.0037351100343226327, NCDG@5: 0.00874746840250171, HR_pos@5: 0.01151439299123905, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.007530246141009594, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.008497155511387819, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.02521592959879223
+HR@10:0.019524405506883603, MRR@10: 0.008770486918171528, Coverage@10: 0.00514839491217444, NCDG@10: 0.011210114582309184, HR_pos@10: 0.01902377972465582, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.008495142737946245, MRR_neg@10: 0.00027534418022528165, NCDG_pos@10: 0.010887445038800328, NDCG_neg@10: 0.000322669543508858, Matthews@10: 0.03041709782913675
+HR@20:0.031539424280350434, MRR@20: 0.00957895492363888, Coverage@20: 0.008580658186957399, NCDG@20: 0.014216590320630815, HR_pos@20: 0.030037546933667083, HR_neg@20: 0.001501877346683354, MRR_pos@20: 0.009225949564375693, MRR_neg@20: 0.0003530053592631815, NCDG_pos@20: 0.013630309802430634, NDCG_neg@20: 0.0005862805182001805, Matthews@20: 0.024759936139376465
+Results for alpha=4
+HR@5:0.011764705882352941, MRR@5: 0.007780559032123486, Coverage@5: 0.0037351100343226327, NCDG@5: 0.00874746840250171, HR_pos@5: 0.010763454317897372, HR_neg@5: 0.0010012515644555694, MRR_pos@5: 0.006946182728410512, MRR_neg@5: 0.0008343763037129745, NCDG_pos@5: 0.007871373283603088, NDCG_neg@5: 0.0008760951188986233, Matthews@5: 0.029005964815982763
+HR@10:0.019524405506883603, MRR@10: 0.008770486918171528, Coverage@10: 0.00514839491217444, NCDG@10: 0.011210114582309184, HR_pos@10: 0.018272841051314142, HR_neg@10: 0.0012515644555694619, MRR_pos@10: 0.00791107932534716, MRR_neg@10: 0.0008594075928243639, NCDG_pos@10: 0.010261662811015594, NDCG_neg@10: 0.0009484517712935889, Matthews@10: 0.04508127505083224
+HR@20:0.031539424280350434, MRR@20: 0.00957895492363888, Coverage@20: 0.008580658186957399, NCDG@20: 0.014216590320630815, HR_pos@20: 0.02853566958698373, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.008600899245629309, MRR_neg@20: 0.0009780556780095678, NCDG_pos@20: 0.012828758853771549, NDCG_neg@20: 0.0013878314668592632, Matthews@20: 0.04330689170606073
+Results for alpha=5
+HR@5:0.011764705882352941, MRR@5: 0.007780559032123486, Coverage@5: 0.0037351100343226327, NCDG@5: 0.00874746840250171, HR_pos@5: 0.007759699624530663, HR_neg@5: 0.004005006257822278, MRR_pos@5: 0.004956195244055069, MRR_neg@5: 0.002824363788068419, NCDG_pos@5: 0.005633390307733843, NDCG_neg@5: 0.003114078094767869, Matthews@5: 0.011961189518251288
+HR@10:0.019524405506883606, MRR@10: 0.008770486918171528, Coverage@10: 0.00514839491217444, NCDG@10: 0.011210114582309184, HR_pos@10: 0.014518147684605758, HR_neg@10: 0.0050062578222778474, MRR_pos@10: 0.005826529193237578, MRR_neg@10: 0.002943957724933945, NCDG_pos@10: 0.007786808243384174, NDCG_neg@10: 0.0034233063389250097, Matthews@10: 0.03973286651145752
+HR@20:0.03153942428035044, MRR@20: 0.00957895492363888, Coverage@20: 0.008580658186957399, NCDG@20: 0.014216590320630815, HR_pos@20: 0.02227784730913642, HR_neg@20: 0.009261576971214018, MRR_pos@20: 0.006353395723079965, MRR_neg@20: 0.00322555920055891, NCDG_pos@20: 0.009735080249343503, NDCG_neg@20: 0.004481510071287311, Matthews@20: 0.037058204543846014
+Time spent: 25.82061984936396 minutes
+------------------------------
+
+Hidden sizes: 128
+Current epoch 73
+Results for alpha=2
+HR@5:0.01576971214017522, MRR@5: 0.008710888610763455, Coverage@5: 0.007571168988491823, NCDG@5: 0.010451160738277012, HR_pos@5: 0.015519399249061327, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.008460575719649564, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.01020084784716312, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.016510438440761034
+HR@10:0.028785982478097622, MRR@10: 0.010375171345133797, Coverage@10: 0.011104381183121341, NCDG@10: 0.014587627054275944, HR_pos@10: 0.02828535669586984, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.010083139638834258, MRR_neg@10: 0.0002920317062995411, NCDG_pos@10: 0.014248150912321494, NDCG_neg@10: 0.0003394761419544486, Matthews@10: 0.02115345227066381
+HR@20:0.048310387984981225, MRR@20: 0.011741899007259733, Coverage@20: 0.01796890773268726, NCDG@20: 0.019538179032927868, HR_pos@20: 0.04730913642052566, HR_neg@20: 0.0010012515644555694, MRR_pos@20: 0.011416492248811673, MRR_neg@20: 0.0003254067584480601, NCDG_pos@20: 0.019073546445416478, NDCG_neg@20: 0.00046463258751139476, Matthews@20: 0.023940812500973924
+Results for alpha=3
+HR@5:0.015519399249061327, MRR@5: 0.008264497288277012, Coverage@5: 0.006460730870179689, NCDG@5: 0.01005982482126906, HR_pos@5: 0.015269086357947435, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.008139340842720066, MRR_neg@5: 0.00012515644555694618, NCDG_pos@5: 0.009901894970562814, NDCG_neg@5: 0.00015792985070624718, Matthews@5: 0.031320651072766596
+HR@10:0.02753441802252816, MRR@10: 0.00983113812901047, Coverage@10: 0.010094891984655765, NCDG@10: 0.013906457949329484, HR_pos@10: 0.02653316645807259, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.009591254941692988, MRR_neg@10: 0.00023988318731748016, NCDG_pos@10: 0.013491236671588998, NDCG_neg@10: 0.0004152212777404833, Matthews@10: 0.029838237449970748
+HR@20:0.044055068836045055, MRR@20: 0.010978275764696096, Coverage@20: 0.01615182717544922, NCDG@20: 0.018082517377203854, HR_pos@20: 0.04180225281602003, HR_neg@20: 0.0022528160200250315, MRR_pos@20: 0.010638646682889294, MRR_neg@20: 0.000339629081806804, NCDG_pos@20: 0.017335373083479926, NDCG_neg@20: 0.0007471442937239256, Matthews@20: 0.026762369716868194
+Results for alpha=4
+HR@5:0.017271589486858575, MRR@5: 0.009858156028368793, Coverage@5: 0.010902483343428226, NCDG@5: 0.011683440945483932, HR_pos@5: 0.015269086357947435, HR_neg@5: 0.002002503128911139, MRR_pos@5: 0.008973717146433042, MRR_neg@5: 0.000884438881935753, NCDG_pos@5: 0.010529608895539475, NDCG_neg@5: 0.0011538320499444592, Matthews@5: 0.02480683140648724
+HR@10:0.03178973717146433, MRR@10: 0.011750004966525618, Coverage@10: 0.017363214213607914, NCDG@10: 0.016332146308237466, HR_pos@10: 0.028785982478097622, HR_neg@10: 0.003003754693366708, MRR_pos@10: 0.01074289290184159, MRR_neg@10: 0.0010071120646840297, NCDG_pos@10: 0.014865208325515283, NDCG_neg@10: 0.0014669379827221872, Matthews@10: 0.04383093408746976
+HR@20:0.05131414267834794, MRR@20: 0.01312274974932825, Coverage@20: 0.027559055118110236, NCDG@20: 0.0212909748210295, HR_pos@20: 0.044806007509386736, HR_neg@20: 0.006508135168961202, MRR_pos@20: 0.011862041151177727, MRR_neg@20: 0.0012607085981505243, NCDG_pos@20: 0.01892464148337804, NDCG_neg@20: 0.002366333337651461, Matthews@20: 0.03705467202980557
+Results for alpha=5
+HR@5:0.015519399249061327, MRR@5: 0.008264497288277012, Coverage@5: 0.006460730870179689, NCDG@5: 0.01005982482126906, HR_pos@5: 0.011013767209011264, HR_neg@5: 0.004505632040050063, MRR_pos@5: 0.005469336670838548, MRR_neg@5: 0.0027951606174384646, NCDG_pos@5: 0.00683645686128136, NDCG_neg@5: 0.0032233679599876996, Matthews@5: 0.026638122872271797
+HR@10:0.027534418022528158, MRR@10: 0.00983113812901047, Coverage@10: 0.010094891984655765, NCDG@10: 0.013906457949329484, HR_pos@10: 0.019774718397997496, HR_neg@10: 0.007759699624530663, MRR_pos@10: 0.006635476885789778, MRR_neg@10: 0.003195661243220692, NCDG_pos@10: 0.009665600621037825, NDCG_neg@10: 0.004240857328291657, Matthews@10: 0.03862880364967777
+HR@20:0.044055068836045055, MRR@20: 0.010978275764696096, Coverage@20: 0.01615182717544922, NCDG@20: 0.018082517377203854, HR_pos@20: 0.030287859824780976, HR_neg@20: 0.01376720901126408, MRR_pos@20: 0.007349095208881242, MRR_neg@20: 0.003629180555814855, NCDG_pos@20: 0.012303533427979576, NDCG_neg@20: 0.005778983949224275, Matthews@20: 0.035802728136599814
+Time spent: 18.45204928716024 minutes
+------------------------------
+
+Hidden sizes: 256
+Current epoch 75
+Results for alpha=2
+HR@5:0.02828535669586984, MRR@5: 0.015661243220692532, Coverage@5: 0.03119321623258631, NCDG@5: 0.01877686468761083, HR_pos@5: 0.028035043804755945, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.015536086775135585, MRR_neg@5: 0.00012515644555694618, NCDG_pos@5: 0.018618934836904587, NDCG_neg@5: 0.00015792985070624718, Matthews@5: 0.028224210361402918
+HR@10:0.04555694618272841, MRR@10: 0.01784969306871685, Coverage@10: 0.04704219664849586, NCDG@10: 0.024244594047570792, HR_pos@10: 0.044806007509386736, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.017657488527325824, MRR_neg@10: 0.00019220454139102448, NCDG_pos@10: 0.023924261641140126, NDCG_neg@10: 0.00032033240643066825, Matthews@10: 0.027832343918838476
+HR@20:0.07634543178973717, MRR@20: 0.01992425413706659, Coverage@20: 0.06995760145366445, NCDG@20: 0.03195007734024179, HR_pos@20: 0.07384230287859825, HR_neg@20: 0.0025031289111389237, MRR_pos@20: 0.019615154845967743, MRR_neg@20: 0.0003090992910988493, NCDG_pos@20: 0.0311924397453645, NDCG_neg@20: 0.0007576375948772905, Matthews@20: 0.013272323761146445
+Results for alpha=3
+HR@5:0.01877346683354193, MRR@5: 0.010738423028785984, Coverage@5: 0.009085402786190187, NCDG@5: 0.012703524323649873, HR_pos@5: 0.018022528160200252, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.01034209428452232, MRR_neg@5: 0.0003963287442636629, NCDG_pos@5: 0.012220251092592706, NDCG_neg@5: 0.00048327323105716975, Matthews@5: 0.022734849640022807
+HR@10:0.031038798498122654, MRR@10: 0.012298905377753942, Coverage@10: 0.014233797698364628, NCDG@10: 0.01659329098536138, HR_pos@10: 0.029787234042553193, HR_neg@10: 0.0012515644555694619, MRR_pos@10: 0.011835528537656202, MRR_neg@10: 0.00046337684009774125, NCDG_pos@10: 0.01594761519857979, NDCG_neg@10: 0.0006456757867815907, Matthews@10: 0.029211552072435032
+HR@20:0.05106382978723405, MRR@20: 0.01367574060821619, Coverage@20: 0.02230971128608924, NCDG@20: 0.02164160536144032, HR_pos@20: 0.047809762202753445, HR_neg@20: 0.003254067584480601, MRR_pos@20: 0.013075730041964927, MRR_neg@20: 0.0006000105662512619, NCDG_pos@20: 0.020492387901526493, NDCG_neg@20: 0.0011492174599138213, Matthews@20: 0.018508513056820424
+Results for alpha=4
+HR@5:0.02928660826032541, MRR@5: 0.017588652482269502, Coverage@5: 0.03644256006460731, NCDG@5: 0.02046710042116038, HR_pos@5: 0.026032540675844807, HR_neg@5: 0.003254067584480601, MRR_pos@5: 0.014993742177722152, MRR_neg@5: 0.002594910304547351, NCDG_pos@5: 0.0177092074147008, NDCG_neg@5: 0.002757893006459574, Matthews@5: 0.034644307643672004
+HR@10:0.04680851063829787, MRR@10: 0.01986540715577011, Coverage@10: 0.055017161316373915, NCDG@10: 0.026071632700775525, HR_pos@10: 0.041551939924906134, HR_neg@10: 0.005256570713391739, MRR_pos@10: 0.01699415936587401, MRR_neg@10: 0.0028712477898961003, NCDG_pos@10: 0.02265717411979512, NDCG_neg@10: 0.003414458580980407, Matthews@10: 0.04352697111924569
+HR@20:0.07934918648310388, MRR@20: 0.022082463315012128, Coverage@20: 0.07964869775893398, NCDG@20: 0.03424831193549698, HR_pos@20: 0.06833541927409262, HR_neg@20: 0.011013767209011264, MRR_pos@20: 0.01880681223427768, MRR_neg@20: 0.0032756510807344474, NCDG_pos@20: 0.029372246696715038, NDCG_neg@20: 0.004876065238781953, Matthews@20: 0.037801466624283145
+Results for alpha=5
+HR@5:0.027534418022528158, MRR@5: 0.013650396328744265, Coverage@5: 0.024126791843327278, NCDG@5: 0.017050787156937496, HR_pos@5: 0.01902377972465582, HR_neg@5: 0.00851063829787234, MRR_pos@5: 0.009328327075511057, MRR_neg@5: 0.004322069253233208, NCDG_pos@5: 0.011688337707053367, NDCG_neg@5: 0.005362449449884131, Matthews@5: 0.02923705576974292
+HR@10:0.04105131414267835, MRR@10: 0.015421161372350358, Coverage@10: 0.0350292751867555, NCDG@10: 0.02138848912673025, HR_pos@10: 0.029036295369211516, HR_neg@10: 0.012015018773466833, MRR_pos@10: 0.010675745475495164, MRR_neg@10: 0.004745415896855196, NCDG_pos@10: 0.014938064772293062, NDCG_neg@10: 0.006450424354437187, Matthews@10: 0.04289763190694781
+HR@20:0.06833541927409262, MRR@20: 0.01726120885692448, Coverage@20: 0.05299818291944276, NCDG@20: 0.02821922094938955, HR_pos@20: 0.04505632040050062, HR_neg@20: 0.02327909887359199, MRR_pos@20: 0.011723997004436564, MRR_neg@20: 0.005537211852487914, NCDG_pos@20: 0.018908411389914587, NDCG_neg@20: 0.009310809559474964, Matthews@20: 0.029560202083195795
+Time spent: 18.554400821526844 minutes
+------------------------------
+
+Hidden sizes: 512
+Current epoch 63
+Results for alpha=2
+HR@5:0.03779724655819775, MRR@5: 0.0215561118064247, Coverage@5: 0.03684635574399354, NCDG@5: 0.02559479354707153, HR_pos@5: 0.037296620775969964, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.021222361284939508, MRR_neg@5: 0.0003337505214851898, NCDG_pos@5: 0.025219324210400695, NDCG_neg@5: 0.0003754693366708385, Matthews@5: 0.028446953166508467
+HR@10:0.05481852315394242, MRR@10: 0.02379154498678904, Coverage@10: 0.05431051887744801, NCDG@10: 0.03106088679016921, HR_pos@10: 0.05406758448060075, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.023422035480859006, MRR_neg@10: 0.00036950950593003155, NCDG_pos@10: 0.03060197982312707, NDCG_neg@10: 0.00045890696704213596, Matthews@10: 0.03402141122817377
+HR@20:0.0821026282853567, MRR@20: 0.02564880858419221, Coverage@20: 0.07914395315970119, NCDG@20: 0.03791486975276636, HR_pos@20: 0.07959949937421777, HR_neg@20: 0.0025031289111389237, MRR_pos@20: 0.025166835778213388, MRR_neg@20: 0.0004819728059788196, NCDG_pos@20: 0.03702396886335387, NDCG_neg@20: 0.000890900889412494, Matthews@20: 0.017232608996830483
+Results for alpha=3
+HR@5:0.016520650813516898, MRR@5: 0.009370045890696703, Coverage@5: 0.008378760347264284, NCDG@5: 0.011122300827689214, HR_pos@5: 0.01576971214017522, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.008806841885690447, MRR_neg@5: 0.0005632040050062579, NCDG_pos@5: 0.0105138711510751, NDCG_neg@5: 0.0006084296766141158, Matthews@5: 0.018782619083409374
+HR@10:0.033541927409261575, MRR@10: 0.011602002503128914, Coverage@10: 0.012719563900666263, NCDG@10: 0.016586063603944375, HR_pos@10: 0.03254067584480601, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.011013767209011264, MRR_neg@10: 0.0005882352941176471, NCDG_pos@10: 0.015905277274935296, NDCG_neg@10: 0.0006807863290090817, Matthews@10: 0.03736025662557881
+HR@20:0.047058823529411764, MRR@20: 0.012522234200463953, Coverage@20: 0.02150211992731678, NCDG@20: 0.019979957596410136, HR_pos@20: 0.04430538172715895, HR_neg@20: 0.002753441802252816, MRR_pos@20: 0.0118243655861208, MRR_neg@20: 0.0006978686143431549, NCDG_pos@20: 0.01887195784127706, NDCG_neg@20: 0.0011079997551330842, Matthews@20: 0.021861549803675676
+Results for alpha=4
+HR@5:0.037797246558197745, MRR@5: 0.0215561118064247, Coverage@5: 0.03684635574399354, NCDG@5: 0.02559479354707153, HR_pos@5: 0.03404255319148936, HR_neg@5: 0.0037546933667083854, MRR_pos@5: 0.019002920317062997, MRR_neg@5: 0.002553191489361702, NCDG_pos@5: 0.02274644919739624, NDCG_neg@5: 0.0028483443496752905, Matthews@5: 0.045488443627907715
+HR@10:0.05481852315394243, MRR@10: 0.02379154498678904, Coverage@10: 0.05431051887744801, NCDG@10: 0.03106088679016921, HR_pos@10: 0.05006257822277847, HR_neg@10: 0.004755944931163955, MRR_pos@10: 0.021115680314679065, MRR_neg@10: 0.0026758646721099784, NCDG_pos@10: 0.027899436507716188, NDCG_neg@10: 0.003161450282453019, Matthews@10: 0.06300709676856474
+HR@20:0.08210262828535671, MRR@20: 0.02564880858419221, Coverage@20: 0.07914395315970119, NCDG@20: 0.03791486975276636, HR_pos@20: 0.07209011264080101, HR_neg@20: 0.010012515644555695, MRR_pos@20: 0.022614176740096525, MRR_neg@20: 0.003034631844095686, NCDG_pos@20: 0.03343192605039506, NDCG_neg@20: 0.0044829437023713135, Matthews@20: 0.05137504801684164
+Results for alpha=5
+HR@5:0.037797246558197745, MRR@5: 0.0215561118064247, Coverage@5: 0.03684635574399354, NCDG@5: 0.02559479354707153, HR_pos@5: 0.027284105131414268, HR_neg@5: 0.010513141426783479, MRR_pos@5: 0.015598664997914059, MRR_neg@5: 0.005957446808510639, NCDG_pos@5: 0.018508476060332693, NDCG_neg@5: 0.007086317486738834, Matthews@5: 0.04698917641590704
+HR@10:0.05481852315394243, MRR@10: 0.02379154498678904, Coverage@10: 0.05431051887744801, NCDG@10: 0.03106088679016921, HR_pos@10: 0.04030037546933667, HR_neg@10: 0.014518147684605758, MRR_pos@10: 0.017290859606253844, MRR_neg@10: 0.006500685380535193, NCDG_pos@10: 0.022670777011684438, NDCG_neg@10: 0.008390109778484771, Matthews@10: 0.06365393568505925
+HR@20:0.0821026282853567, MRR@20: 0.02564880858419221, Coverage@20: 0.07914395315970119, NCDG@20: 0.03791486975276636, HR_pos@20: 0.05732165206508135, HR_neg@20: 0.024780976220275343, MRR_pos@20: 0.018455277701646036, MRR_neg@20: 0.007193530882546178, NCDG_pos@20: 0.02695409130415865, NDCG_neg@20: 0.010960778448607718, Matthews@20: 0.05641000555072121
+Time spent: 15.884335239728292 minutes
+------------------------------
+
+Hidden sizes: 1024
+Current epoch 88
+Results for alpha=2
+HR@5:0.053817271589486855, MRR@5: 0.03271172298706717, Coverage@5: 0.21794871794871795, NCDG@5: 0.0379403758922424, HR_pos@5: 0.05306633291614518, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.03236128493950772, MRR_neg@5: 0.0003504380475594493, NCDG_pos@5: 0.0374963945118997, NDCG_neg@5: 0.0004439813803426992, Matthews@5: 0.03338860707625522
+HR@10:0.08185231539424281, MRR@10: 0.03639251445258955, Coverage@10: 0.3036543508984454, NCDG@10: 0.04694484273868537, HR_pos@10: 0.08085106382978724, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.036010787293640864, MRR_neg@10: 0.0003817271589486858, NCDG_pos@10: 0.04642189643298954, NDCG_neg@10: 0.0005229463056958228, Matthews@10: 0.0443610631014596
+HR@20:0.11589486858573217, MRR@20: 0.038746554922715525, Coverage@20: 0.398445386634363, NCDG@20: 0.05554238484084868, HR_pos@20: 0.11339173967459325, HR_neg@20: 0.0025031289111389237, MRR_pos@20: 0.03824912498020718, MRR_neg@20: 0.0004974299425083493, NCDG_pos@20: 0.05462541590245712, NDCG_neg@20: 0.000916968938391554, Matthews@20: 0.03689755124381599
+Results for alpha=3
+HR@5:0.051564455569461834, MRR@5: 0.031051314142678352, Coverage@5: 0.29254996971532404, NCDG@5: 0.03612794894650918, HR_pos@5: 0.0493116395494368, HR_neg@5: 0.0022528160200250315, MRR_pos@5: 0.030208594075928245, MRR_neg@5: 0.0008427200667501042, NCDG_pos@5: 0.03494134349141541, NDCG_neg@5: 0.0011866054550937599, Matthews@5: 0.035257893179049093
+HR@10:0.07759699624530664, MRR@10: 0.034452390885432185, Coverage@10: 0.400262467191601, NCDG@10: 0.04447353626565031, HR_pos@10: 0.07384230287859825, HR_neg@10: 0.0037546933667083854, MRR_pos@10: 0.03339243498817967, MRR_neg@10: 0.001059955897252518, NCDG_pos@10: 0.0427846818499155, NDCG_neg@10: 0.0016888544157348153, Matthews@10: 0.03900062999212306
+HR@20:0.11239048811013767, MRR@20: 0.03686191398429412, Coverage@20: 0.5162527760952957, NCDG@20: 0.053263328100702424, HR_pos@20: 0.10588235294117647, HR_neg@20: 0.006508135168961202, MRR_pos@20: 0.035608307144660636, MRR_neg@20: 0.0012536068396334905, NCDG_pos@20: 0.05087502999191315, NDCG_neg@20: 0.0023882981087892776, Matthews@20: 0.03577277786867321
+Results for alpha=4
+HR@5:0.05156445556946183, MRR@5: 0.031051314142678352, Coverage@5: 0.29254996971532404, NCDG@5: 0.03612794894650918, HR_pos@5: 0.04455569461827284, HR_neg@5: 0.007008760951188986, MRR_pos@5: 0.02746766791823112, MRR_neg@5: 0.003583646224447226, NCDG_pos@5: 0.031704040648282535, NDCG_neg@5: 0.004423908298226646, Matthews@5: 0.03173691752393042
+HR@10:0.07759699624530664, MRR@10: 0.034452390885432185, Coverage@10: 0.400262467191601, NCDG@10: 0.04447353626565031, HR_pos@10: 0.06733416770963704, HR_neg@10: 0.010262828535669587, MRR_pos@10: 0.030429008482825756, MRR_neg@10: 0.004023382402606433, NCDG_pos@10: 0.03899165267747626, NDCG_neg@10: 0.00548188358817406, Matthews@10: 0.04219134604985028
+HR@20:0.11239048811013769, MRR@20: 0.03686191398429412, Coverage@20: 0.5162527760952957, NCDG@20: 0.053263328100702424, HR_pos@20: 0.09586983729662078, HR_neg@20: 0.016520650813516898, MRR_pos@20: 0.032404514242347526, MRR_neg@20: 0.004457399741946602, NCDG_pos@20: 0.046198789800474066, NDCG_neg@20: 0.0070645383002283565, Matthews@20: 0.03837614140787535
+Results for alpha=5
+HR@5:0.05206508135168961, MRR@5: 0.031639549436796, Coverage@5: 0.26610135271552593, NCDG@5: 0.0367163777290651, HR_pos@5: 0.034793491864831036, HR_neg@5: 0.017271589486858575, MRR_pos@5: 0.0221026282853567, MRR_neg@5: 0.0095369211514393, NCDG_pos@5: 0.025270348327731208, NDCG_neg@5: 0.011446029401333895, Matthews@5: 0.029862225009781557
+HR@10:0.0783479349186483, MRR@10: 0.03509615193595168, Coverage@10: 0.36351706036745407, NCDG@10: 0.0451642819623072, HR_pos@10: 0.05356695869837297, HR_neg@10: 0.024780976220275343, MRR_pos@10: 0.02452937203250094, MRR_neg@10: 0.010566779903450741, NCDG_pos@10: 0.03126287220771842, NDCG_neg@10: 0.01390140975458878, Matthews@10: 0.04636179866945
+HR@20:0.1148936170212766, MRR@20: 0.037642653909175136, Coverage@20: 0.4758732081566727, NCDG@20: 0.05441537769066041, HR_pos@20: 0.07234042553191489, HR_neg@20: 0.0425531914893617, MRR_pos@20: 0.02581011045782219, MRR_neg@20: 0.011832543451352954, NCDG_pos@20: 0.03598223023410479, NDCG_neg@20: 0.018433147456555617, Matthews@20: 0.017417511877720566
+Time spent: 22.962035171190898 minutes
+------------------------------
+
+batch size 64
+Hidden sizes: 16
+Current epoch 63
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.007259073842302879, MRR@10: 0.0014087053261020721, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0027053122570464077, HR_pos@10: 0.007259073842302879, HR_neg@10: 0.0, MRR_pos@10: 0.0014087053261020721, MRR_neg@10: 0.0, NCDG_pos@10: 0.0027053122570464077, NDCG_neg@10: 0.0, Matthews@10: 0.0179162887738347
+HR@20:0.016020025031289114, MRR@20: 0.0020380048591783846, Coverage@20: 0.00343226327478296, NCDG@20: 0.004946502868062703, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0020152491418043944, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004876679852880943, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.016800744917088047
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.007259073842302879, MRR@10: 0.0014087053261020721, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0027053122570464077, HR_pos@10: 0.007259073842302879, HR_neg@10: 0.0, MRR_pos@10: 0.0014087053261020721, MRR_neg@10: 0.0, NCDG_pos@10: 0.0027053122570464077, NDCG_neg@10: 0.0, Matthews@10: 0.02624798376917582
+HR@20:0.016020025031289114, MRR@20: 0.0020380048591783846, Coverage@20: 0.00343226327478296, NCDG@20: 0.004946502868062703, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0020152491418043944, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004876679852880943, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.032059167457933864
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.006257822277847309, MRR@10: 0.0012704372529153502, Coverage@10: 0.0018170805572380376, NCDG@10: 0.00237691709306829, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.0012704372529153502, MRR_neg@10: 0.0, NCDG_pos@10: 0.00237691709306829, NDCG_neg@10: 0.0, Matthews@10: 0.038338063704917866
+HR@20:0.01576971214017522, MRR@20: 0.0019518264559085707, Coverage@20: 0.0032303654350898446, NCDG@20: 0.004808414867691896, HR_pos@20: 0.014518147684605758, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.0018611549614602964, MRR_neg@20: 9.067149444827425e-05, NCDG_pos@20: 0.004487102199665663, NDCG_neg@20: 0.00032131266802623457, Matthews@20: 0.03550576322382776
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0006675010429703797, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0008741634217066943, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.00047976637463496033, MRR_neg@5: 0.00018773466833541926, NCDG_pos@5: 0.0006084296766141158, NDCG_neg@5: 0.0002657337450925784, Matthews@5: 0.004814564446620437
+HR@10:0.005757196495619525, MRR@10: 0.001186800961519359, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0022014099377560274, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0009712537497268411, MRR_neg@10: 0.00021554721179251843, NCDG_pos@10: 0.0018603245041367946, NDCG_neg@10: 0.000341085433619232, Matthews@10: 0.04104422362218856
+HR@20:0.01476846057571965, MRR@20: 0.001800900029451973, Coverage@20: 0.0029275186755501714, NCDG@20: 0.004466067364344804, HR_pos@20: 0.010513141426783479, HR_neg@20: 0.00425531914893617, MRR_pos@20: 0.0013580310434059507, MRR_neg@20: 0.0004428689860460223, NCDG_pos@20: 0.0032580675114809885, NDCG_neg@20: 0.0012079998528638166, Matthews@20: 0.0265237329581281
+Time spent: 14.854711425304412 minutes
+------------------------------
+
+Hidden sizes: 32
+Current epoch 57
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0006675010429703796, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0008741634217066943, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006675010429703796, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008741634217066943, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.005256570713391739, MRR@10: 0.0011353477561237256, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0020542966132319944, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.0011353477561237256, MRR_neg@10: 0.0, NCDG_pos@10: 0.0020542966132319944, NDCG_neg@10: 0.0, Matthews@10: 0.01523074425299448
+HR@20:0.016520650813516898, MRR@20: 0.001932418684754228, Coverage@20: 0.002826569755703614, NCDG@20: 0.004923538004979904, HR_pos@20: 0.016270337922403004, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0019145391925318072, MRR_neg@20: 1.7879492222420883e-05, NCDG_pos@20: 0.004859468411785958, NDCG_neg@20: 6.40695931939463e-05, Matthews@20: 0.0173713314046241
+Results for alpha=3
+HR@5:0.0050062578222778474, MRR@5: 0.001543596161869003, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0023786956505756087, HR_pos@5: 0.004755944931163955, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.00148101793909053, MRR_neg@5: 6.257822277847309e-05, NCDG_pos@5: 0.002270891756189277, NDCG_neg@5: 0.00010780389438633117, Matthews@5: 0.00913013323946041
+HR@10:0.010513141426783479, MRR@10: 0.0022286787055247627, Coverage@10: 0.0019180294770845953, NCDG@10: 0.004109447751632789, HR_pos@10: 0.010262828535669587, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.00216610048274629, MRR_neg@10: 6.257822277847309e-05, NCDG_pos@10: 0.004001643857246458, NDCG_neg@10: 0.00010780389438633117, Matthews@10: 0.022891157856890214
+HR@20:0.018272841051314145, MRR@20: 0.0027561719354382004, Coverage@20: 0.0030284675953967293, NCDG@20: 0.0060584339690622, HR_pos@20: 0.018022528160200252, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.002693593712659728, MRR_neg@20: 6.257822277847309e-05, NCDG_pos@20: 0.005950630074675867, NDCG_neg@20: 0.00010780389438633117, Matthews@20: 0.03521533769917704
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0007926574885273258, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0009665464621143394, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007926574885273258, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009665464621143394, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.0050062578222778474, MRR@10: 0.0012207719967419588, Coverage@10: 0.0016151827175449223, NCDG@10: 0.002059876724174468, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0012207719967419588, MRR_neg@10: 0.0, NCDG_pos@10: 0.002059876724174468, NDCG_neg@10: 0.0, Matthews@10: 0.0342690334225411
+HR@20:0.01576971214017522, MRR@20: 0.0018957168604366917, Coverage@20: 0.003331314354936402, NCDG@20: 0.004690864603666918, HR_pos@20: 0.014518147684605758, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.001818798602190768, MRR_neg@20: 7.691825824592402e-05, NCDG_pos@20: 0.004387047425952178, NDCG_neg@20: 0.00030381717771474077, Matthews@20: 0.03550576322382776
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0006675010429703796, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0008741634217066943, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.00045890696704213596, MRR_neg@5: 0.0002085940759282436, NCDG_pos@5: 0.0005910771254435009, NDCG_neg@5: 0.0002830862962631934, Matthews@5: 0.004814564446620437
+HR@10:0.00525657071339174, MRR@10: 0.0011353477561237256, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0020542966132319944, HR_pos@10: 0.00425531914893617, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.0008600035758984444, MRR_neg@10: 0.00027534418022528154, NCDG_pos@10: 0.0016096904137332787, NDCG_neg@10: 0.0004446061994987153, Matthews@10: 0.030276937169639053
+HR@20:0.016520650813516898, MRR@20: 0.001932418684754228, Coverage@20: 0.002826569755703614, NCDG@20: 0.004923538004979904, HR_pos@20: 0.011764705882352941, HR_neg@20: 0.004755944931163955, MRR_pos@20: 0.0013834060162190912, MRR_neg@20: 0.0005490126685351367, NCDG_pos@20: 0.0035126922284231467, NDCG_neg@20: 0.0014108457765567581, Matthews@20: 0.028146179133655
+Time spent: 14.07154407898585 minutes
+------------------------------
+
+Hidden sizes: 64
+Current epoch 54
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0007592824363788069, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0009460931334039835, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007592824363788069, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009460931334039835, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.006257822277847309, MRR@10: 0.001290800007946441, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0023793256673419155, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.001290800007946441, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023793256673419155, NDCG_neg@10: 0.0, Matthews@10: 0.016626474121349273
+HR@20:0.01576971214017522, MRR@20: 0.0019995944517695774, Coverage@20: 0.0031294165152432867, NCDG@20: 0.004842369795698833, HR_pos@20: 0.015519399249061327, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.001978735044176753, MRR_neg@20: 2.085940759282436e-05, NCDG_pos@20: 0.0047747257019748485, NDCG_neg@20: 6.764409372398492e-05, Matthews@20: 0.016510438440761034
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0007592824363788069, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0009460931334039835, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007592824363788069, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009460931334039835, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.006257822277847309, MRR@10: 0.001290800007946441, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0023793256673419155, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.001290800007946441, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023793256673419155, NDCG_neg@10: 0.0, Matthews@10: 0.024358360617246895
+HR@20:0.01576971214017522, MRR@20: 0.0019995944517695774, Coverage@20: 0.0031294165152432867, NCDG@20: 0.004842369795698833, HR_pos@20: 0.015519399249061327, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.001978735044176753, MRR_neg@20: 2.085940759282436e-05, NCDG_pos@20: 0.0047747257019748485, NDCG_neg@20: 6.764409372398492e-05, Matthews@20: 0.03169176266175752
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0010095953274926993, Coverage@5: 0.0007066424389259035, NCDG@5: 0.001130859214219274, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0010095953274926993, MRR_neg@5: 0.0, NCDG_pos@5: 0.001130859214219274, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.004505632040050063, MRR@10: 0.0013599340445398017, Coverage@10: 0.00171613163739148, NCDG@10: 0.0020507059425786496, HR_pos@10: 0.004505632040050063, HR_neg@10: 0.0, MRR_pos@10: 0.0013599340445398017, MRR_neg@10: 0.0, NCDG_pos@10: 0.0020507059425786496, NDCG_neg@10: 0.0, Matthews@10: 0.032502284001333065
+HR@20:0.010262828535669588, MRR@20: 0.001739643477322542, Coverage@20: 0.00343226327478296, NCDG@20: 0.0034800331700337046, HR_pos@20: 0.009762202753441803, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.0017110129178814105, MRR_neg@20: 2.863055944113148e-05, NCDG_pos@20: 0.0033610791325030995, NDCG_neg@20: 0.00011895403753060568, Matthews@20: 0.036514426407647356
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0010095953274926993, Coverage@5: 0.0007066424389259035, NCDG@5: 0.001130859214219274, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0006758448060075094, MRR_neg@5: 0.0003337505214851898, NCDG_pos@5: 0.0007553898775484354, NDCG_neg@5: 0.0003754693366708385, Matthews@5: 0.004814564446620437
+HR@10:0.004505632040050062, MRR@10: 0.0013599340445398017, Coverage@10: 0.00171613163739148, NCDG@10: 0.0020507059425786496, HR_pos@10: 0.0037546933667083854, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0009904245386097702, MRR_neg@10: 0.00036950950593003155, NCDG_pos@10: 0.0015917989755365137, NDCG_neg@10: 0.00045890696704213596, Matthews@10: 0.031298552727020146
+HR@20:0.010262828535669587, MRR@20: 0.001739643477322542, Coverage@20: 0.00343226327478296, NCDG@20: 0.0034800331700337046, HR_pos@20: 0.007509386733416771, HR_neg@20: 0.002753441802252816, MRR_pos@20: 0.0012261992224755272, MRR_neg@20: 0.0005134442548470144, NCDG_pos@20: 0.002508825905508781, NDCG_neg@20: 0.0009712072645249243, Matthews@20: 0.02619541203811022
+Time spent: 13.100050489107767 minutes
+------------------------------
+
+Hidden sizes: 128
+Current epoch 81
+Results for alpha=2
+HR@5:0.009011264080100124, MRR@5: 0.0066916979557780564, Coverage@5: 0.0020189783969311527, NCDG@5: 0.007257458866600884, HR_pos@5: 0.008760951188986232, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.006441385064664164, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.007007145975486992, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.006782051388100554
+HR@10:0.014518147684605756, MRR@10: 0.007346484693168047, Coverage@10: 0.003937007874015748, NCDG@10: 0.008956670456050957, HR_pos@10: 0.014267834793491864, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.007096171802054155, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.008706357564937066, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.015004161582340353
+HR@20:0.02778473091364205, MRR@20: 0.008314833275407059, Coverage@20: 0.006561679790026247, NCDG@20: 0.0123707251726055, HR_pos@20: 0.027284105131414268, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.008041764666919176, MRR_neg@20: 0.00027306860848788254, NCDG_pos@20: 0.01205058926630985, NDCG_neg@20: 0.000320135906295652, Matthews@20: 0.02024373967822276
+Results for alpha=3
+HR@5:0.009011264080100124, MRR@5: 0.0066916979557780564, Coverage@5: 0.0020189783969311527, NCDG@5: 0.007257458866600884, HR_pos@5: 0.008760951188986232, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.006441385064664164, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.007007145975486992, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.019828097938158772
+HR@10:0.014518147684605756, MRR@10: 0.007346484693168047, Coverage@10: 0.003937007874015748, NCDG@10: 0.008956670456050957, HR_pos@10: 0.014267834793491864, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.007096171802054155, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.008706357564937066, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.029796784712394032
+HR@20:0.02778473091364205, MRR@20: 0.008314833275407059, Coverage@20: 0.006561679790026247, NCDG@20: 0.0123707251726055, HR_pos@20: 0.02653316645807259, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.00798027004972994, MRR_neg@20: 0.000334563225677118, NCDG_pos@20: 0.011849052564210158, NDCG_neg@20: 0.0005216726083953428, Matthews@20: 0.02474570653016375
+Results for alpha=4
+HR@5:0.009011264080100126, MRR@5: 0.0066916979557780564, Coverage@5: 0.0020189783969311527, NCDG@5: 0.007257458866600884, HR_pos@5: 0.008260325406758449, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.005940759282436378, MRR_neg@5: 0.000750938673341677, NCDG_pos@5: 0.006506520193259209, NDCG_neg@5: 0.000750938673341677, Matthews@5: 0.02578208554791632
+HR@10:0.014518147684605758, MRR@10: 0.007346484693168047, Coverage@10: 0.003937007874015748, NCDG@10: 0.008956670456050957, HR_pos@10: 0.01376720901126408, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.00659554601982637, MRR_neg@10: 0.000750938673341677, NCDG_pos@10: 0.00820573178270928, NDCG_neg@10: 0.000750938673341677, Matthews@10: 0.04261118261603232
+HR@20:0.02778473091364205, MRR@20: 0.008314833275407059, Coverage@20: 0.006561679790026247, NCDG@20: 0.0123707251726055, HR_pos@20: 0.02553191489361702, HR_neg@20: 0.0022528160200250315, MRR_pos@20: 0.007445665142011583, MRR_neg@20: 0.0008691681333954763, NCDG_pos@20: 0.011222654065685669, NDCG_neg@20: 0.0011480711069198298, Matthews@20: 0.046678915550286006
+Results for alpha=5
+HR@5:0.007509386733416771, MRR@5: 0.002461410095953275, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0036840746498276278, HR_pos@5: 0.005256570713391739, HR_neg@5: 0.0022528160200250315, MRR_pos@5: 0.0017939090529828952, MRR_neg@5: 0.0006675010429703796, NCDG_pos@5: 0.002629008541689501, NDCG_neg@5: 0.0010550661081381266, Matthews@5: 0.01673205232849615
+HR@10:0.011264080100125156, MRR@10: 0.0028948884518346344, Coverage@10: 0.00171613163739148, NCDG@10: 0.004829735176270042, HR_pos@10: 0.008760951188986232, HR_neg@10: 0.0025031289111389237, MRR_pos@10: 0.0022023561197528655, MRR_neg@10: 0.0006925323320817688, NCDG_pos@10: 0.0037023124157369498, NDCG_neg@10: 0.0011274227605330923, Matthews@10: 0.03752085517280363
+HR@20:0.018022528160200252, MRR@20: 0.003321090841772654, Coverage@20: 0.0026246719160104987, NCDG@20: 0.0064850620202449305, HR_pos@20: 0.013016270337922404, HR_neg@20: 0.0050062578222778474, MRR_pos@20: 0.0024748336838430105, MRR_neg@20: 0.0008462571579296434, NCDG_pos@20: 0.0047498585794693, NDCG_neg@20: 0.0017352034407756302, Matthews@20: 0.03222071937701524
+Time spent: 20.19769388437271 minutes
+------------------------------
+
+Hidden sizes: 256
+Current epoch 80
+Results for alpha=2
+HR@5:0.016270337922403004, MRR@5: 0.00878598247809762, Coverage@5: 0.005451241671714113, NCDG@5: 0.010607152183497592, HR_pos@5: 0.01602002503128911, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.00853566958698373, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.010356839292383698, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.017087674091645872
+HR@10:0.02853566958698373, MRR@10: 0.010403877863202021, Coverage@10: 0.009489198465576418, NCDG@10: 0.014554300662404691, HR_pos@10: 0.028035043804755945, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.010117805987643285, MRR_neg@10: 0.0002860718755587341, NCDG_pos@10: 0.014220550140919504, NDCG_neg@10: 0.0003337505214851898, Matthews@10: 0.020928297446745545
+HR@20:0.04230287859824781, MRR@20: 0.011333826416456794, Coverage@20: 0.013022410660205935, NCDG@20: 0.018005224525049317, HR_pos@20: 0.04080100125156445, HR_neg@20: 0.001501877346683354, MRR_pos@20: 0.01097255231300497, MRR_neg@20: 0.0003612741034518256, NCDG_pos@20: 0.017410933579215998, NDCG_neg@20: 0.0005942909458333151, Matthews@20: 0.006858340312571515
+Results for alpha=3
+HR@5:0.007759699624530663, MRR@5: 0.0027826449728827712, Coverage@5: 0.0018170805572380376, NCDG@5: 0.004022946618815793, HR_pos@5: 0.007509386733416771, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.0026992073425114735, MRR_neg@5: 8.343763037129745e-05, NCDG_pos@5: 0.0038977901732588473, NDCG_neg@5: 0.00012515644555694618, Matthews@5: 0.016975708529009335
+HR@10:0.012515644555694618, MRR@10: 0.003380316665673361, Coverage@10: 0.0029275186755501714, NCDG@10: 0.005523636970207162, HR_pos@10: 0.012265331664580726, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.0032968790353020637, MRR_neg@10: 8.343763037129745e-05, NCDG_pos@10: 0.005398480524650215, NDCG_neg@10: 0.00012515644555694618, Matthews@10: 0.02653045888529077
+HR@20:0.026032540675844804, MRR@20: 0.004337345440446452, Coverage@20: 0.005047445992327882, NCDG@20: 0.008962810811636626, HR_pos@20: 0.024780976220275343, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.00417850692115737, MRR_neg@20: 0.00015883851928908248, NCDG_pos@20: 0.008577191778281206, NDCG_neg@20: 0.0003856190333554201, Matthews@20: 0.022164204586877696
+Results for alpha=4
+HR@5:0.015018773466833543, MRR@5: 0.008648310387984984, Coverage@5: 0.004340803553401979, NCDG@5: 0.010196525478829103, HR_pos@5: 0.01376720901126408, HR_neg@5: 0.0012515644555694619, MRR_pos@5: 0.007751355861493533, MRR_neg@5: 0.0008969545264914476, NCDG_pos@5: 0.00921262646554415, NDCG_neg@5: 0.0009838990132849544, Matthews@5: 0.03338587803175669
+HR@10:0.02453066332916145, MRR@10: 0.009901364801239645, Coverage@10: 0.00686452654956592, NCDG@10: 0.013256692884648898, HR_pos@10: 0.02252816020025031, HR_neg@10: 0.002002503128911139, MRR_pos@10: 0.00889911993166061, MRR_neg@10: 0.0010022448695790373, NCDG_pos@10: 0.012024841301625436, NDCG_neg@10: 0.001231851583023462, Matthews@10: 0.04356384751863071
+HR@20:0.03504380475594493, MRR@20: 0.010617441845369944, Coverage@20: 0.009993943064809207, NCDG@20: 0.01589795215918, HR_pos@20: 0.03053817271589487, HR_neg@20: 0.004505632040050063, MRR_pos@20: 0.009444869601789824, MRR_neg@20: 0.001172572243580121, NCDG_pos@20: 0.014037355943497988, NDCG_neg@20: 0.001860596215682014, Matthews@20: 0.029514897467693813
+Results for alpha=5
+HR@5:0.015018773466833543, MRR@5: 0.008648310387984984, Coverage@5: 0.004340803553401979, NCDG@5: 0.010196525478829103, HR_pos@5: 0.010763454317897372, HR_neg@5: 0.00425531914893617, MRR_pos@5: 0.005782227784730913, MRR_neg@5: 0.002866082603254067, NCDG_pos@5: 0.006990064343653589, NDCG_neg@5: 0.0032064611351755143, Matthews@5: 0.027964537454231365
+HR@10:0.024530663329161453, MRR@10: 0.009901364801239645, Coverage@10: 0.00686452654956592, NCDG@10: 0.013256692884648898, HR_pos@10: 0.018022528160200252, HR_neg@10: 0.006508135168961202, MRR_pos@10: 0.006729840872519221, MRR_neg@10: 0.0031715239287204242, NCDG_pos@10: 0.009316572365745296, NDCG_neg@10: 0.003940120518903603, Matthews@10: 0.041763549661364155
+HR@20:0.03504380475594493, MRR@20: 0.010617441845369944, Coverage@20: 0.009993943064809207, NCDG@20: 0.01589795215918, HR_pos@20: 0.0230287859824781, HR_neg@20: 0.012015018773466833, MRR_pos@20: 0.0070798393176695, MRR_neg@20: 0.003537602527700444, NCDG_pos@20: 0.010585198849038907, NDCG_neg@20: 0.0053127533101410915, Matthews@20: 0.019942980534802427
+Time spent: 20.368989590803782 minutes
+------------------------------
+
+Hidden sizes: 512
+Current epoch 90
+Results for alpha=2
+HR@5:0.018272841051314145, MRR@5: 0.009766374634960367, Coverage@5: 0.006662628709872804, NCDG@5: 0.011828772923124528, HR_pos@5: 0.018022528160200252, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.009516061743846475, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.011578460032010634, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.019273202976992046
+HR@10:0.030287859824780976, MRR@10: 0.01131334803424916, Coverage@10: 0.01029678982434888, NCDG@10: 0.015656735006829167, HR_pos@10: 0.029787234042553193, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.011027276158690428, MRR_neg@10: 0.0002860718755587341, NCDG_pos@10: 0.015322984485343975, NDCG_neg@10: 0.0003337505214851898, Matthews@10: 0.02247441523502615
+HR@20:0.04755944931163955, MRR@20: 0.012525485312928596, Coverage@20: 0.015243286896830204, NCDG@20: 0.0200393120447586, HR_pos@20: 0.04630788485607009, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.012184053940060866, MRR_neg@20: 0.00034143137286772715, NCDG_pos@20: 0.01951164076306588, NDCG_neg@20: 0.0005276712816927185, Matthews@20: 0.017520566774004907
+Results for alpha=3
+HR@5:0.030287859824780976, MRR@5: 0.01605340008343763, Coverage@5: 0.021300222087623662, NCDG@5: 0.019545013659662908, HR_pos@5: 0.029036295369211516, HR_neg@5: 0.0012515644555694619, MRR_pos@5: 0.015481852315394243, MRR_neg@5: 0.0005715477680433875, NCDG_pos@5: 0.018806976333285083, NDCG_neg@5: 0.0007380373263778204, Matthews@5: 0.028215010051654957
+HR@10:0.04630788485607008, MRR@10: 0.018127619842263146, Coverage@10: 0.030486573793660408, NCDG@10: 0.024659938252370693, HR_pos@10: 0.04380475594493116, HR_neg@10: 0.0025031289111389237, MRR_pos@10: 0.017411148856705805, MRR_neg@10: 0.0007164709855573435, NCDG_pos@10: 0.023539433376951864, NDCG_neg@10: 0.0011205048754188262, Matthews@10: 0.025178599562716106
+HR@20:0.07033792240300377, MRR@20: 0.019799491700678167, Coverage@20: 0.04522511609125782, NCDG@20: 0.030739253868798517, HR_pos@20: 0.06633291614518148, HR_neg@20: 0.004005006257822278, MRR_pos@20: 0.018975503668783193, MRR_neg@20: 0.0008239880318949744, NCDG_pos@20: 0.029235516033589627, NDCG_neg@20: 0.0015037378352088895, Matthews@20: 0.028600424833013713
+Results for alpha=4
+HR@5:0.030287859824780976, MRR@5: 0.01605340008343763, Coverage@5: 0.021300222087623662, NCDG@5: 0.019545013659662908, HR_pos@5: 0.027284105131414268, HR_neg@5: 0.003003754693366708, MRR_pos@5: 0.014409678765123071, MRR_neg@5: 0.0016437213183145597, NCDG_pos@5: 0.01756831322467948, NDCG_neg@5: 0.0019767004349834252, Matthews@5: 0.04063587908039025
+HR@10:0.04630788485607008, MRR@10: 0.018127619842263146, Coverage@10: 0.030486573793660408, NCDG@10: 0.024659938252370693, HR_pos@10: 0.04105131414267835, HR_neg@10: 0.005256570713391739, MRR_pos@10: 0.016211434928581365, MRR_neg@10: 0.001916184913681785, NCDG_pos@10: 0.021983456082344473, NDCG_neg@10: 0.0026764821700262166, Matthews@10: 0.04259923345206878
+HR@20:0.07033792240300375, MRR@20: 0.019799491700678167, Coverage@20: 0.04522511609125782, NCDG@20: 0.030739253868798517, HR_pos@20: 0.0623279098873592, HR_neg@20: 0.008010012515644555, MRR_pos@20: 0.017688473383779435, MRR_neg@20: 0.002111018316898732, NCDG_pos@20: 0.027363021721611324, NDCG_neg@20: 0.0033762321471871907, Matthews@20: 0.05291872197570314
+Results for alpha=5
+HR@5:0.019274092615769713, MRR@5: 0.010120984564038383, Coverage@5: 0.007470220068645265, NCDG@5: 0.012342887862139069, HR_pos@5: 0.014267834793491864, HR_neg@5: 0.0050062578222778474, MRR_pos@5: 0.006816854401335002, MRR_neg@5: 0.003304130162703379, NCDG_pos@5: 0.008634902952720925, NDCG_neg@5: 0.003707984909418146, Matthews@5: 0.03851693163988535
+HR@10:0.03354192740926158, MRR@10: 0.011983034348491168, Coverage@10: 0.011104381183121341, NCDG@10: 0.016916591902304358, HR_pos@10: 0.024530663329161453, HR_neg@10: 0.009011264080100126, MRR_pos@10: 0.00815255180086219, MRR_neg@10: 0.0038304825476289804, NCDG_pos@10: 0.011920490709364372, NDCG_neg@10: 0.004996101192939987, Matthews@10: 0.047785327990817424
+HR@20:0.049561952440550686, MRR@20: 0.013096734705566566, Coverage@20: 0.01706036745406824, NCDG@20: 0.020968760398547226, HR_pos@20: 0.03379224030037547, HR_neg@20: 0.01576971214017522, MRR_pos@20: 0.008784729955368949, MRR_neg@20: 0.004312004750197614, NCDG_pos@20: 0.014247811881417643, NDCG_neg@20: 0.006720948517129584, Matthews@20: 0.03542906329925547
+Time spent: 22.886455281575522 minutes
+------------------------------
+
+Hidden sizes: 1024
+Current epoch 79
+Results for alpha=2
+HR@5:0.03829787234042553, MRR@5: 0.021247392574050894, Coverage@5: 0.0514839491217444, NCDG@5: 0.02547647880786768, HR_pos@5: 0.037296620775969964, HR_neg@5: 0.0010012515644555694, MRR_pos@5: 0.020884438881935755, MRR_neg@5: 0.0003629536921151439, NCDG_pos@5: 0.02495598096745445, NDCG_neg@5: 0.000520497840413229, Matthews@5: 0.01581745772943756
+HR@10:0.061827284105131414, MRR@10: 0.024285217633152553, Coverage@10: 0.07439935392691298, NCDG@10: 0.032982469769308805, HR_pos@10: 0.06057571964956195, HR_neg@10: 0.0012515644555694619, MRR_pos@10: 0.023897232651926018, MRR_neg@10: 0.0003879849812265332, NCDG_pos@10: 0.03238961527650061, NDCG_neg@10: 0.0005928544928081946, Matthews@10: 0.02789525320056628
+HR@20:0.09036295369211514, MRR@20: 0.02624615535874579, Coverage@20: 0.10498687664041995, NCDG@20: 0.04017314802781302, HR_pos@20: 0.08710888610763454, HR_neg@20: 0.003254067584480601, MRR_pos@20: 0.025712286399823456, MRR_neg@20: 0.0005338689589223345, NCDG_pos@20: 0.039065174952675474, NDCG_neg@20: 0.00110797307513755, Matthews@20: 0.009487193961266294
+Results for alpha=3
+HR@5:0.03829787234042553, MRR@5: 0.021247392574050894, Coverage@5: 0.0514839491217444, NCDG@5: 0.02547647880786768, HR_pos@5: 0.03629536921151439, HR_neg@5: 0.002002503128911139, MRR_pos@5: 0.020175219023779722, MRR_neg@5: 0.0010721735502711722, NCDG_pos@5: 0.024172268888963473, NDCG_neg@5: 0.001304209918904207, Matthews@5: 0.024058744657569412
+HR@10:0.061827284105131414, MRR@10: 0.024285217633152553, Coverage@10: 0.07439935392691298, NCDG@10: 0.032982469769308805, HR_pos@10: 0.05932415519399249, HR_neg@10: 0.0025031289111389237, MRR_pos@10: 0.023146293978584344, MRR_neg@10: 0.0011389236545682102, NCDG_pos@10: 0.031516739947169074, NDCG_neg@10: 0.001465729822139729, Matthews@10: 0.0417496454167264
+HR@20:0.09036295369211514, MRR@20: 0.02624615535874579, Coverage@20: 0.10498687664041995, NCDG@20: 0.04017314802781302, HR_pos@20: 0.08485607008760951, HR_neg@20: 0.005506883604505632, MRR_pos@20: 0.02488296692219359, MRR_neg@20: 0.0013631884365521995, NCDG_pos@20: 0.037928262535015425, NDCG_neg@20: 0.0022448854927975964, Matthews@20: 0.02827506647901131
+Results for alpha=4
+HR@5:0.0392991239048811, MRR@5: 0.021706299541093033, Coverage@5: 0.04704219664849586, NCDG@5: 0.02606161875827092, HR_pos@5: 0.03504380475594493, HR_neg@5: 0.00425531914893617, MRR_pos@5: 0.01911556111806425, MRR_neg@5: 0.002590738423028786, NCDG_pos@5: 0.023063794700646484, NDCG_neg@5: 0.0029978240576244396, Matthews@5: 0.04180212457887604
+HR@10:0.058823529411764705, MRR@10: 0.024183105866460063, Coverage@10: 0.06844336765596608, NCDG@10: 0.03224729846561183, HR_pos@10: 0.052565707133917394, HR_neg@10: 0.006257822277847309, MRR_pos@10: 0.02131007012734172, MRR_neg@10: 0.002873035739118342, NCDG_pos@10: 0.028587183212997306, NDCG_neg@10: 0.0036601152526145302, Matthews@10: 0.05288124005162076
+HR@20:0.08785982478097622, MRR@20: 0.02618051692006364, Coverage@20: 0.09670906521300222, NCDG@20: 0.0395658817192412, HR_pos@20: 0.0753441802252816, HR_neg@20: 0.012515644555694618, MRR_pos@20: 0.022850867641434024, MRR_neg@20: 0.003329649278629622, NCDG_pos@20: 0.03429492603024516, NDCG_neg@20: 0.005270955688996048, Matthews@20: 0.03707101229860199
+Results for alpha=5
+HR@5:0.01877346683354193, MRR@5: 0.010158531497705464, Coverage@5: 0.005955986270946901, NCDG@5: 0.01225536265843763, HR_pos@5: 0.01376720901126408, HR_neg@5: 0.0050062578222778474, MRR_pos@5: 0.006929495202336254, MRR_neg@5: 0.0032290362953692115, NCDG_pos@5: 0.008595882190339419, NDCG_neg@5: 0.003659480468098212, Matthews@5: 0.03604301547893313
+HR@10:0.0295369211514393, MRR@10: 0.011462343802769337, Coverage@10: 0.009085402786190187, NCDG@10: 0.015602811069421203, HR_pos@10: 0.02227784730913642, HR_neg@10: 0.007259073842302879, MRR_pos@10: 0.00795458608975505, MRR_neg@10: 0.003507757713014284, NCDG_pos@10: 0.01123694059332204, NDCG_neg@10: 0.004365870476099161, Matthews@10: 0.052923138158942035
+HR@20:0.042302878598247814, MRR@20: 0.012432102910971621, Coverage@20: 0.014334746618211184, NCDG@20: 0.018935181309995466, HR_pos@20: 0.029787234042553193, HR_neg@20: 0.012515644555694618, MRR_pos@20: 0.008530427604085854, MRR_neg@20: 0.0039016753068857675, NCDG_pos@20: 0.013204368050222856, NDCG_neg@20: 0.005730813259772611, Matthews@20: 0.04220944281284089
+Time spent: 20.03618956009547 minutes
+------------------------------
+
+batch size 128
+Hidden sizes: 16
+Current epoch 54
+Results for alpha=2
+HR@5:0.0017521902377972466, MRR@5: 0.0004839382561535252, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0007891968188790659, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0004839382561535252, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007891968188790659, NDCG_neg@5: 0.0, Matthews@5: 0.008778025839763472
+HR@10:0.0050062578222778474, MRR@10: 0.0008693406440590421, Coverage@10: 0.002523722996163941, NCDG@10: 0.0017925043619069344, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0008693406440590421, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017925043619069344, NDCG_neg@10: 0.0, Matthews@10: 0.014861814664115222
+HR@20:0.00851063829787234, MRR@20: 0.0011133093091772088, Coverage@20: 0.004138905713708864, NCDG@20: 0.002679625724129582, HR_pos@20: 0.008260325406758449, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0010905535918032186, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.002609802708947822, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.005835049484555037
+Results for alpha=3
+HR@5:0.0017521902377972466, MRR@5: 0.0004839382561535252, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0007891968188790659, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0004839382561535252, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007891968188790659, NDCG_neg@5: 0.0, Matthews@5: 0.012860111972743284
+HR@10:0.0050062578222778474, MRR@10: 0.0008693406440590421, Coverage@10: 0.002523722996163941, NCDG@10: 0.0017925043619069344, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0008693406440590421, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017925043619069344, NDCG_neg@10: 0.0, Matthews@10: 0.02177307337521237
+HR@20:0.00851063829787234, MRR@20: 0.0011133093091772088, Coverage@20: 0.004138905713708864, NCDG@20: 0.002679625724129582, HR_pos@20: 0.008260325406758449, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0010905535918032186, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.002609802708947822, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.018724925820770098
+Results for alpha=4
+HR@5:0.0017521902377972466, MRR@5: 0.0004839382561535252, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0007891968188790659, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0004839382561535252, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007891968188790659, NDCG_neg@5: 0.0, Matthews@5: 0.020240762496730545
+HR@10:0.0050062578222778474, MRR@10: 0.0008693406440590421, Coverage@10: 0.002523722996163941, NCDG@10: 0.0017925043619069344, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0008693406440590421, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017925043619069344, NDCG_neg@10: 0.0, Matthews@10: 0.0342690334225411
+HR@20:0.00851063829787234, MRR@20: 0.0011133093091772088, Coverage@20: 0.004138905713708864, NCDG@20: 0.002679625724129582, HR_pos@20: 0.008010012515644555, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.0010712987540252273, MRR_neg@20: 4.201055515198194e-05, NCDG_pos@20: 0.002544058144482942, NDCG_neg@20: 0.00013556757964663916, Matthews@20: 0.030846677208407305
+Results for alpha=5
+HR@5:0.0017521902377972466, MRR@5: 0.0004839382561535252, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0007891968188790659, HR_pos@5: 0.0012515644555694619, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.00030871923237380054, MRR_neg@5: 0.00017521902377972464, NCDG_pos@5: 0.0005344327235584154, NDCG_neg@5: 0.0002547640953206506, Matthews@5: 0.00928387997816207
+HR@10:0.0050062578222778474, MRR@10: 0.0008693406440590421, Coverage@10: 0.002523722996163941, NCDG@10: 0.0017925043619069344, HR_pos@10: 0.00425531914893617, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0006690903311679283, MRR_neg@10: 0.0002002503128911139, NCDG_pos@10: 0.0014653836141913185, NDCG_neg@10: 0.0003271207477156163, Matthews@10: 0.03541929531779446
+HR@20:0.00851063829787234, MRR@20: 0.0011133093091772088, Coverage@20: 0.004138905713708864, NCDG@20: 0.002679625724129582, HR_pos@20: 0.006508135168961202, HR_neg@20: 0.002002503128911139, MRR_pos@20: 0.0008165069598091527, MRR_neg@20: 0.0002968023493680565, NCDG_pos@20: 0.0020241189026928372, NDCG_neg@20: 0.0006555068214367445, Matthews@20: 0.030090301302211873
+Time spent: 14.026985069115957 minutes
+------------------------------
+
+Hidden sizes: 32
+Current epoch 110
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0005506883604505631, Coverage@5: 0.0012113870381586917, NCDG@5: 0.0007881632826977365, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0005506883604505631, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007881632826977365, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.006007509386733416, MRR@10: 0.001116176967240797, Coverage@10: 0.0020189783969311527, NCDG@10: 0.002209687139597776, HR_pos@10: 0.006007509386733416, HR_neg@10: 0.0, MRR_pos@10: 0.001116176967240797, MRR_neg@10: 0.0, NCDG_pos@10: 0.002209687139597776, NDCG_neg@10: 0.0, Matthews@10: 0.016288499808387535
+HR@20:0.015519399249061327, MRR@20: 0.0018071851515455552, Coverage@20: 0.0035332121946295173, NCDG@20: 0.004654819537489263, HR_pos@20: 0.015269086357947435, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0017863257439527309, MRR_neg@20: 2.085940759282436e-05, NCDG_pos@20: 0.004587175443765279, NDCG_neg@20: 6.764409372398492e-05, Matthews@20: 0.01621664389295846
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0005506883604505631, Coverage@5: 0.0012113870381586917, NCDG@5: 0.0007881632826977365, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0005506883604505631, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007881632826977365, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.006007509386733416, MRR@10: 0.001116176967240797, Coverage@10: 0.0020189783969311527, NCDG@10: 0.002209687139597776, HR_pos@10: 0.006007509386733416, HR_neg@10: 0.0, MRR_pos@10: 0.001116176967240797, MRR_neg@10: 0.0, NCDG_pos@10: 0.002209687139597776, NDCG_neg@10: 0.0, Matthews@10: 0.02386321653953068
+HR@20:0.015519399249061327, MRR@20: 0.0018071851515455552, Coverage@20: 0.0035332121946295173, NCDG@20: 0.004654819537489263, HR_pos@20: 0.015269086357947435, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0017863257439527309, MRR_neg@20: 2.085940759282436e-05, NCDG_pos@20: 0.004587175443765279, NDCG_neg@20: 6.764409372398492e-05, Matthews@20: 0.031320651072766596
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0005924071756362118, Coverage@5: 0.001110438118312134, NCDG@5: 0.0008209366878470373, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0005924071756362118, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008209366878470373, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.005256570713391739, MRR@10: 0.0010435663627152987, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0019842632809267467, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.0010435663627152987, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019842632809267467, NDCG_neg@10: 0.0, Matthews@10: 0.03511972768145915
+HR@20:0.014518147684605758, MRR@20: 0.0016736088305619877, Coverage@20: 0.0035332121946295173, NCDG@20: 0.004311649064841581, HR_pos@20: 0.01376720901126408, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.001619225375052124, MRR_neg@20: 5.438345550986352e-05, NCDG_pos@20: 0.004118696193413456, NDCG_neg@20: 0.00019295287142812547, Matthews@20: 0.04261118261603232
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0005506883604505631, Coverage@5: 0.0012113870381586917, NCDG@5: 0.0007881632826977365, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0003838130997079683, MRR_neg@5: 0.0001668752607425949, NCDG_pos@5: 0.000537850391583844, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.004814564446620437
+HR@10:0.006007509386733417, MRR@10: 0.001116176967240797, Coverage@10: 0.0020189783969311527, NCDG@10: 0.002209687139597776, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.0008867234837197289, MRR_neg@10: 0.00022945348352106798, NCDG_pos@10: 0.0018014443977776367, NDCG_neg@10: 0.0004082427418201396, Matthews@10: 0.03616774866927922
+HR@20:0.015519399249061327, MRR@20: 0.0018071851515455552, Coverage@20: 0.0035332121946295173, NCDG@20: 0.004654819537489263, HR_pos@20: 0.01151439299123905, HR_neg@20: 0.004005006257822278, MRR_pos@20: 0.0013487921003894916, MRR_neg@20: 0.0004583930511560638, NCDG_pos@20: 0.003460987602749639, NDCG_neg@20: 0.001193831934739626, Matthews@20: 0.03492687595855001
+Time spent: 28.048900043964387 minutes
+------------------------------
+
+Hidden sizes: 64
+Current epoch 67
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.000621610346266166, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0008348715709922237, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000621610346266166, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008348715709922237, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.006257822277847309, MRR@10: 0.001180543139241512, Coverage@10: 0.0016151827175449223, NCDG@10: 0.002296633066344055, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.001180543139241512, MRR_neg@10: 0.0, NCDG_pos@10: 0.002296633066344055, NDCG_neg@10: 0.0, Matthews@10: 0.016626474121349273
+HR@20:0.016020025031289114, MRR@20: 0.0018750148356525523, Coverage@20: 0.002826569755703614, NCDG@20: 0.004785553935082319, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0018522591182785618, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004715730919900561, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.016800744917088047
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.000621610346266166, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0008348715709922237, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000621610346266166, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008348715709922237, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.006257822277847309, MRR@10: 0.001180543139241512, Coverage@10: 0.0016151827175449223, NCDG@10: 0.002296633066344055, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.001180543139241512, MRR_neg@10: 0.0, NCDG_pos@10: 0.002296633066344055, NDCG_neg@10: 0.0, Matthews@10: 0.024358360617246895
+HR@20:0.016020025031289114, MRR@20: 0.0018750148356525523, Coverage@20: 0.002826569755703614, NCDG@20: 0.004785553935082319, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0018522591182785618, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004715730919900561, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.032059167457933864
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.000621610346266166, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0008348715709922237, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000621610346266166, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008348715709922237, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.004505632040050063, MRR@10: 0.0009844647078689633, Coverage@10: 0.0016151827175449223, NCDG@10: 0.0017679348452679156, HR_pos@10: 0.004505632040050063, HR_neg@10: 0.0, MRR_pos@10: 0.0009844647078689633, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017679348452679156, NDCG_neg@10: 0.0, Matthews@10: 0.032502284001333065
+HR@20:0.013767209011264079, MRR@20: 0.001595738699171008, Coverage@20: 0.002826569755703614, NCDG@20: 0.004068707334298175, HR_pos@20: 0.01276595744680851, HR_neg@20: 0.0010012515644555694, MRR_pos@20: 0.0015313644369023187, MRR_neg@20: 6.437426226868912e-05, NCDG_pos@20: 0.003821876226635574, NDCG_neg@20: 0.00024683110766260163, Matthews@20: 0.035143429313119305
+Results for alpha=5
+HR@5:0.003003754693366708, MRR@5: 0.0010638297872340426, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0015336170466555736, HR_pos@5: 0.002002503128911139, HR_neg@5: 0.0010012515644555694, MRR_pos@5: 0.000755110554860242, MRR_neg@5: 0.00030871923237380054, NCDG_pos@5: 0.0010568622611635734, NDCG_neg@5: 0.0004767547854920002, Matthews@5: 0.0068139488199264395
+HR@10:0.00951188986232791, MRR@10: 0.001986808907960347, Coverage@10: 0.0016151827175449223, NCDG@10: 0.0036932104551050345, HR_pos@10: 0.007008760951188986, HR_neg@10: 0.0025031289111389237, MRR_pos@10: 0.0014441663190098734, MRR_neg@10: 0.0005426425889504738, NCDG_pos@10: 0.002697400110526388, NDCG_neg@10: 0.0009958103445786462, Matthews@10: 0.02623906741695261
+HR@20:0.018022528160200252, MRR@20: 0.002542455998381943, Coverage@20: 0.003331314354936402, NCDG@20: 0.005801592068538336, HR_pos@20: 0.013266583229036295, HR_neg@20: 0.004755944931163955, MRR_pos@20: 0.001853874786943212, MRR_neg@20: 0.0006885812114387305, NCDG_pos@20: 0.004249607183051856, NDCG_neg@20: 0.0015519848854864795, Matthews@20: 0.03607143655755777
+Time spent: 16.60150599082311 minutes
+------------------------------
+
+Hidden sizes: 128
+Current epoch 50
+Results for alpha=2
+HR@5:0.0022528160200250315, MRR@5: 0.0012599082186065915, Coverage@5: 0.001413284877851807, NCDG@5: 0.0015063285508901125, HR_pos@5: 0.0022528160200250315, HR_neg@5: 0.0, MRR_pos@5: 0.0012599082186065915, MRR_neg@5: 0.0, NCDG_pos@5: 0.0015063285508901125, NDCG_neg@5: 0.0, Matthews@5: 0.00995584249481011
+HR@10:0.007008760951188986, MRR@10: 0.0018454615888908754, Coverage@10: 0.0021199273167777106, NCDG@10: 0.002995342907907563, HR_pos@10: 0.007008760951188986, HR_neg@10: 0.0, MRR_pos@10: 0.0018454615888908754, MRR_neg@10: 0.0, NCDG_pos@10: 0.002995342907907563, NDCG_neg@10: 0.0, Matthews@10: 0.01760245834180031
+HR@20:0.011514392991239047, MRR@20: 0.0021482663192501725, Coverage@20: 0.00514839491217444, NCDG@20: 0.004121522434440557, HR_pos@20: 0.011264080100125156, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.002130386827027752, MRR_neg@20: 1.7879492222420883e-05, NCDG_pos@20: 0.004057452841246612, NDCG_neg@20: 6.40695931939463e-05, Matthews@20: 0.010923244008705466
+Results for alpha=3
+HR@5:0.0022528160200250315, MRR@5: 0.0012599082186065915, Coverage@5: 0.001413284877851807, NCDG@5: 0.0015063285508901125, HR_pos@5: 0.0022528160200250315, HR_neg@5: 0.0, MRR_pos@5: 0.0012599082186065915, MRR_neg@5: 0.0, NCDG_pos@5: 0.0015063285508901125, NDCG_neg@5: 0.0, Matthews@5: 0.014585654178218256
+HR@10:0.007008760951188986, MRR@10: 0.0018454615888908754, Coverage@10: 0.0021199273167777106, NCDG@10: 0.002995342907907563, HR_pos@10: 0.007008760951188986, HR_neg@10: 0.0, MRR_pos@10: 0.0018454615888908754, MRR_neg@10: 0.0, NCDG_pos@10: 0.002995342907907563, NDCG_neg@10: 0.0, Matthews@10: 0.02578821131349059
+HR@20:0.011514392991239047, MRR@20: 0.0021482663192501725, Coverage@20: 0.00514839491217444, NCDG@20: 0.004121522434440557, HR_pos@20: 0.011264080100125156, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.002130386827027752, MRR_neg@20: 1.7879492222420883e-05, NCDG_pos@20: 0.004057452841246612, NDCG_neg@20: 6.40695931939463e-05, Matthews@20: 0.02476511855245077
+Results for alpha=4
+HR@5:0.0022528160200250315, MRR@5: 0.0012599082186065915, Coverage@5: 0.001413284877851807, NCDG@5: 0.0015063285508901125, HR_pos@5: 0.0022528160200250315, HR_neg@5: 0.0, MRR_pos@5: 0.0012599082186065915, MRR_neg@5: 0.0, NCDG_pos@5: 0.0015063285508901125, NDCG_neg@5: 0.0, Matthews@5: 0.022956624538455286
+HR@10:0.007008760951188986, MRR@10: 0.0018454615888908754, Coverage@10: 0.0021199273167777106, NCDG@10: 0.002995342907907563, HR_pos@10: 0.007008760951188986, HR_neg@10: 0.0, MRR_pos@10: 0.0018454615888908754, MRR_neg@10: 0.0, NCDG_pos@10: 0.002995342907907563, NDCG_neg@10: 0.0, Matthews@10: 0.040588531539863165
+HR@20:0.01151439299123905, MRR@20: 0.0021482663192501725, Coverage@20: 0.00514839491217444, NCDG@20: 0.004121522434440557, HR_pos@20: 0.011013767209011264, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.0021172124643375474, MRR_neg@20: 3.105385491262574e-05, NCDG_pos@20: 0.003999535891769826, NDCG_neg@20: 0.00012198654267073208, Matthews@20: 0.0401623401505127
+Results for alpha=5
+HR@5:0.002252816020025031, MRR@5: 0.0012599082186065915, Coverage@5: 0.001413284877851807, NCDG@5: 0.0015063285508901125, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.0008427200667501042, MRR_neg@5: 0.0004171881518564872, NCDG_pos@5: 0.0010057027686623278, NDCG_neg@5: 0.0005006257822277847, Matthews@5: 0.005898831693021706
+HR@10:0.007008760951188986, MRR@10: 0.0018454615888908754, Coverage@10: 0.0021199273167777106, NCDG@10: 0.002995342907907563, HR_pos@10: 0.005506883604505632, HR_neg@10: 0.001501877346683354, MRR_pos@10: 0.0013396706200210578, MRR_neg@10: 0.0005057909688698174, NCDG_pos@10: 0.0022635711543868625, NDCG_neg@10: 0.0007317717535207014, Matthews@10: 0.030897930645638946
+HR@20:0.011514392991239047, MRR@20: 0.0021482663192501725, Coverage@20: 0.00514839491217444, NCDG@20: 0.004121522434440557, HR_pos@20: 0.008010012515644555, HR_neg@20: 0.003504380475594493, MRR_pos@20: 0.0015151764805744045, MRR_neg@20: 0.0006330898386757685, NCDG_pos@20: 0.0028986519413081524, NDCG_neg@20: 0.0012228704931324052, Matthews@20: 0.01980053023005732
+Time spent: 12.277960344155629 minutes
+------------------------------
+
+Hidden sizes: 256
+Current epoch 54
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.0050062578222778474, MRR@10: 0.0010933309494010365, Coverage@10: 0.001413284877851807, NCDG@10: 0.0019612066100982884, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0010933309494010365, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019612066100982884, NDCG_neg@10: 0.0, Matthews@10: 0.014861814664115222
+HR@20:0.01151439299123905, MRR@20: 0.001526602370120002, Coverage@20: 0.0027256208358570565, NCDG@20: 0.0035846100694788855, HR_pos@20: 0.01151439299123905, HR_neg@20: 0.0, MRR_pos@20: 0.001526602370120002, MRR_neg@20: 0.0, NCDG_pos@20: 0.0035846100694788855, NDCG_neg@20: 0.0, Matthews@20: 0.022613134127853315
+Results for alpha=3
+HR@5:0.0012515644555694619, MRR@5: 0.0007092198581560283, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008492588887895803, HR_pos@5: 0.0012515644555694619, HR_neg@5: 0.0, MRR_pos@5: 0.0007092198581560283, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008492588887895803, NDCG_neg@5: 0.0, Matthews@5: 0.01086605400401058
+HR@10:0.010262828535669587, MRR@10: 0.0017822873830383218, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0036343396128223253, HR_pos@10: 0.010012515644555695, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.0017544748395812227, MRR_neg@10: 2.781254345709915e-05, NCDG_pos@10: 0.0035589879242956713, NDCG_neg@10: 7.535168852665361e-05, Matthews@10: 0.0224033414453685
+HR@20:0.01576971214017522, MRR@20: 0.0021597533288133376, Coverage@20: 0.0027256208358570565, NCDG@20: 0.005019988742593851, HR_pos@20: 0.015519399249061327, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0021319407853562385, MRR_neg@20: 2.781254345709915e-05, NCDG_pos@20: 0.004944637054067198, NDCG_neg@20: 7.535168852665361e-05, Matthews@20: 0.03169176266175752
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.0050062578222778474, MRR@10: 0.0010933309494010365, Coverage@10: 0.001413284877851807, NCDG@10: 0.0019612066100982884, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0010933309494010365, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019612066100982884, NDCG_neg@10: 0.0, Matthews@10: 0.0342690334225411
+HR@20:0.01151439299123905, MRR@20: 0.001526602370120002, Coverage@20: 0.0027256208358570565, NCDG@20: 0.0035846100694788855, HR_pos@20: 0.011013767209011264, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.0014917029766473922, MRR_neg@20: 3.4899393472609996e-05, NCDG_pos@20: 0.0034576263205038115, NDCG_neg@20: 0.00012698374897507375, Matthews@20: 0.0401623401505127
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0006090947017104714, Coverage@5: 0.0007066424389259035, NCDG@5: 0.000823901921220296, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0004338756779307467, MRR_neg@5: 0.00017521902377972464, NCDG_pos@5: 0.0005691378258996454, NDCG_neg@5: 0.0002547640953206506, Matthews@5: 0.004814564446620437
+HR@10:0.003754693366708386, MRR@10: 0.0008896040685777859, Coverage@10: 0.0012113870381586917, NCDG@10: 0.0015324274971612291, HR_pos@10: 0.003254067584480601, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.0007143850447980612, MRR_neg@10: 0.00017521902377972464, NCDG_pos@10: 0.0012776634018405785, NDCG_neg@10: 0.0002547640953206506, Matthews@10: 0.032748703048604305
+HR@20:0.011013767209011264, MRR@20: 0.001377179502332073, Coverage@20: 0.0031294165152432867, NCDG@20: 0.0033486892045165007, HR_pos@20: 0.008010012515644555, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.0010270011659228831, MRR_neg@20: 0.00035017833640918993, NCDG_pos@20: 0.0024591086177373025, NDCG_neg@20: 0.0008895805867791987, Matthews@20: 0.02618943322196983
+Time spent: 13.199008889993031 minutes
+------------------------------
+
+Hidden sizes: 512
+Current epoch 93
+Results for alpha=2
+HR@5:0.01476846057571965, MRR@5: 0.008468919482686695, Coverage@5: 0.004441752473248536, NCDG@5: 0.010004653142625742, HR_pos@5: 0.014518147684605758, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.0082186065915728, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.009754340251511852, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.015313136246068901
+HR@10:0.021526908635794744, MRR@10: 0.009363092754832433, Coverage@10: 0.008479709267110842, NCDG@10: 0.012181687518818029, HR_pos@10: 0.02127659574468085, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.009112779863718539, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.011931374627704133, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.022484074600626014
+HR@20:0.032540675844806, MRR@20: 0.01009478037961785, Coverage@20: 0.013830002018978396, NCDG@20: 0.014927013186391504, HR_pos@20: 0.03178973717146433, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.009806067215435353, MRR_neg@20: 0.00028871316418250083, NCDG_pos@20: 0.014545638095585654, NDCG_neg@20: 0.0003813750908058463, Matthews@20: 0.01733909121817673
+Results for alpha=3
+HR@5:0.008010012515644555, MRR@5: 0.005982478097622027, Coverage@5: 0.003937007874015748, NCDG@5: 0.006496138522305933, HR_pos@5: 0.007759699624530663, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.005732165206508134, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.0062458256311920405, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.017572424085936456
+HR@10:0.014017521902377972, MRR@10: 0.006770367721556708, Coverage@10: 0.007470220068645265, NCDG@10: 0.008424360860568006, HR_pos@10: 0.01376720901126408, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.006520054830442817, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.008174047969454113, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.029009380430321807
+HR@20:0.026783479349186484, MRR@20: 0.0076032634997788805, Coverage@20: 0.012315768221280032, NCDG@20: 0.011586560534379788, HR_pos@20: 0.02528160200250313, HR_neg@20: 0.001501877346683354, MRR_pos@20: 0.007275274148009804, MRR_neg@20: 0.0003279893517690764, NCDG_pos@20: 0.011031630474305274, NDCG_neg@20: 0.000554930060074513, Matthews@20: 0.017760582959442016
+Results for alpha=4
+HR@5:0.008260325406758447, MRR@5: 0.006783479349186484, Coverage@5: 0.003937007874015748, NCDG@5: 0.007147271009366208, HR_pos@5: 0.007509386733416771, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.006032540675844807, MRR_neg@5: 0.000750938673341677, NCDG_pos@5: 0.0063963323360245305, NDCG_neg@5: 0.000750938673341677, Matthews@5: 0.02290999232695785
+HR@10:0.016520650813516898, MRR@10: 0.007827939686512903, Coverage@10: 0.007672117908338381, NCDG@10: 0.009761549587310276, HR_pos@10: 0.015519399249061327, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.007035282197985576, MRR_neg@10: 0.0007926574885273259, NCDG_pos@10: 0.008921447663128043, NDCG_neg@10: 0.0008401019241822332, Matthews@10: 0.04256231804691126
+HR@20:0.030037546933667083, MRR@20: 0.00873667252275187, Coverage@20: 0.012113870381586917, NCDG@20: 0.013141533083166766, HR_pos@20: 0.027033792240300374, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.007815008224333736, MRR_neg@20: 0.0009216642984181357, NCDG_pos@20: 0.01180751640404299, NDCG_neg@20: 0.0013340166791237762, Matthews@20: 0.0400910962761967
+Results for alpha=5
+HR@5:0.008260325406758449, MRR@5: 0.006783479349186484, Coverage@5: 0.003937007874015748, NCDG@5: 0.007147271009366208, HR_pos@5: 0.005506883604505632, HR_neg@5: 0.002753441802252816, MRR_pos@5: 0.00459741343345849, MRR_neg@5: 0.0021860659157279935, NCDG_pos@5: 0.004825942945669315, NDCG_neg@5: 0.002321328063696892, Matthews@5: 0.011329562296042869
+HR@10:0.016520650813516898, MRR@10: 0.007827939686512903, Coverage@10: 0.007672117908338381, NCDG@10: 0.009761549587310276, HR_pos@10: 0.013016270337922404, HR_neg@10: 0.003504380475594493, MRR_pos@10: 0.005530623596956513, MRR_neg@10: 0.00229731608955639, NCDG_pos@10: 0.007186543333405618, NDCG_neg@10: 0.0025750062539046585, Matthews@10: 0.04824053304890428
+HR@20:0.030037546933667083, MRR@20: 0.00873667252275187, Coverage@20: 0.012113870381586917, NCDG@20: 0.013141533083166766, HR_pos@20: 0.02127659574468085, HR_neg@20: 0.008760951188986232, MRR_pos@20: 0.006085882140538309, MRR_neg@20: 0.0026507903822135617, NCDG_pos@20: 0.009251123056606915, NDCG_neg@20: 0.0038904100265598476, Matthews@20: 0.03685165908705971
+Time spent: 23.731491057078042 minutes
+------------------------------
+
+Hidden sizes: 1024
+Current epoch 68
+Results for alpha=2
+HR@5:0.01702127659574468, MRR@5: 0.009378389653733837, Coverage@5: 0.0072683222289521504, NCDG@5: 0.01123338013764075, HR_pos@5: 0.016770963704630788, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.009128076762619943, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.010983067246526859, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.01792922756041985
+HR@10:0.028035043804755945, MRR@10: 0.010779347199872858, Coverage@10: 0.010902483343428226, NCDG@10: 0.014726249487302567, HR_pos@10: 0.02778473091364205, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.010529034308758964, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.014475936596188671, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.02802856921249924
+HR@20:0.041551939924906134, MRR@20: 0.011624476137460635, Coverage@20: 0.018170805572380374, NCDG@20: 0.018028157996738802, HR_pos@20: 0.04030037546933667, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.011306618497950931, MRR_neg@20: 0.0003178576395097046, NCDG_pos@20: 0.017526710440344293, NDCG_neg@20: 0.0005014475563945144, Matthews@20: 0.012378287531192973
+Results for alpha=3
+HR@5:0.013016270337922404, MRR@5: 0.0069420108468919465, Coverage@5: 0.005955986270946901, NCDG@5: 0.008451487467568403, HR_pos@5: 0.012515644555694618, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.006766791823112222, MRR_neg@5: 0.00017521902377972464, NCDG_pos@5: 0.008196723372247753, NDCG_neg@5: 0.0002547640953206506, Matthews@5: 0.019505058237946304
+HR@10:0.0230287859824781, MRR@10: 0.008160001589288198, Coverage@10: 0.009993943064809207, NCDG@10: 0.011569502173406791, HR_pos@10: 0.02227784730913642, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.007956970022051374, MRR_neg@10: 0.0002030315672368238, NCDG_pos@10: 0.011239386389559488, NDCG_neg@10: 0.00033011578384730425, Matthews@10: 0.029280025603006497
+HR@20:0.03354192740926158, MRR@20: 0.008914487374171888, Coverage@20: 0.01594992933575611, NCDG@20: 0.014258889783102725, HR_pos@20: 0.03153942428035044, HR_neg@20: 0.002002503128911139, MRR_pos@20: 0.00861018557112165, MRR_neg@20: 0.0003043018030502386, NCDG_pos@20: 0.013594500126192843, NDCG_neg@20: 0.0006643896569098822, Matthews@20: 0.017536345718527822
+Results for alpha=4
+HR@5:0.013016270337922402, MRR@5: 0.0069420108468919465, Coverage@5: 0.005955986270946901, NCDG@5: 0.008451487467568403, HR_pos@5: 0.012015018773466833, HR_neg@5: 0.0010012515644555694, MRR_pos@5: 0.006391322486441384, MRR_neg@5: 0.0005506883604505633, NCDG_pos@5: 0.007788480630427613, NDCG_neg@5: 0.0006630068371407902, Matthews@5: 0.03292839294201619
+HR@10:0.0230287859824781, MRR@10: 0.008160001589288198, Coverage@10: 0.009993943064809207, NCDG@10: 0.011569502173406791, HR_pos@10: 0.021526908635794744, HR_neg@10: 0.001501877346683354, MRR_pos@10: 0.007550211573991299, MRR_neg@10: 0.0006097900152968989, NCDG_pos@10: 0.010752178722386223, NDCG_neg@10: 0.0008173234510205675, Matthews@10: 0.04861091722421955
+HR@20:0.033541927409261575, MRR@20: 0.008914487374171888, Coverage@20: 0.01594992933575611, NCDG@20: 0.014258889783102725, HR_pos@20: 0.029787234042553193, HR_neg@20: 0.0037546933667083854, MRR_pos@20: 0.008143757990325101, MRR_neg@20: 0.0007707293838467869, NCDG_pos@20: 0.012866613995074138, NDCG_neg@20: 0.0013922757880285865, Matthews@20: 0.036763031738948675
+Results for alpha=5
+HR@5:0.013016270337922404, MRR@5: 0.0069420108468919465, Coverage@5: 0.005955986270946901, NCDG@5: 0.008451487467568403, HR_pos@5: 0.009261576971214018, HR_neg@5: 0.0037546933667083854, MRR_pos@5: 0.004868585732165206, MRR_neg@5: 0.002073425114726742, NCDG_pos@5: 0.005955322728353078, NDCG_neg@5: 0.0024961647392153247, Matthews@5: 0.024801912144663235
+HR@10:0.0230287859824781, MRR@10: 0.008160001589288198, Coverage@10: 0.009993943064809207, NCDG@10: 0.011569502173406791, HR_pos@10: 0.01777221526908636, HR_neg@10: 0.005256570713391739, MRR_pos@10: 0.005901623060571747, MRR_neg@10: 0.0022583785287164514, NCDG_pos@10: 0.00860318430319639, NDCG_neg@10: 0.002966317870210401, Matthews@10: 0.052073532670925904
+HR@20:0.033541927409261575, MRR@20: 0.008914487374171888, Coverage@20: 0.01594992933575611, NCDG@20: 0.014258889783102725, HR_pos@20: 0.02252816020025031, HR_neg@20: 0.011013767209011264, MRR_pos@20: 0.006238671943665027, MRR_neg@20: 0.0026758154305068596, NCDG_pos@20: 0.009814419432077483, NDCG_neg@20: 0.004444470351025243, Matthews@20: 0.025023627105719568
+Time spent: 17.68318287531535 minutes
+------------------------------
+
+batch size 256
+Hidden sizes: 16
+Current epoch 81
+Results for alpha=2
+HR@5:0.0017521902377972466, MRR@5: 0.0006967042136003337, Coverage@5: 0.001110438118312134, NCDG@5: 0.0009536451151504826, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0006967042136003337, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009536451151504826, NDCG_neg@5: 0.0, Matthews@5: 0.008778025839763472
+HR@10:0.006257822277847309, MRR@10: 0.001242426048433558, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0023538432999923677, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.001242426048433558, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023538432999923677, NDCG_neg@10: 0.0, Matthews@10: 0.016626474121349273
+HR@20:0.016020025031289114, MRR@20: 0.0018951673770487534, Coverage@20: 0.0036341611144760752, NCDG@20: 0.004790422348685237, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0018724116596747632, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004720599333503476, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.016800744917088047
+Results for alpha=3
+HR@5:0.0017521902377972466, MRR@5: 0.0006967042136003337, Coverage@5: 0.001110438118312134, NCDG@5: 0.0009536451151504826, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0006967042136003337, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009536451151504826, NDCG_neg@5: 0.0, Matthews@5: 0.012860111972743284
+HR@10:0.006257822277847309, MRR@10: 0.001242426048433558, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0023538432999923677, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.001242426048433558, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023538432999923677, NDCG_neg@10: 0.0, Matthews@10: 0.024358360617246895
+HR@20:0.016020025031289114, MRR@20: 0.0018951673770487534, Coverage@20: 0.0036341611144760752, NCDG@20: 0.004790422348685237, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0018724116596747632, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004720599333503476, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.032059167457933864
+Results for alpha=4
+HR@5:0.0017521902377972466, MRR@5: 0.0006967042136003337, Coverage@5: 0.001110438118312134, NCDG@5: 0.0009536451151504826, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0006967042136003337, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009536451151504826, NDCG_neg@5: 0.0, Matthews@5: 0.020240762496730545
+HR@10:0.006257822277847309, MRR@10: 0.001242426048433558, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0023538432999923677, HR_pos@10: 0.006007509386733416, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.0012146135049764589, MRR_neg@10: 2.781254345709915e-05, NCDG_pos@10: 0.002278491611465714, NDCG_neg@10: 7.535168852665361e-05, Matthews@10: 0.030234330133428598
+HR@20:0.01602002503128911, MRR@20: 0.0018951673770487534, Coverage@20: 0.0036341611144760752, NCDG@20: 0.004790422348685237, HR_pos@20: 0.01476846057571965, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.001792450597235603, MRR_neg@20: 0.00010271677981315028, NCDG_pos@20: 0.0044551251822324495, NDCG_neg@20: 0.0003352971664527867, Matthews@20: 0.03619495709179177
+Results for alpha=5
+HR@5:0.0017521902377972466, MRR@5: 0.0006967042136003337, Coverage@5: 0.001110438118312134, NCDG@5: 0.0009536451151504826, HR_pos@5: 0.0012515644555694619, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0005089695452649144, MRR_neg@5: 0.00018773466833541926, NCDG_pos@5: 0.0006879113700579043, NDCG_neg@5: 0.0002657337450925784, Matthews@5: 0.00928387997816207
+HR@10:0.005757196495619525, MRR@10: 0.001190674851500884, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0022076523263159504, HR_pos@10: 0.004505632040050063, HR_neg@10: 0.0012515644555694619, MRR_pos@10: 0.0009160259848620299, MRR_neg@10: 0.00027464886663885416, NCDG_pos@10: 0.0017122502788169411, NDCG_neg@10: 0.0004954020474990093, Matthews@10: 0.027502358538103566
+HR@20:0.01602002503128911, MRR@20: 0.0018822626437214331, Coverage@20: 0.0037351100343226327, NCDG@20: 0.004776372752219611, HR_pos@20: 0.011013767209011264, HR_neg@20: 0.0050062578222778474, MRR_pos@20: 0.0013353939015757, MRR_neg@20: 0.0005468687421457332, NCDG_pos@20: 0.0033167301939480585, NDCG_neg@20: 0.0014596425582715533, Matthews@20: 0.021280071416338347
+Time spent: 20.77227412859599 minutes
+------------------------------
+
+Hidden sizes: 32
+Current epoch 56
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0004213600333750521, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0006813929244927348, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0004213600333750521, MRR_neg@5: 0.0, NCDG_pos@5: 0.0006813929244927348, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.004755944931163955, MRR@10: 0.0008353696088364424, Coverage@10: 0.0016151827175449223, NCDG@10: 0.0017123169219127343, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0008353696088364424, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017123169219127343, NDCG_neg@10: 0.0, Matthews@10: 0.014483683379780848
+HR@20:0.010763454317897372, MRR@20: 0.001239080839829841, Coverage@20: 0.004845548152634767, NCDG@20: 0.003215308320905165, HR_pos@20: 0.010763454317897372, HR_neg@20: 0.0, MRR_pos@20: 0.001239080839829841, MRR_neg@20: 0.0, NCDG_pos@20: 0.003215308320905165, NDCG_neg@20: 0.0, Matthews@20: 0.02185501805373536
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0004213600333750521, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0006813929244927348, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0004213600333750521, MRR_neg@5: 0.0, NCDG_pos@5: 0.0006813929244927348, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.004755944931163955, MRR@10: 0.0008353696088364424, Coverage@10: 0.0016151827175449223, NCDG@10: 0.0017123169219127343, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0008353696088364424, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017123169219127343, NDCG_neg@10: 0.0, Matthews@10: 0.021219097943184197
+HR@20:0.010763454317897372, MRR@20: 0.001239080839829841, Coverage@20: 0.004845548152634767, NCDG@20: 0.003215308320905165, HR_pos@20: 0.010763454317897372, HR_neg@20: 0.0, MRR_pos@20: 0.001239080839829841, MRR_neg@20: 0.0, NCDG_pos@20: 0.003215308320905165, NDCG_neg@20: 0.0, Matthews@20: 0.03201835862275572
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0004213600333750521, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0006813929244927348, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0004213600333750521, MRR_neg@5: 0.0, NCDG_pos@5: 0.0006813929244927348, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.004755944931163955, MRR@10: 0.0008353696088364424, Coverage@10: 0.0016151827175449223, NCDG@10: 0.0017123169219127343, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0008353696088364424, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017123169219127343, NDCG_neg@10: 0.0, Matthews@10: 0.03339712148487909
+HR@20:0.010763454317897372, MRR@20: 0.001239080839829841, Coverage@20: 0.004845548152634767, NCDG@20: 0.003215308320905165, HR_pos@20: 0.010012515644555695, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.0011916505201842523, MRR_neg@20: 4.743031964558873e-05, NCDG_pos@20: 0.003031073657502241, NDCG_neg@20: 0.00018423466340292358, Matthews@20: 0.031814989016522105
+Results for alpha=5
+HR@5:0.0017521902377972466, MRR@5: 0.00046307884856070083, Coverage@5: 0.0010094891984655764, NCDG@5: 0.0007718442677084512, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.00040050062578222777, MRR_neg@5: 6.257822277847309e-05, NCDG_pos@5: 0.0006640403733221197, NDCG_neg@5: 0.00010780389438633117, Matthews@5: 0.02153259216863679
+HR@10:0.00425531914893617, MRR@10: 0.0007786518862864294, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0015631892733258992, HR_pos@10: 0.003504380475594493, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0006525021356060154, MRR_neg@10: 0.000126149750680414, NCDG_pos@10: 0.001296596060041617, NDCG_neg@10: 0.00026659321328428224, Matthews@10: 0.029101279829658554
+HR@20:0.006508135168961201, MRR@20: 0.0009239447066820293, Coverage@20: 0.004845548152634767, NCDG@20: 0.002118670045896748, HR_pos@20: 0.004755944931163955, HR_neg@20: 0.0017521902377972466, MRR_pos@20: 0.0007304254967452385, MRR_neg@20: 0.00019351920993679073, NCDG_pos@20: 0.0016014091081639282, NDCG_neg@20: 0.0005172609377328191, Matthews@20: 0.0206654329175596
+Time spent: 14.691057097911834 minutes
+------------------------------
+
+Hidden sizes: 64
+Current epoch 66
+Results for alpha=2
+HR@5:0.0017521902377972466, MRR@5: 0.0007175636211931583, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0009709976663210976, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0007175636211931583, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009709976663210976, NDCG_neg@5: 0.0, Matthews@5: 0.008778025839763472
+HR@10:0.006257822277847309, MRR@10: 0.0012823569143969645, Coverage@10: 0.00171613163739148, NCDG@10: 0.0023919033225263562, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.0012823569143969645, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023919033225263562, NDCG_neg@10: 0.0, Matthews@10: 0.016626474121349273
+HR@20:0.01476846057571965, MRR@20: 0.0018913266502842481, Coverage@20: 0.003331314354936402, NCDG@20: 0.004564856862340553, HR_pos@20: 0.014518147684605758, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.001868570932910258, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.0044950338471587935, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.015313136246068901
+Results for alpha=3
+HR@5:0.0017521902377972466, MRR@5: 0.0007175636211931583, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0009709976663210976, HR_pos@5: 0.0017521902377972466, HR_neg@5: 0.0, MRR_pos@5: 0.0007175636211931583, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009709976663210976, NDCG_neg@5: 0.0, Matthews@5: 0.012860111972743284
+HR@10:0.006257822277847309, MRR@10: 0.0012823569143969645, Coverage@10: 0.00171613163739148, NCDG@10: 0.0023919033225263562, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.0012823569143969645, MRR_neg@10: 0.0, NCDG_pos@10: 0.0023919033225263562, NDCG_neg@10: 0.0, Matthews@10: 0.024358360617246895
+HR@20:0.01476846057571965, MRR@20: 0.0018913266502842481, Coverage@20: 0.003331314354936402, NCDG@20: 0.004564856862340553, HR_pos@20: 0.014518147684605758, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.001868570932910258, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.0044950338471587935, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.030183914288819384
+Results for alpha=4
+HR@5:0.0012515644555694619, MRR@5: 0.0005590321234876929, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0007270676766058926, HR_pos@5: 0.0012515644555694619, HR_neg@5: 0.0, MRR_pos@5: 0.0005590321234876929, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007270676766058926, NDCG_neg@5: 0.0, Matthews@5: 0.017102278645627498
+HR@10:0.005256570713391739, MRR@10: 0.0010646244313328166, Coverage@10: 0.0021199273167777106, NCDG@10: 0.001992998819877875, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.0010646244313328166, MRR_neg@10: 0.0, NCDG_pos@10: 0.001992998819877875, NDCG_neg@10: 0.0, Matthews@10: 0.03511972768145915
+HR@20:0.013516896120150189, MRR@20: 0.0016072646654604749, Coverage@20: 0.004340803553401979, NCDG@20: 0.004043658985903925, HR_pos@20: 0.012265331664580726, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.0015315514431669688, MRR_neg@20: 7.571322229350646e-05, NCDG_pos@20: 0.0037410683342289463, NDCG_neg@20: 0.00030259065167497824, Matthews@20: 0.028881434500850067
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.000621610346266166, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0008348715709922237, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.00044639132248644133, MRR_neg@5: 0.00017521902377972464, NCDG_pos@5: 0.000580107475671573, NDCG_neg@5: 0.0002547640953206506, Matthews@5: 0.004814564446620437
+HR@10:0.004755944931163955, MRR@10: 0.0010223096330730873, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0018537493110761189, HR_pos@10: 0.0037546933667083854, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.0007914655223791645, MRR_neg@10: 0.00023084411069392298, NCDG_pos@10: 0.0014482818387021612, NDCG_neg@10: 0.0004054674723739579, Matthews@10: 0.02595533530900425
+HR@20:0.01376720901126408, MRR@20: 0.0016462165831927565, Coverage@20: 0.0031294165152432867, NCDG@20: 0.004129810051970476, HR_pos@20: 0.009261576971214018, HR_neg@20: 0.004505632040050063, MRR_pos@20: 0.0011826454949437622, MRR_neg@20: 0.0004635710882489945, NCDG_pos@20: 0.0028516228587674216, NDCG_neg@20: 0.0012781871932030552, Matthews@20: 0.016132614490742075
+Time spent: 17.000173310438793 minutes
+------------------------------
+
+Hidden sizes: 128
+Current epoch 61
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.000621610346266166, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008348715709922237, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000621610346266166, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008348715709922237, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.005757196495619525, MRR@10: 0.0011338577984385241, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0021548750993270957, HR_pos@10: 0.005757196495619525, HR_neg@10: 0.0, MRR_pos@10: 0.0011338577984385241, MRR_neg@10: 0.0, NCDG_pos@10: 0.0021548750993270957, NDCG_neg@10: 0.0, Matthews@10: 0.015943538243613265
+HR@20:0.01576971214017522, MRR@20: 0.0017855263687030945, Coverage@20: 0.0027256208358570565, NCDG@20: 0.004632415395036062, HR_pos@20: 0.015519399249061327, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0017676468764806737, MRR_neg@20: 1.7879492222420883e-05, NCDG_pos@20: 0.004568345801842116, NDCG_neg@20: 6.40695931939463e-05, Matthews@20: 0.016510438440761034
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.000621610346266166, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008348715709922237, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000621610346266166, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008348715709922237, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.005757196495619525, MRR@10: 0.0011338577984385241, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0021548750993270957, HR_pos@10: 0.005757196495619525, HR_neg@10: 0.0, MRR_pos@10: 0.0011338577984385241, MRR_neg@10: 0.0, NCDG_pos@10: 0.0021548750993270957, NDCG_neg@10: 0.0, Matthews@10: 0.02335783589583356
+HR@20:0.01576971214017522, MRR@20: 0.0017855263687030945, Coverage@20: 0.0027256208358570565, NCDG@20: 0.004632415395036062, HR_pos@20: 0.015519399249061327, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0017676468764806737, MRR_neg@20: 1.7879492222420883e-05, NCDG_pos@20: 0.004568345801842116, NDCG_neg@20: 6.40695931939463e-05, Matthews@20: 0.03169176266175752
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0006007509386733417, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008175190198216087, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006007509386733417, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008175190198216087, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.0050062578222778474, MRR@10: 0.0010395931422214277, Coverage@10: 0.0020189783969311527, NCDG@10: 0.0019219302598580694, HR_pos@10: 0.0050062578222778474, HR_neg@10: 0.0, MRR_pos@10: 0.0010395931422214277, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019219302598580694, NDCG_neg@10: 0.0, Matthews@10: 0.0342690334225411
+HR@20:0.01376720901126408, MRR@20: 0.001606537925204447, Coverage@20: 0.0026246719160104987, NCDG@20: 0.004085316208794707, HR_pos@20: 0.013016270337922404, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.001554121977919914, MRR_neg@20: 5.241594728453302e-05, NCDG_pos@20: 0.0038949011941661646, NDCG_neg@20: 0.00019041501462854204, Matthews@20: 0.04062772619225651
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0007133917396745933, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008989324104573261, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0004130162703379224, MRR_neg@5: 0.00030037546933667084, NCDG_pos@5: 0.0005517852747290303, NDCG_neg@5: 0.00034714713572829575, Matthews@5: 0.004814564446620437
+HR@10:0.004505632040050062, MRR@10: 0.0010689949738760752, Coverage@10: 0.0016151827175449223, NCDG@10: 0.001824527943583156, HR_pos@10: 0.0037546933667083854, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0007408069610823054, MRR_neg@10: 0.00032818801279377, NCDG_pos@10: 0.0014020291193282068, NDCG_neg@10: 0.0004224988242549494, Matthews@10: 0.031298552727020146
+HR@20:0.011514392991239047, MRR@20: 0.0015415294801195132, Coverage@20: 0.0030284675953967293, NCDG@20: 0.003578259208397295, HR_pos@20: 0.008010012515644555, HR_neg@20: 0.003504380475594493, MRR_pos@20: 0.001034844690400978, MRR_neg@20: 0.0005066847897185355, NCDG_pos@20: 0.0024747239442852046, NDCG_neg@20: 0.001103535264112091, Matthews@20: 0.01980053023005732
+Time spent: 15.655584402879079 minutes
+------------------------------
+
+Hidden sizes: 256
+Current epoch 65
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0007592824363788069, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0009460931334039835, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007592824363788069, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009460931334039835, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.006257822277847309, MRR@10: 0.00131275205117508, Coverage@10: 0.0019180294770845953, NCDG@10: 0.0024018810705539596, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.00131275205117508, MRR_neg@10: 0.0, NCDG_pos@10: 0.0024018810705539596, NDCG_neg@10: 0.0, Matthews@10: 0.016626474121349273
+HR@20:0.01677096370463079, MRR@20: 0.0020985705761857837, Coverage@20: 0.0032303654350898446, NCDG@20: 0.005128881624960406, HR_pos@20: 0.016520650813516898, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.002075814858811794, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005059058609778646, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.017651817304650843
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0007592824363788069, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0009460931334039835, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007592824363788069, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009460931334039835, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.006257822277847309, MRR@10: 0.00131275205117508, Coverage@10: 0.0019180294770845953, NCDG@10: 0.0024018810705539596, HR_pos@10: 0.006257822277847309, HR_neg@10: 0.0, MRR_pos@10: 0.00131275205117508, MRR_neg@10: 0.0, NCDG_pos@10: 0.0024018810705539596, NDCG_neg@10: 0.0, Matthews@10: 0.024358360617246895
+HR@20:0.01677096370463079, MRR@20: 0.0020985705761857837, Coverage@20: 0.0032303654350898446, NCDG@20: 0.005128881624960406, HR_pos@20: 0.016520650813516898, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.002075814858811794, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005059058609778646, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.0331401972335497
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.005256570713391739, MRR@10: 0.0011290899338458787, Coverage@10: 0.0019180294770845953, NCDG@10: 0.002044644240469586, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.0011290899338458787, MRR_neg@10: 0.0, NCDG_pos@10: 0.002044644240469586, NDCG_neg@10: 0.0, Matthews@10: 0.03511972768145915
+HR@20:0.01702127659574468, MRR@20: 0.0020103377717287517, Coverage@20: 0.003331314354936402, NCDG@20: 0.005098725008398957, HR_pos@20: 0.01576971214017522, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.0019121964470542605, MRR_neg@20: 9.814132467449113e-05, NCDG_pos@20: 0.0047687015216746195, NDCG_neg@20: 0.0003300234867243369, Matthews@20: 0.03887179124895613
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0007592824363788069, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0009460931334039835, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0005089695452649144, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.0006302334319914892, NDCG_neg@5: 0.00031585970141249437, Matthews@5: 0.004814564446620437
+HR@10:0.006257822277847309, MRR@10: 0.00131275205117508, Coverage@10: 0.0019180294770845953, NCDG@10: 0.0024018810705539596, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.001012376581838409, MRR_neg@10: 0.0003003754693366709, NCDG_pos@10: 0.001941308064351534, NDCG_neg@10: 0.00046057300620242576, Matthews@10: 0.03800088368341164
+HR@20:0.016770963704630788, MRR@20: 0.0020985705761857837, Coverage@20: 0.0032303654350898446, NCDG@20: 0.005128881624960406, HR_pos@20: 0.012015018773466833, HR_neg@20: 0.004755944931163955, MRR_pos@20: 0.0015137668427771768, MRR_neg@20: 0.0005848037334086071, NCDG_pos@20: 0.0036903906771151448, NDCG_neg@20: 0.0014384909478452612, Matthews@20: 0.029510643123180465
+Time spent: 15.973023064931233 minutes
+------------------------------
+
+Hidden sizes: 512
+Current epoch 54
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006758448060075094, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008805463231053816, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.007008760951188986, MRR@10: 0.0013074875340207002, Coverage@10: 0.0015142337976983646, NCDG@10: 0.002555476902724328, HR_pos@10: 0.007008760951188986, HR_neg@10: 0.0, MRR_pos@10: 0.0013074875340207002, MRR_neg@10: 0.0, NCDG_pos@10: 0.002555476902724328, NDCG_neg@10: 0.0, Matthews@10: 0.01760245834180031
+HR@20:0.01702127659574468, MRR@20: 0.0020222845018448656, Coverage@20: 0.0030284675953967293, NCDG@20: 0.005109811577930301, HR_pos@20: 0.016770963704630788, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0019995287844708754, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005039988562748541, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.01792922756041985
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006758448060075094, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008805463231053816, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.007008760951188986, MRR@10: 0.0013074875340207002, Coverage@10: 0.0015142337976983646, NCDG@10: 0.002555476902724328, HR_pos@10: 0.007008760951188986, HR_neg@10: 0.0, MRR_pos@10: 0.0013074875340207002, MRR_neg@10: 0.0, NCDG_pos@10: 0.002555476902724328, NDCG_neg@10: 0.0, Matthews@10: 0.02578821131349059
+HR@20:0.01702127659574468, MRR@20: 0.0020222845018448656, Coverage@20: 0.0030284675953967293, NCDG@20: 0.005109811577930301, HR_pos@20: 0.016770963704630788, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0019995287844708754, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005039988562748541, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.03349380758410645
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.000688360450563204, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008915159728773093, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.000688360450563204, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008915159728773093, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.005506883604505632, MRR@10: 0.0011701134354450997, Coverage@10: 0.001413284877851807, NCDG@10: 0.002133830675607338, HR_pos@10: 0.005506883604505632, HR_neg@10: 0.0, MRR_pos@10: 0.0011701134354450997, MRR_neg@10: 0.0, NCDG_pos@10: 0.002133830675607338, NDCG_neg@10: 0.0, Matthews@10: 0.03595071081370007
+HR@20:0.010763454317897372, MRR@20: 0.0015071374402116774, Coverage@20: 0.0026246719160104987, NCDG@20: 0.0034286688723946255, HR_pos@20: 0.010262828535669587, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.001469590506544594, MRR_neg@20: 3.7546933667083855e-05, NCDG_pos@20: 0.0032984465558921674, NDCG_neg@20: 0.00013022231650245802, Matthews@20: 0.038008083647960274
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.00034209428452231953, MRR_neg@5: 0.0003337505214851898, NCDG_pos@5: 0.000505076986434543, NDCG_neg@5: 0.0003754693366708385, Matthews@5: 0.004814564446620437
+HR@10:0.0032540675844806004, MRR@10: 0.0009106621371953037, Coverage@10: 0.0015142337976983646, NCDG@10: 0.0014481734002210586, HR_pos@10: 0.002753441802252816, HR_neg@10: 0.0005006257822277847, MRR_pos@10: 0.0005769116157101138, MRR_neg@10: 0.0003337505214851898, NCDG_pos@10: 0.0010727040635502205, NDCG_neg@10: 0.0003754693366708385, Matthews@10: 0.02808109504480098
+HR@20:0.010513141426783479, MRR@20: 0.0013752190725535888, Coverage@20: 0.0027256208358570565, NCDG@20: 0.0032342352651982273, HR_pos@20: 0.007509386733416771, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.0008837745444843328, MRR_neg@20: 0.0004914445280692564, NCDG_pos@20: 0.0022463869595758155, NDCG_neg@20: 0.0009878483056224116, Matthews@20: 0.02284122069887805
+Time spent: 13.294663711388905 minutes
+------------------------------
+
+Hidden sizes: 1024
+Current epoch 107
+Results for alpha=2
+HR@5:0.009011264080100124, MRR@5: 0.007046307884856069, Coverage@5: 0.0045427013930950935, NCDG@5: 0.007529846601425116, HR_pos@5: 0.008760951188986232, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.006795994993742178, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.007279533710311223, NDCG_neg@5: 0.00025031289111389235, Matthews@5: 0.006782051388100554
+HR@10:0.016020025031289114, MRR@10: 0.007887736654945667, Coverage@10: 0.007571168988491823, NCDG@10: 0.009701852609101289, HR_pos@10: 0.01576971214017522, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.007637423763831774, MRR_neg@10: 0.00025031289111389235, NCDG_pos@10: 0.009451539717987394, NDCG_neg@10: 0.00025031289111389235, Matthews@10: 0.016800744917088047
+HR@20:0.03128911138923655, MRR@20: 0.008945797411226336, Coverage@20: 0.011609125782354129, NCDG@20: 0.013564364804156525, HR_pos@20: 0.03053817271589487, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.008663698756161471, MRR_neg@20: 0.0002820986550648628, NCDG_pos@20: 0.013191056434149903, NDCG_neg@20: 0.0003733083700066217, Matthews@20: 0.01616483850218572
+Results for alpha=3
+HR@5:0.008010012515644555, MRR@5: 0.004960367125573633, Coverage@5: 0.003937007874015748, NCDG@5: 0.005739721647874157, HR_pos@5: 0.007759699624530663, HR_neg@5: 0.00025031289111389235, MRR_pos@5: 0.004835210680016687, MRR_neg@5: 0.00012515644555694618, NCDG_pos@5: 0.005581791797167909, NDCG_neg@5: 0.00015792985070624718, Matthews@5: 0.017572424085936456
+HR@10:0.01276595744680851, MRR@10: 0.005535987444623239, Coverage@10: 0.00686452654956592, NCDG@10: 0.0072182897416715784, HR_pos@10: 0.012515644555694618, HR_neg@10: 0.00025031289111389235, MRR_pos@10: 0.005410830999066293, MRR_neg@10: 0.00012515644555694618, NCDG_pos@10: 0.0070603598909653315, NDCG_neg@10: 0.00015792985070624718, Matthews@10: 0.02695681411062881
+HR@20:0.025031289111389236, MRR@20: 0.006326387073121576, Coverage@20: 0.011205330102967898, NCDG@20: 0.010243042046807644, HR_pos@20: 0.024030037546933666, HR_neg@20: 0.0010012515644555694, MRR_pos@20: 0.006153949303687559, MRR_neg@20: 0.00017243776943401474, NCDG_pos@20: 0.009901553418506678, NDCG_neg@20: 0.0003414886283009683, Matthews@20: 0.02633605721859825
+Results for alpha=4
+HR@5:0.008010012515644555, MRR@5: 0.004960367125573633, Coverage@5: 0.003937007874015748, NCDG@5: 0.005739721647874157, HR_pos@5: 0.007259073842302879, HR_neg@5: 0.000750938673341677, MRR_pos@5: 0.004334584897788903, MRR_neg@5: 0.0006257822277847309, NCDG_pos@5: 0.0050811660149401245, NDCG_neg@5: 0.000658555632934032, Matthews@5: 0.021905619892135467
+HR@10:0.01276595744680851, MRR@10: 0.005535987444623239, Coverage@10: 0.00686452654956592, NCDG@10: 0.0072182897416715784, HR_pos@10: 0.012015018773466833, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.004910205216838508, MRR_neg@10: 0.0006257822277847309, NCDG_pos@10: 0.006559734108737547, NDCG_neg@10: 0.000658555632934032, Matthews@10: 0.0378606430870847
+HR@20:0.025031289111389236, MRR@20: 0.006326387073121576, Coverage@20: 0.011205330102967898, NCDG@20: 0.010243042046807644, HR_pos@20: 0.022778473091364205, HR_neg@20: 0.0022528160200250315, MRR_pos@20: 0.005604850231434546, MRR_neg@20: 0.0007215368416870294, NCDG_pos@20: 0.009215353934607689, NDCG_neg@20: 0.0010276881121999554, Matthews@20: 0.0405946049538038
+Results for alpha=5
+HR@5:0.009011264080100124, MRR@5: 0.007046307884856069, Coverage@5: 0.0045427013930950935, NCDG@5: 0.007529846601425116, HR_pos@5: 0.006007509386733416, HR_neg@5: 0.003003754693366708, MRR_pos@5: 0.004730913642052565, MRR_neg@5: 0.0023153942428035044, NCDG_pos@5: 0.005046001938648736, NDCG_neg@5: 0.0024838446627763796, Matthews@5: 0.011837824494620567
+HR@10:0.01602002503128911, MRR@10: 0.007887736654945667, Coverage@10: 0.007571168988491823, NCDG@10: 0.009701852609101289, HR_pos@10: 0.011764705882352941, HR_neg@10: 0.00425531914893617, MRR_pos@10: 0.005416691499294754, MRR_neg@10: 0.002471045155650913, NCDG_pos@10: 0.00682445941930757, NDCG_neg@10: 0.0028773931897937174, Matthews@10: 0.03352050412534272
+HR@20:0.03128911138923655, MRR@20: 0.008945797411226336, Coverage@20: 0.011609125782354129, NCDG@20: 0.013564364804156525, HR_pos@20: 0.021526908635794744, HR_neg@20: 0.009762202753441803, MRR_pos@20: 0.006097810454649694, MRR_neg@20: 0.0028479869565766406, NCDG_pos@20: 0.009299407593879806, NDCG_neg@20: 0.0042649572102767186, Matthews@20: 0.030157173022343598
+Time spent: 25.93819386959076 minutes
+------------------------------
+
+batch size 512
+Hidden sizes: 16
+Current epoch 64
+Results for alpha=2
+HR@5:0.00025031289111389235, MRR@5: 0.00025031289111389235, Coverage@5: 0.0016151827175449223, NCDG@5: 0.00025031289111389235, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 0.00025031289111389235, MRR_neg@5: 0.0, NCDG_pos@5: 0.00025031289111389235, NDCG_neg@5: 0.0, Matthews@5: 0.003315288899407307
+HR@10:0.0012515644555694619, MRR@10: 0.00035947712418300657, Coverage@10: 0.002321825156470826, NCDG@10: 0.0005493428097836009, HR_pos@10: 0.0012515644555694619, HR_neg@10: 0.0, MRR_pos@10: 0.00035947712418300657, MRR_neg@10: 0.0, NCDG_pos@10: 0.0005493428097836009, NDCG_neg@10: 0.0, Matthews@10: 0.007416926308700196
+HR@20:0.0037546933667083854, MRR@20: 0.0005240676293792224, Coverage@20: 0.0055521905915606705, NCDG@20: 0.0011714533639419595, HR_pos@20: 0.0037546933667083854, HR_neg@20: 0.0, MRR_pos@20: 0.0005240676293792224, MRR_neg@20: 0.0, NCDG_pos@20: 0.0011714533639419595, NDCG_neg@20: 0.0, Matthews@20: 0.012862621888490838
+Results for alpha=3
+HR@5:0.00025031289111389235, MRR@5: 0.00025031289111389235, Coverage@5: 0.0016151827175449223, NCDG@5: 0.00025031289111389235, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 0.00025031289111389235, MRR_neg@5: 0.0, NCDG_pos@5: 0.00025031289111389235, NDCG_neg@5: 0.0, Matthews@5: 0.0048570130968673035
+HR@10:0.0012515644555694619, MRR@10: 0.00035947712418300657, Coverage@10: 0.002321825156470826, NCDG@10: 0.0005493428097836009, HR_pos@10: 0.0012515644555694619, HR_neg@10: 0.0, MRR_pos@10: 0.00035947712418300657, MRR_neg@10: 0.0, NCDG_pos@10: 0.0005493428097836009, NDCG_neg@10: 0.0, Matthews@10: 0.01086605400401058
+HR@20:0.0037546933667083854, MRR@20: 0.0005240676293792224, Coverage@20: 0.0055521905915606705, NCDG@20: 0.0011714533639419595, HR_pos@20: 0.0037546933667083854, HR_neg@20: 0.0, MRR_pos@20: 0.0005240676293792224, MRR_neg@20: 0.0, NCDG_pos@20: 0.0011714533639419595, NDCG_neg@20: 0.0, Matthews@20: 0.018844186696254726
+Results for alpha=4
+HR@5:0.00025031289111389235, MRR@5: 0.00025031289111389235, Coverage@5: 0.0016151827175449223, NCDG@5: 0.00025031289111389235, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 0.00025031289111389235, MRR_neg@5: 0.0, NCDG_pos@5: 0.00025031289111389235, NDCG_neg@5: 0.0, Matthews@5: 0.007644540634293536
+HR@10:0.0012515644555694619, MRR@10: 0.00035947712418300657, Coverage@10: 0.002321825156470826, NCDG@10: 0.0005493428097836009, HR_pos@10: 0.0012515644555694619, HR_neg@10: 0.0, MRR_pos@10: 0.00035947712418300657, MRR_neg@10: 0.0, NCDG_pos@10: 0.0005493428097836009, NDCG_neg@10: 0.0, Matthews@10: 0.017102278645627498
+HR@20:0.0037546933667083854, MRR@20: 0.0005240676293792224, Coverage@20: 0.0055521905915606705, NCDG@20: 0.0011714533639419595, HR_pos@20: 0.003504380475594493, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0005108932666890176, MRR_neg@20: 1.3174362690204861e-05, NCDG_pos@20: 0.0011135364144651736, NDCG_neg@20: 5.791694947678577e-05, Matthews@20: 0.019210482051104903
+Results for alpha=5
+HR@5:0.00025031289111389235, MRR@5: 0.00025031289111389235, Coverage@5: 0.0016151827175449223, NCDG@5: 0.00025031289111389235, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 0.00025031289111389235, MRR_neg@5: 0.0, NCDG_pos@5: 0.00025031289111389235, NDCG_neg@5: 0.0, Matthews@5: 0.012758538809710292
+HR@10:0.0012515644555694619, MRR@10: 0.00035947712418300657, Coverage@10: 0.002321825156470826, NCDG@10: 0.0005493428097836009, HR_pos@10: 0.0012515644555694619, HR_neg@10: 0.0, MRR_pos@10: 0.00035947712418300657, MRR_neg@10: 0.0, NCDG_pos@10: 0.0005493428097836009, NDCG_neg@10: 0.0, Matthews@10: 0.028543256720471727
+HR@20:0.0037546933667083854, MRR@20: 0.0005240676293792224, Coverage@20: 0.0055521905915606705, NCDG@20: 0.0011714533639419595, HR_pos@20: 0.003003754693366708, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.0004773692187719784, MRR_neg@20: 4.669841060724401e-05, NCDG_pos@20: 0.000988227636761033, NDCG_neg@20: 0.00018322572718092634, Matthews@20: 0.024372834375161644
+Time spent: 17.55699278116226 minutes
+------------------------------
+
+Hidden sizes: 32
+Current epoch 77
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345015, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007717980809345015, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009570627831759114, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.004755944931163955, MRR@10: 0.0011482607227288077, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0019507835311754552, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0011482607227288077, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019507835311754552, NDCG_neg@10: 0.0, Matthews@10: 0.014483683379780848
+HR@20:0.010513141426783479, MRR@20: 0.0015374724666428305, Coverage@20: 0.0036341611144760752, NCDG@20: 0.00339313925303499, HR_pos@20: 0.010513141426783479, HR_neg@20: 0.0, MRR_pos@20: 0.0015374724666428305, MRR_neg@20: 0.0, NCDG_pos@20: 0.00339313925303499, NDCG_neg@20: 0.0, Matthews@20: 0.02159666281534426
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345015, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007717980809345015, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009570627831759114, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.004755944931163955, MRR@10: 0.0011482607227288077, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0019507835311754552, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0011482607227288077, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019507835311754552, NDCG_neg@10: 0.0, Matthews@10: 0.021219097943184197
+HR@20:0.010513141426783479, MRR@20: 0.0015374724666428305, Coverage@20: 0.0036341611144760752, NCDG@20: 0.00339313925303499, HR_pos@20: 0.010513141426783479, HR_neg@20: 0.0, MRR_pos@20: 0.0015374724666428305, MRR_neg@20: 0.0, NCDG_pos@20: 0.00339313925303499, NDCG_neg@20: 0.0, Matthews@20: 0.03163985924771352
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345015, Coverage@5: 0.0013123359580052493, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007717980809345015, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009570627831759114, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.004755944931163955, MRR@10: 0.0011482607227288077, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0019507835311754552, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0011482607227288077, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019507835311754552, NDCG_neg@10: 0.0, Matthews@10: 0.03339712148487909
+HR@20:0.010513141426783479, MRR@20: 0.0015374724666428305, Coverage@20: 0.0036341611144760752, NCDG@20: 0.00339313925303499, HR_pos@20: 0.010262828535669587, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0015242981039526257, MRR_neg@20: 1.3174362690204861e-05, NCDG_pos@20: 0.0033352223035582043, NDCG_neg@20: 5.791694947678577e-05, Matthews@20: 0.043532950326968425
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345015, Coverage@5: 0.0012113870381586917, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0005214851898206091, MRR_neg@5: 0.00025031289111389235, NCDG_pos@5: 0.0006412030817634169, NDCG_neg@5: 0.00031585970141249437, Matthews@5: 0.004814564446620437
+HR@10:0.004505632040050062, MRR@10: 0.0011204481792717084, Coverage@10: 0.0021199273167777106, NCDG@10: 0.0018754318426488015, HR_pos@10: 0.0037546933667083854, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0008343763037129745, MRR_neg@10: 0.0002860718755587341, NCDG_pos@10: 0.0014761345108650096, NDCG_neg@10: 0.0003992973317837918, Matthews@10: 0.031298552727020146
+HR@20:0.010513141426783479, MRR@20: 0.0015307351121178002, Coverage@20: 0.0036341611144760752, NCDG@20: 0.003385393338909542, HR_pos@20: 0.008760951188986232, HR_neg@20: 0.0017521902377972466, MRR_pos@20: 0.0011754127491388074, MRR_neg@20: 0.00035532236297899255, NCDG_pos@20: 0.002733511477475335, NDCG_neg@20: 0.0006518818614342067, Matthews@20: 0.04795424268589308
+Time spent: 19.191678269704184 minutes
+------------------------------
+
+Hidden sizes: 64
+Current epoch 50
+Results for alpha=2
+HR@5:0.00025031289111389235, MRR@5: 8.343763037129745e-05, Coverage@5: 0.004643650312941652, NCDG@5: 0.00012515644555694618, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 8.343763037129745e-05, MRR_neg@5: 0.0, NCDG_pos@5: 0.00012515644555694618, NDCG_neg@5: 0.0, Matthews@5: 0.003315288899407307
+HR@10:0.0005006257822277847, MRR@10: 0.0001112501738283966, Coverage@10: 0.007167373309105592, NCDG@10: 0.0002005081340835998, HR_pos@10: 0.0005006257822277847, HR_neg@10: 0.0, MRR_pos@10: 0.0001112501738283966, MRR_neg@10: 0.0, NCDG_pos@10: 0.0002005081340835998, NDCG_neg@10: 0.0, Matthews@10: 0.004689113581202476
+HR@20:0.0012515644555694619, MRR@20: 0.00016124582347066334, Coverage@20: 0.013325257419745608, NCDG@20: 0.00038734809926913526, HR_pos@20: 0.0012515644555694619, HR_neg@20: 0.0, MRR_pos@20: 0.00016124582347066334, MRR_neg@20: 0.0, NCDG_pos@20: 0.00038734809926913526, NDCG_neg@20: 0.0, Matthews@20: 0.007416926308700196
+Results for alpha=3
+HR@5:0.00025031289111389235, MRR@5: 8.343763037129745e-05, Coverage@5: 0.004643650312941652, NCDG@5: 0.00012515644555694618, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 8.343763037129745e-05, MRR_neg@5: 0.0, NCDG_pos@5: 0.00012515644555694618, NDCG_neg@5: 0.0, Matthews@5: 0.0048570130968673035
+HR@10:0.0005006257822277847, MRR@10: 0.0001112501738283966, Coverage@10: 0.007167373309105592, NCDG@10: 0.0002005081340835998, HR_pos@10: 0.0005006257822277847, HR_neg@10: 0.0, MRR_pos@10: 0.0001112501738283966, MRR_neg@10: 0.0, NCDG_pos@10: 0.0002005081340835998, NDCG_neg@10: 0.0, Matthews@10: 0.006869713852289133
+HR@20:0.0012515644555694619, MRR@20: 0.00016124582347066334, Coverage@20: 0.013325257419745608, NCDG@20: 0.00038734809926913526, HR_pos@20: 0.0012515644555694619, HR_neg@20: 0.0, MRR_pos@20: 0.00016124582347066334, MRR_neg@20: 0.0, NCDG_pos@20: 0.00038734809926913526, NDCG_neg@20: 0.0, Matthews@20: 0.01086605400401058
+Results for alpha=4
+HR@5:0.00025031289111389235, MRR@5: 8.343763037129745e-05, Coverage@5: 0.004643650312941652, NCDG@5: 0.00012515644555694618, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 8.343763037129745e-05, MRR_neg@5: 0.0, NCDG_pos@5: 0.00012515644555694618, NDCG_neg@5: 0.0, Matthews@5: 0.007644540634293536
+HR@10:0.0005006257822277847, MRR@10: 0.0001112501738283966, Coverage@10: 0.007167373309105592, NCDG@10: 0.0002005081340835998, HR_pos@10: 0.0005006257822277847, HR_neg@10: 0.0, MRR_pos@10: 0.0001112501738283966, MRR_neg@10: 0.0, NCDG_pos@10: 0.0002005081340835998, NDCG_neg@10: 0.0, Matthews@10: 0.010812366704068663
+HR@20:0.0012515644555694616, MRR@20: 0.00016124582347066334, Coverage@20: 0.013325257419745608, NCDG@20: 0.00038734809926913526, HR_pos@20: 0.0010012515644555694, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0001487301789149687, MRR_neg@20: 1.251564455569462e-05, NCDG_pos@20: 0.0003303593010971821, NDCG_neg@20: 5.698879817195319e-05, Matthews@20: -0.0009727486531243299
+Results for alpha=5
+HR@5:0.00025031289111389235, MRR@5: 8.343763037129745e-05, Coverage@5: 0.004643650312941652, NCDG@5: 0.00012515644555694618, HR_pos@5: 0.00025031289111389235, HR_neg@5: 0.0, MRR_pos@5: 8.343763037129745e-05, MRR_neg@5: 0.0, NCDG_pos@5: 0.00012515644555694618, NDCG_neg@5: 0.0, Matthews@5: 0.012758538809710292
+HR@10:0.0005006257822277847, MRR@10: 0.0001112501738283966, Coverage@10: 0.007167373309105592, NCDG@10: 0.0002005081340835998, HR_pos@10: 0.0005006257822277847, HR_neg@10: 0.0, MRR_pos@10: 0.0001112501738283966, MRR_neg@10: 0.0, NCDG_pos@10: 0.0002005081340835998, NDCG_neg@10: 0.0, Matthews@10: 0.018045557845534025
+HR@20:0.0012515644555694616, MRR@20: 0.00016124582347066334, Coverage@20: 0.013325257419745608, NCDG@20: 0.00038734809926913526, HR_pos@20: 0.0005006257822277847, HR_neg@20: 0.000750938673341677, MRR_pos@20: 0.0001112501738283966, MRR_neg@20: 4.9995649642266744e-05, NCDG_pos@20: 0.0002005081340835998, NDCG_neg@20: 0.0001868399651855355, Matthews@20: -0.014924460153080198
+Time spent: 13.193393234411875 minutes
+------------------------------
+
+Hidden sizes: 128
+Current epoch 95
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0005298289528577389, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0007708107315271213, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0005298289528577389, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007708107315271213, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.004755944931163955, MRR@10: 0.0009305282396646602, Coverage@10: 0.00171613163739148, NCDG@10: 0.0017896884716110165, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0009305282396646602, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017896884716110165, NDCG_neg@10: 0.0, Matthews@10: 0.014483683379780848
+HR@20:0.014267834793491864, MRR@20: 0.0015368168484873965, Coverage@20: 0.0027256208358570565, NCDG@20: 0.004128021345780994, HR_pos@20: 0.014017521902377972, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.001522910576758847, MRR_neg@20: 1.3906271728549575e-05, NCDG_pos@20: 0.004069095460082212, NDCG_neg@20: 5.892588569878304e-05, Matthews@20: 0.014691051013866056
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0005298289528577389, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0007708107315271213, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0005298289528577389, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007708107315271213, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.004755944931163955, MRR@10: 0.0009305282396646602, Coverage@10: 0.00171613163739148, NCDG@10: 0.0017896884716110165, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0009305282396646602, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017896884716110165, NDCG_neg@10: 0.0, Matthews@10: 0.021219097943184197
+HR@20:0.014267834793491864, MRR@20: 0.0015368168484873965, Coverage@20: 0.0027256208358570565, NCDG@20: 0.004128021345780994, HR_pos@20: 0.014017521902377972, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.001522910576758847, MRR_neg@20: 1.3906271728549575e-05, NCDG_pos@20: 0.004069095460082212, NDCG_neg@20: 5.892588569878304e-05, Matthews@20: 0.029405321915364067
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0005298289528577389, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0007708107315271213, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0005298289528577389, MRR_neg@5: 0.0, NCDG_pos@5: 0.0007708107315271213, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.004755944931163955, MRR@10: 0.0009305282396646602, Coverage@10: 0.00171613163739148, NCDG@10: 0.0017896884716110165, HR_pos@10: 0.004755944931163955, HR_neg@10: 0.0, MRR_pos@10: 0.0009305282396646602, MRR_neg@10: 0.0, NCDG_pos@10: 0.0017896884716110165, NDCG_neg@10: 0.0, Matthews@10: 0.03339712148487909
+HR@20:0.014267834793491866, MRR@20: 0.0015368168484873965, Coverage@20: 0.0027256208358570565, NCDG@20: 0.004128021345780994, HR_pos@20: 0.013016270337922404, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.001457616046508121, MRR_neg@20: 7.920080197927506e-05, NCDG_pos@20: 0.003821053319741239, NDCG_neg@20: 0.00030696802603975625, Matthews@20: 0.0311809840794597
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0004964539007092198, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0007424885305845786, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.00032123487692949516, MRR_neg@5: 0.00017521902377972464, NCDG_pos@5: 0.00048772443526392796, NDCG_neg@5: 0.0002547640953206506, Matthews@5: 0.004814564446620437
+HR@10:0.004505632040050063, MRR@10: 0.0008665593897133322, Coverage@10: 0.00171613163739148, NCDG@10: 0.0016830195460101319, HR_pos@10: 0.003254067584480601, HR_neg@10: 0.0012515644555694619, MRR_pos@10: 0.0006106839899080199, MRR_neg@10: 0.00025587539980531226, NCDG_pos@10: 0.0012051954212412086, NDCG_neg@10: 0.00047782412476892356, Matthews@10: 0.01600061204745258
+HR@20:0.011013767209011264, MRR@20: 0.001312692277384985, Coverage@20: 0.0030284675953967293, NCDG@20: 0.0033209668789482005, HR_pos@20: 0.008260325406758449, HR_neg@20: 0.002753441802252816, MRR_pos@20: 0.0009436259383561932, MRR_neg@20: 0.0003690663390287921, NCDG_pos@20: 0.002451617151088234, NDCG_neg@20: 0.0008693497278599663, Matthews@20: 0.03109780185218985
+Time spent: 25.59925990899404 minutes
+------------------------------
+
+Hidden sizes: 256
+Current epoch 59
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0006132665832290364, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008284886695935364, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006132665832290364, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008284886695935364, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.005256570713391739, MRR@10: 0.001051214812166001, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0019786219010541253, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.001051214812166001, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019786219010541253, NDCG_neg@10: 0.0, Matthews@10: 0.01523074425299448
+HR@20:0.010513141426783479, MRR@20: 0.001414326942996681, Coverage@20: 0.002826569755703614, NCDG@20: 0.0033051211721184096, HR_pos@20: 0.010513141426783479, HR_neg@20: 0.0, MRR_pos@20: 0.001414326942996681, MRR_neg@20: 0.0, NCDG_pos@20: 0.0033051211721184096, NDCG_neg@20: 0.0, Matthews@20: 0.02159666281534426
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0006132665832290364, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008284886695935364, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006132665832290364, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008284886695935364, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.005256570713391739, MRR@10: 0.001051214812166001, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0019786219010541253, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.001051214812166001, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019786219010541253, NDCG_neg@10: 0.0, Matthews@10: 0.022313568004603095
+HR@20:0.010513141426783479, MRR@20: 0.001414326942996681, Coverage@20: 0.002826569755703614, NCDG@20: 0.0033051211721184096, HR_pos@20: 0.010513141426783479, HR_neg@20: 0.0, MRR_pos@20: 0.001414326942996681, MRR_neg@20: 0.0, NCDG_pos@20: 0.0033051211721184096, NDCG_neg@20: 0.0, Matthews@20: 0.03163985924771352
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0006132665832290364, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008284886695935364, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006132665832290364, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008284886695935364, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.005256570713391739, MRR@10: 0.001051214812166001, Coverage@10: 0.0018170805572380376, NCDG@10: 0.0019786219010541253, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.001051214812166001, MRR_neg@10: 0.0, NCDG_pos@10: 0.0019786219010541253, NDCG_neg@10: 0.0, Matthews@10: 0.03511972768145915
+HR@20:0.01051314142678348, MRR@20: 0.001414326942996681, Coverage@20: 0.002826569755703614, NCDG@20: 0.0033051211721184096, HR_pos@20: 0.010012515644555695, HR_neg@20: 0.0005006257822277847, MRR_pos@20: 0.001374212697625865, MRR_neg@20: 4.011424537081608e-05, NCDG_pos@20: 0.0031717325139295443, NDCG_neg@20: 0.00013338865818886443, Matthews@20: 0.03726735474544886
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0006132665832290364, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008284886695935364, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.000425531914893617, MRR_neg@5: 0.00018773466833541926, NCDG_pos@5: 0.0005627549245009582, NDCG_neg@5: 0.0002657337450925784, Matthews@5: 0.004814564446620437
+HR@10:0.004005006257822278, MRR@10: 0.0009204958579176351, Coverage@10: 0.0016151827175449223, NCDG@10: 0.0016108485668159212, HR_pos@10: 0.003254067584480601, HR_neg@10: 0.000750938673341677, MRR_pos@10: 0.0007077299004708267, MRR_neg@10: 0.0002127659574468085, NCDG_pos@10: 0.0012727581693283772, NDCG_neg@10: 0.00033809039748754406, Matthews@10: 0.02679750182856756
+HR@20:0.012015018773466835, MRR@20: 0.0014563952536728105, Coverage@20: 0.002826569755703614, NCDG@20: 0.00360990372937115, HR_pos@20: 0.009011264080100126, HR_neg@20: 0.003003754693366708, MRR_pos@20: 0.0010730416444118167, MRR_neg@20: 0.00038335360926099345, NCDG_pos@20: 0.002684583779681737, NDCG_neg@20: 0.0009253199496894129, Matthews@20: 0.03249704891386036
+Time spent: 15.83539249499639 minutes
+------------------------------
+
+Hidden sizes: 512
+Current epoch 70
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006758448060075094, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008805463231053816, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.005256570713391739, MRR@10: 0.001122732781055684, Coverage@10: 0.0013123359580052493, NCDG@10: 0.002039624964602318, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.001122732781055684, MRR_neg@10: 0.0, NCDG_pos@10: 0.002039624964602318, NDCG_neg@10: 0.0, Matthews@10: 0.01523074425299448
+HR@20:0.015269086357947433, MRR@20: 0.0018384213546897548, Coverage@20: 0.0026246719160104987, NCDG@20: 0.004596137905037482, HR_pos@20: 0.015018773466833541, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0018156656373157646, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004526314889855723, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.01591924480746081
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0006056935190793458, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006758448060075094, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008805463231053816, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.005256570713391739, MRR@10: 0.001122732781055684, Coverage@10: 0.0013123359580052493, NCDG@10: 0.002039624964602318, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.001122732781055684, MRR_neg@10: 0.0, NCDG_pos@10: 0.002039624964602318, NDCG_neg@10: 0.0, Matthews@10: 0.022313568004603095
+HR@20:0.015269086357947433, MRR@20: 0.0018384213546897548, Coverage@20: 0.0026246719160104987, NCDG@20: 0.004596137905037482, HR_pos@20: 0.015018773466833541, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0018156656373157646, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.004526314889855723, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.03094571940215834
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0006758448060075094, MRR_neg@5: 0.0, NCDG_pos@5: 0.0008805463231053816, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.005256570713391739, MRR@10: 0.001126606671037209, Coverage@10: 0.0013123359580052493, NCDG@10: 0.0020441373679792084, HR_pos@10: 0.005256570713391739, HR_neg@10: 0.0, MRR_pos@10: 0.001126606671037209, MRR_neg@10: 0.0, NCDG_pos@10: 0.0020441373679792084, NDCG_neg@10: 0.0, Matthews@10: 0.03511972768145915
+HR@20:0.015519399249061327, MRR@20: 0.001910479246816851, Coverage@20: 0.0029275186755501714, NCDG@20: 0.0047280758811961655, HR_pos@20: 0.014267834793491864, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.001812322640525076, MRR_neg@20: 9.815660629177525e-05, NCDG_pos@20: 0.0043977902782159324, NDCG_neg@20: 0.0003302856029802336, Matthews@20: 0.03480804672479224
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0006758448060075094, Coverage@5: 0.0007066424389259035, NCDG@5: 0.0008805463231053816, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0004672507300792657, MRR_neg@5: 0.0002085940759282436, NCDG_pos@5: 0.0005974600268421882, NDCG_neg@5: 0.0002830862962631934, Matthews@5: 0.004814564446620437
+HR@10:0.00525657071339174, MRR@10: 0.001126606671037209, Coverage@10: 0.0013123359580052493, NCDG@10: 0.0020441373679792084, HR_pos@10: 0.00425531914893617, HR_neg@10: 0.0010012515644555694, MRR_pos@10: 0.0008651687625404772, MRR_neg@10: 0.000261437908496732, NCDG_pos@10: 0.0016133427307943955, NDCG_neg@10: 0.0004307946371848127, Matthews@10: 0.030276937169639053
+HR@20:0.015519399249061327, MRR@20: 0.001910479246816851, Coverage@20: 0.0029275186755501714, NCDG@20: 0.0047280758811961655, HR_pos@20: 0.011013767209011264, HR_neg@20: 0.004505632040050063, MRR_pos@20: 0.001378113790649584, MRR_neg@20: 0.0005323654561672673, NCDG_pos@20: 0.0033770447133784774, NDCG_neg@20: 0.0013510311678176878, Matthews@20: 0.026638122872271797
+Time spent: 19.065268727143607 minutes
+------------------------------
+
+Hidden sizes: 1024
+Current epoch 65
+Results for alpha=2
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345014, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007717980809345014, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009570627831759114, NDCG_neg@5: 0.0, Matthews@5: 0.008125854034515026
+HR@10:0.007509386733416771, MRR@10: 0.0014517154379482284, Coverage@10: 0.00171613163739148, NCDG@10: 0.0027763761029813198, HR_pos@10: 0.007509386733416771, HR_neg@10: 0.0, MRR_pos@10: 0.0014517154379482284, MRR_neg@10: 0.0, NCDG_pos@10: 0.0027763761029813198, NDCG_neg@10: 0.0, Matthews@10: 0.01822487009034471
+HR@20:0.016520650813516898, MRR@20: 0.0020930532177272495, Coverage@20: 0.00343226327478296, NCDG@20: 0.005073627597645873, HR_pos@20: 0.016270337922403004, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0020702975003532593, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005003804582464113, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.0173713314046241
+Results for alpha=3
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345014, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007717980809345014, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009570627831759114, NDCG_neg@5: 0.0, Matthews@5: 0.011904657683355246
+HR@10:0.007509386733416771, MRR@10: 0.0014517154379482284, Coverage@10: 0.00171613163739148, NCDG@10: 0.0027763761029813198, HR_pos@10: 0.007509386733416771, HR_neg@10: 0.0, MRR_pos@10: 0.0014517154379482284, MRR_neg@10: 0.0, NCDG_pos@10: 0.0027763761029813198, NDCG_neg@10: 0.0, Matthews@10: 0.02670006608876064
+HR@20:0.016520650813516898, MRR@20: 0.0020930532177272495, Coverage@20: 0.00343226327478296, NCDG@20: 0.005073627597645873, HR_pos@20: 0.016270337922403004, HR_neg@20: 0.00025031289111389235, MRR_pos@20: 0.0020702975003532593, MRR_neg@20: 2.2755717373990216e-05, NCDG_pos@20: 0.005003804582464113, NDCG_neg@20: 6.982301518175967e-05, Matthews@20: 0.03278328392867859
+Results for alpha=4
+HR@5:0.001501877346683354, MRR@5: 0.0007300792657488527, Coverage@5: 0.0009085402786190188, NCDG@5: 0.0009242893780266104, HR_pos@5: 0.001501877346683354, HR_neg@5: 0.0, MRR_pos@5: 0.0007300792657488527, MRR_neg@5: 0.0, NCDG_pos@5: 0.0009242893780266104, NDCG_neg@5: 0.0, Matthews@5: 0.018736955734474148
+HR@10:0.006508135168961202, MRR@10: 0.0013531795697002205, Coverage@10: 0.0019180294770845953, NCDG@10: 0.002498876933355343, HR_pos@10: 0.006508135168961202, HR_neg@10: 0.0, MRR_pos@10: 0.0013531795697002205, MRR_neg@10: 0.0, NCDG_pos@10: 0.002498876933355343, NDCG_neg@10: 0.0, Matthews@10: 0.03910223201346688
+HR@20:0.017521902377972465, MRR@20: 0.002152638843500486, Coverage@20: 0.003937007874015748, NCDG@20: 0.005325561195836763, HR_pos@20: 0.016270337922403004, HR_neg@20: 0.0012515644555694619, MRR_pos@20: 0.0020558728643815653, MRR_neg@20: 9.67659791189203e-05, NCDG_pos@20: 0.004997212680383359, NDCG_neg@20: 0.00032834851545340376, Matthews@20: 0.04016560283682843
+Results for alpha=5
+HR@5:0.001501877346683354, MRR@5: 0.0007717980809345014, Coverage@5: 0.0008075913587724611, NCDG@5: 0.0009570627831759114, HR_pos@5: 0.0010012515644555694, HR_neg@5: 0.0005006257822277847, MRR_pos@5: 0.0005632040050062579, MRR_neg@5: 0.0002085940759282436, NCDG_pos@5: 0.000673976486912718, NDCG_neg@5: 0.0002830862962631934, Matthews@5: 0.004814564446620437
+HR@10:0.007509386733416771, MRR@10: 0.0014517154379482284, Coverage@10: 0.00171613163739148, NCDG@10: 0.0027763761029813198, HR_pos@10: 0.006007509386733416, HR_neg@10: 0.001501877346683354, MRR_pos@10: 0.0011429962055744282, MRR_neg@10: 0.0003087192323738006, NCDG_pos@10: 0.002203863197138263, NDCG_neg@10: 0.0005725129058430561, Matthews@10: 0.03453353010541817
+HR@20:0.016520650813516898, MRR@20: 0.0020930532177272495, Coverage@20: 0.00343226327478296, NCDG@20: 0.005073627597645873, HR_pos@20: 0.011764705882352941, HR_neg@20: 0.004755944931163955, MRR_pos@20: 0.0015487103553068358, MRR_neg@20: 0.0005443428624204129, NCDG_pos@20: 0.0036664465869624247, NDCG_neg@20: 0.0014071810106834485, Matthews@20: 0.028146179133655
+Time spent: 17.072100925445557 minutes
+------------------------------
+
+[[init-process] Main process terminated]
