@@ -404,7 +404,7 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
             prev_matt3, hrs3, mrrs3, cs3, ndcgs3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch, h)
             prev_matt4, hrs4, mrrs4, cs4, ndcgs4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
             prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
-            # prev_matt6, hrs6, mrrs6, cs6, ndcgs6 = predict_and_check(model, scores, holdout_valid, data_description, hrs6, mrrs6, cs6, ndcgs6, 6, prev_matt6, epoch, h)
+            prev_matt6, hrs6, mrrs6, cs6, ndcgs6 = predict_and_check(model, scores, holdout_valid, data_description, hrs6, mrrs6, cs6, ndcgs6, 6, prev_matt6, epoch, h)
 
             # stop = epoch if epoch < early_stop else epoch-early_stop
             if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop:# and len(prev_matt6) >= early_stop:
@@ -418,7 +418,7 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
         check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, h, device, batch_size=batch_size, dcg=True)
         check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
         check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
-        # check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 6, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 6, h, device, batch_size=batch_size, dcg=True)
         end = time.time()
 
         print('Time spent:', (end-start) / 60, 'minutes')

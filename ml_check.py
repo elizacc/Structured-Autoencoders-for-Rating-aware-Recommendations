@@ -154,7 +154,8 @@ def main():
 
     print('Alpha: 2')
     h = (128, 4)
-    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description, varindtriangular_model, h, device, MVDataset, batch_size=16, tensor_model=True)
+    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+                                      varindtriangular_model, h, device, MVDataset, batch_size=16, tensor_model=True)
 
     print('Alpha: 3')
     h = (512, 5)
