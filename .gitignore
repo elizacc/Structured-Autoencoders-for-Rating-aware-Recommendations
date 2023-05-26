@@ -15,3 +15,7 @@ __pycache__/dataprep.cpython-310.pyc
 mlc.exe
 .devcontainer/devcontainer.json
 .devcontainer/Dockerfile
+.ipynb_checkpoints/RecVAE-checkpoint.ipynb
+__pycache__/dataprep.cpython-39.pyc
+__pycache__/model.cpython-39.pyc
+__pycache__/utils.cpython-39.pyc

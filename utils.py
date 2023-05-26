@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import time
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import torch
 from torch.utils.data import Dataset, DataLoader
 
@@ -157,7 +157,7 @@ def predict_and_check(model, scores, holdout, data_description, hrs, mrrs, cs, n
         
     return prev_matt, hrs, mrrs, cs, ndcgs
 
-def check_test(model, criterion, user_tensor_test, target_test, testset, holdout, data_description, test_num_batches, alpha, h, device, batch_size=16, dcg=True):
+def check_test(model, criterion, user_tensor_test, target_test, testset, holdout, data_description, test_num_batches, alpha, h, device, gamma, batch_size=16, dcg=True):
     test_loss = 0
     scores = torch.zeros((len(testset.userid.unique()), data_description['n_items']))
     
@@ -415,40 +415,40 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
             # print('Epoch:', epoch, '\tTrain loss:', train_loss / len(train_dataloader), '\tVal loss:', val_loss)
 
         # Testing the AE
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 2, h, device, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, h, device, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
-        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 6, h, device, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 2, h, device, gamma, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 3, h, device, gamma, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 4, h, device, gamma, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 5, h, device, gamma, batch_size=batch_size, dcg=True)
+        check_test(model, criterion, user_tensor_val, target_val, testset_valid, holdout_valid, data_description, val_num_batches, 6, h, device, gamma, batch_size=batch_size, dcg=True)
         end = time.time()
 
         print('Time spent:', (end-start) / 60, 'minutes')
         # our
-        # plt.figure(figsize=(10,6))
-        # plt.plot(history, label='train')
-        # plt.plot(val_history, label='val')
-        # plt.legend()
-        # plt.show()
+        plt.figure(figsize=(10,6))
+        plt.plot(history, label='train')
+        plt.plot(val_history, label='val')
+        plt.legend()
+        plt.show()
 
-        # hrs = [hrs2, hrs3, hrs4, hrs5]
-        # mrrs = [mrrs2, mrrs3, mrrs4, mrrs5]
-        # cs = [cs2, cs3, cs4, cs5]
-        # ndcgs = [ndcgs2, ndcgs3, ndcgs4, ndcgs5]
+        hrs = [hrs2, hrs3, hrs4, hrs5]
+        mrrs = [mrrs2, mrrs3, mrrs4, mrrs5]
+        cs = [cs2, cs3, cs4, cs5]
+        ndcgs = [ndcgs2, ndcgs3, ndcgs4, ndcgs5]
+        
+        fig = plt.figure(figsize=(24,5))
+        axes = fig.subplots(nrows=1, ncols=4)
+        for i in range(4):
+            axes[i].set_title(f'alpha={i+2}')
+            axes[i].plot(hrs[i], label='HR@10')
+            axes[i].plot(mrrs[i], label='MRR@10')
+            axes[i].plot(cs[i], label='Matthews@10')
+            axes[i].plot(ndcgs[i], label='NDCG@10')
+            axes[i].legend()
         #
-        # fig = plt.figure(figsize=(24,5))
-        # axes = fig.subplots(nrows=1, ncols=4)
-        # for i in range(4):
-        #     axes[i].set_title(f'alpha={i+2}')
-        #     axes[i].plot(hrs[i], label='HR@10')
-        #     axes[i].plot(mrrs[i], label='MRR@10')
-        #     axes[i].plot(cs[i], label='Matthews@10')
-        #     axes[i].plot(ndcgs[i], label='NDCG@10')
-        #     axes[i].legend()
-        #
-        # plt.show()
+        plt.show()
 
-        # print('Test loss:', val_history[-min(early_stop, epoch)])
-        # print('Train loss:', history[-min(early_stop, epoch)])
+        print('Test loss:', val_history[-min(early_stop, epoch)])
+        print('Train loss:', history[-min(early_stop, epoch)])
 
         print("------------------------------")
         print()
