@@ -18,6 +18,11 @@ from scipy.sparse import csr_matrix
 from scipy.linalg import solve_triangular
 # from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances, rbf_kernel, laplacian_kernel
 
+data = pd.read_csv('../../e.makhneva/data/Clothing_Shoes_and_Jewelry/Amazon_Clothing_Shoes_and_Jewelry.csv')
+data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
+            inplace=True)
+
+
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description = full_preproccessing(data)
 
