@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch.optim as optim
 from torch.nn import functional as F
-from RecVAE.model import VAE
+from model import VAE
 
 from dataprep import full_preproccessing
 from utils import *

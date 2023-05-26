@@ -161,11 +161,11 @@ def main():
 
     # %%
     # sizes = 2 ** np.arange(7, 10)
-    sizes = [128]
+    sizes = [512]
     for batch_size in sizes:
         print('Batch size:', batch_size)
         tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, varindtriangular_model,
-                                device, grid[10:], MVDataset, batch_size=int(batch_size))
+                                device, grid, MVDataset, batch_size=int(batch_size))
 
 
 # ## Preprocess data
