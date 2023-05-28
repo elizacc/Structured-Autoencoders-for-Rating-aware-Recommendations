@@ -161,7 +161,7 @@ def main():
     grid = list(zip(grid[1].flatten(), grid[0].flatten()))
 
     # %%
-    sizes = 2 ** np.arange(4, 10)
+    sizes = [512]
     for batch_size in sizes:
         print('Batch size:', batch_size)
         tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, varindtriangular_model,

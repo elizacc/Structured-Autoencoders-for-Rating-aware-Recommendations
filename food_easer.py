@@ -1,7 +1,7 @@
 # %%
 import numpy as np
 import pandas as pd
-from tqdm.notebook import tqdm
+# from tqdm.notebook import tqdm
 
 from scipy.sparse import csr_matrix
 
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     hr_tf = {}
     mrr_tf = {}
     c_tf = {}
-    for lmbda in tqdm(lambda_grid):
+    for lmbda in lambda_grid:
         easer_params = easer(training, data_description, lmbda=lmbda)
         easer_scores = easer_scoring(easer_params, testset_valid, data_description)
         downvote_seen_items(easer_scores, testset_valid, data_description)

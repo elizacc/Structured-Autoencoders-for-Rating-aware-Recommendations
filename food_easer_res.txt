@@ -1,0 +1,129 @@
+failed to get console mode for stdout: The handle is invalid.
+Looking in indexes: https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/simple
+Collecting torch==1.13.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/torch/1.13.1/torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 289.3 MB/s eta 0:00:00
+Collecting scipy==1.10.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/scipy/1.10.1/scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.5/34.5 MB 290.6 MB/s eta 0:00:00
+Collecting numpy==1.22.2
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/numpy/1.22.2/numpy-1.22.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 278.8 MB/s eta 0:00:00
+Collecting scikit-learn==1.2.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/scikit-learn/1.2.1/scikit_learn-1.2.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.8/9.8 MB 273.4 MB/s eta 0:00:00
+Collecting tqdm==4.64.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/tqdm/4.64.1/tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 226.3 MB/s eta 0:00:00
+Collecting pandas==1.5.3
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pandas/1.5.3/pandas-1.5.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 273.8 MB/s eta 0:00:00
+Collecting numba>=0.21.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/numba/0.57.0/numba-0.57.0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 165.4 MB/s eta 0:00:00
+Requirement already satisfied: requests>=2.7.0 in /usr/local/lib/python3.8/dist-packages (from -r /home/requirements.txt (line 8)) (2.28.2)
+Collecting ipython==8.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/ipython/8.0.0/ipython-8.0.0-py3-none-any.whl (747 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 747.4/747.4 kB 210.0 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from torch==1.13.1->-r /home/requirements.txt (line 1)) (4.4.0)
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cuda-runtime-cu11/11.7.99/nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 282.6 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cudnn-cu11/8.5.0.96/nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 300.6 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cuda-nvrtc-cu11/11.7.99/nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 285.4 MB/s eta 0:00:00
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cublas-cu11/11.10.3.66/nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 268.9 MB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/threadpoolctl/3.1.0/threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting joblib>=1.1.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/joblib/1.2.0/joblib-1.2.0-py3-none-any.whl (297 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.0/298.0 kB 254.3 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pytz/2023.3/pytz-2023.3-py2.py3-none-any.whl (502 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.3/502.3 kB 264.9 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/python-dateutil/2.8.2/python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 69.8 MB/s eta 0:00:00
+Collecting decorator
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/decorator/5.1.1/decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Requirement already satisfied: setuptools>=18.5 in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (66.0.0)
+Collecting traitlets>=5
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/traitlets/5.9.0/traitlets-5.9.0-py3-none-any.whl (117 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.4/117.4 kB 270.3 MB/s eta 0:00:00
+Collecting backcall
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/backcall/0.2.0/backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: pygments in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.14.0)
+Requirement already satisfied: pexpect>4.3 in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (4.8.0)
+Collecting matplotlib-inline
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/matplotlib-inline/0.1.6/matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting pickleshare
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pickleshare/0.7.5/pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Collecting stack-data
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/stack-data/0.6.2/stack_data-0.6.2-py3-none-any.whl (24 kB)
+Collecting jedi>=0.16
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/jedi/0.18.2/jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 280.4 MB/s eta 0:00:00
+Collecting black
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/black/23.3.0/black-23.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 119.8 MB/s eta 0:00:00
+Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/prompt-toolkit/3.0.38/prompt_toolkit-3.0.38-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.8/385.8 kB 283.7 MB/s eta 0:00:00
+Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r /home/requirements.txt (line 1)) (0.38.4)
+Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.8/dist-packages (from numba>=0.21.0->-r /home/requirements.txt (line 7)) (4.13.0)
+Collecting llvmlite<0.41,>=0.40.0dev0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/llvmlite/0.40.0/llvmlite-0.40.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 MB 289.3 MB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2019.11.28)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.8/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (3.0.1)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2.8)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (1.26.14)
+Collecting parso<0.9.0,>=0.8.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/parso/0.8.3/parso-0.8.3-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 262.5 MB/s eta 0:00:00
+Requirement already satisfied: ptyprocess>=0.5 in /usr/local/lib/python3.8/dist-packages (from pexpect>4.3->ipython==8.0.0->-r /home/requirements.txt (line 9)) (0.7.0)
+Collecting wcwidth
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/wcwidth/0.2.6/wcwidth-0.2.6-py2.py3-none-any.whl (29 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.1->pandas==1.5.3->-r /home/requirements.txt (line 6)) (1.14.0)
+Collecting mypy-extensions>=0.4.3
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/mypy-extensions/1.0.0/mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Requirement already satisfied: platformdirs>=2 in /usr/local/lib/python3.8/dist-packages (from black->ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.6.2)
+Requirement already satisfied: tomli>=1.1.0 in /usr/local/lib/python3.8/dist-packages (from black->ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.0.1)
+Collecting click>=8.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/click/8.1.3/click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 239.8 MB/s eta 0:00:00
+Requirement already satisfied: packaging>=22.0 in /usr/local/lib/python3.8/dist-packages (from black->ipython==8.0.0->-r /home/requirements.txt (line 9)) (23.0)
+Collecting pathspec>=0.9.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pathspec/0.11.1/pathspec-0.11.1-py3-none-any.whl (29 kB)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.8/dist-packages (from importlib-metadata->numba>=0.21.0->-r /home/requirements.txt (line 7)) (3.11.0)
+Collecting executing>=1.2.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/executing/1.2.0/executing-1.2.0-py2.py3-none-any.whl (24 kB)
+Collecting pure-eval
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pure-eval/0.2.2/pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting asttokens>=2.1.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/asttokens/2.2.1/asttokens-2.2.1-py2.py3-none-any.whl (26 kB)
+Installing collected packages: wcwidth, pytz, pure-eval, pickleshare, executing, backcall, traitlets, tqdm, threadpoolctl, python-dateutil, prompt-toolkit, pathspec, parso, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, numpy, mypy-extensions, llvmlite, joblib, decorator, click, asttokens, stack-data, scipy, pandas, nvidia-cudnn-cu11, numba, matplotlib-inline, jedi, black, torch, scikit-learn, ipython
+Successfully installed asttokens-2.2.1 backcall-0.2.0 black-23.3.0 click-8.1.3 decorator-5.1.1 executing-1.2.0 ipython-8.0.0 jedi-0.18.2 joblib-1.2.0 llvmlite-0.40.0 matplotlib-inline-0.1.6 mypy-extensions-1.0.0 numba-0.57.0 numpy-1.22.2 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 pandas-1.5.3 parso-0.8.3 pathspec-0.11.1 pickleshare-0.7.5 prompt-toolkit-3.0.38 pure-eval-0.2.2 python-dateutil-2.8.2 pytz-2023.3 scikit-learn-1.2.1 scipy-1.10.1 stack-data-0.6.2 threadpoolctl-3.1.0 torch-1.13.1 tqdm-4.64.1 traitlets-5.9.0 wcwidth-0.2.6
+Looking in indexes: https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/simple
+Collecting polara
+  Cloning https://github.com/evfro/polara.git (to revision develop) to /tmp/pip-install-6jhgbhnv/polara_d4be078169664e2baeaccbcc69621dc1
+  Resolved https://github.com/evfro/polara.git to commit 8e48cfd88e616ca53f8bbda1702a3e2c8abaf38e
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: polara
+  Building wheel for polara (setup.py): started
+  Building wheel for polara (setup.py): finished with status 'done'
+  Created wheel for polara: filename=polara-0.7.2.dev0-py3-none-any.whl size=89447 sha256=901cf106bb338311396597d7427a9942efec3cd7cf756d541c1b553b5b839935
+  Stored in directory: /tmp/pip-ephem-wheel-cache-e72zisd3/wheels/5e/e1/4c/eaa6d1a342974af58b0efac692b6846b8c034f8904e428626b
+Successfully built polara
+Installing collected packages: polara
+Successfully installed polara-0.7.2.dev0
+There are 25076 users
+Filtered 24583 invalid observations.
+{'lambda=10, alpha=2': -0.04220415043741388, 'lambda=10, alpha=3': -0.0445275386188103, 'lambda=10, alpha=4': -0.04163455040305903, 'lambda=10, alpha=5': -0.02454573962445331, 'lambda=10, alpha=6': -0.0006696911715293504, 'lambda=20, alpha=2': -0.05028350217742456, 'lambda=20, alpha=3': -0.05221513373865097, 'lambda=20, alpha=4': -0.04868528001816376, 'lambda=20, alpha=5': -0.036822080467228145, 'lambda=20, alpha=6': -0.005399251346179825, 'lambda=30, alpha=2': -0.052421651275705465, 'lambda=30, alpha=3': -0.05446104757555889, 'lambda=30, alpha=4': -0.05100096650642374, 'lambda=30, alpha=5': -0.03918132708486275, 'lambda=30, alpha=6': -0.00802365943152216, 'lambda=40, alpha=2': -0.05028350217742456, 'lambda=40, alpha=3': -0.05221513373865097, 'lambda=40, alpha=4': -0.04868528001816376, 'lambda=40, alpha=5': -0.04296025088861556, 'lambda=40, alpha=6': -0.0101288115208303, 'lambda=50, alpha=2': -0.04628789961181947, 'lambda=50, alpha=3': -0.04801752394099167, 'lambda=50, alpha=4': -0.05115387316035176, 'lambda=50, alpha=5': -0.044237136241740804, 'lambda=50, alpha=6': -0.009561920201928966, 'lambda=60, alpha=2': -0.05306946617944087, 'lambda=60, alpha=3': -0.05437643011383208, 'lambda=60, alpha=4': -0.05681231807936099, 'lambda=60, alpha=5': -0.0489546027738419, 'lambda=60, alpha=6': -0.012821060745980955, 'lambda=70, alpha=2': -0.04824164194549724, 'lambda=70, alpha=3': -0.05007014590694022, 'lambda=70, alpha=4': -0.053394741855351945, 'lambda=70, alpha=5': -0.04661622212412785, 'lambda=70, alpha=6': -0.012160524666766568, 'lambda=80, alpha=2': -0.04824164194549724, 'lambda=80, alpha=3': -0.05007014590694022, 'lambda=80, alpha=4': -0.053394741855351945, 'lambda=80, alpha=5': -0.04661622212412785, 'lambda=80, alpha=6': -0.012160524666766568, 'lambda=90, alpha=2': -0.04725422746183619, 'lambda=90, alpha=3': -0.049032783074308736, 'lambda=90, alpha=4': -0.052262293914925574, 'lambda=90, alpha=5': -0.04541433646045958, 'lambda=90, alpha=6': -0.010849325736984428, 'lambda=100, alpha=2': -0.04725422746183619, 'lambda=100, alpha=3': -0.049032783074308736, 'lambda=100, alpha=4': -0.052262293914925574, 'lambda=100, alpha=5': -0.04541433646045958, 'lambda=100, alpha=6': -0.010849325736984428, 'lambda=110, alpha=2': -0.04824164194549724, 'lambda=110, alpha=3': -0.05007014590694022, 'lambda=110, alpha=4': -0.053394741855351945, 'lambda=110, alpha=5': -0.04661622212412785, 'lambda=110, alpha=6': -0.012160524666766568, 'lambda=120, alpha=2': -0.04925107097362632, 'lambda=120, alpha=3': -0.0511305845685166, 'lambda=120, alpha=4': -0.05455227259457288, 'lambda=120, alpha=5': -0.04784386888709083, 'lambda=120, alpha=6': -0.013496518469805468, 'lambda=130, alpha=2': -0.04925107097362632, 'lambda=130, alpha=3': -0.0511305845685166, 'lambda=130, alpha=4': -0.05455227259457288, 'lambda=130, alpha=5': -0.04784386888709083, 'lambda=130, alpha=6': -0.013496518469805468, 'lambda=140, alpha=2': -0.04124596123927331, 'lambda=140, alpha=3': -0.04351363156189829, 'lambda=140, alpha=4': -0.047566332869154855, 'lambda=140, alpha=5': -0.04176210275379693, 'lambda=140, alpha=6': -0.008810418716800683, 'lambda=150, alpha=2': -0.0403087314362525, 'lambda=150, alpha=3': -0.04252189128460569, 'lambda=150, alpha=4': -0.0464718093155399, 'lambda=150, alpha=5': -0.0405893083060033, 'lambda=150, alpha=6': -0.007516689515019575, 'lambda=160, alpha=2': -0.038493620267547754, 'lambda=160, alpha=3': -0.04060117844968633, 'lambda=160, alpha=4': -0.044351921968042, 'lambda=160, alpha=5': -0.038315545442554194, 'lambda=160, alpha=6': -0.004999238149826655, 'lambda=170, alpha=2': -0.036752273494964995, 'lambda=170, alpha=3': -0.0387584805638692, 'lambda=170, alpha=4': -0.04231799682092641, 'lambda=170, alpha=5': -0.036131109021498055, 'lambda=170, alpha=6': -0.002569060637627743, 'lambda=180, alpha=2': -0.029886424450317157, 'lambda=180, alpha=3': -0.03231750209646637, 'lambda=180, alpha=4': -0.036580823753118726, 'lambda=180, alpha=5': -0.03134162272312942, 'lambda=180, alpha=6': 0.0007500269374943284, 'lambda=190, alpha=2': -0.029886424450317157, 'lambda=190, alpha=3': -0.03231750209646637, 'lambda=190, alpha=4': -0.036580823753118726, 'lambda=190, alpha=5': -0.03134162272312942, 'lambda=190, alpha=6': 0.0007500269374943284, 'lambda=200, alpha=2': -0.03590742251292891, 'lambda=200, alpha=3': -0.03786444225065269, 'lambda=200, alpha=4': -0.04133112784112035, 'lambda=200, alpha=5': -0.03507017983565735, 'lambda=200, alpha=6': -0.001384615712128145, 'lambda=210, alpha=2': -0.03590742251292891, 'lambda=210, alpha=3': -0.03786444225065269, 'lambda=210, alpha=4': -0.04133112784112035, 'lambda=210, alpha=5': -0.03507017983565735, 'lambda=210, alpha=6': -0.001384615712128145, 'lambda=220, alpha=2': -0.03590742251292891, 'lambda=220, alpha=3': -0.03786444225065269, 'lambda=220, alpha=4': -0.04133112784112035, 'lambda=220, alpha=5': -0.03507017983565735, 'lambda=220, alpha=6': -0.001384615712128145, 'lambda=230, alpha=2': -0.03590742251292891, 'lambda=230, alpha=3': -0.03786444225065269, 'lambda=230, alpha=4': -0.04133112784112035, 'lambda=230, alpha=5': -0.03507017983565735, 'lambda=230, alpha=6': -0.001384615712128145, 'lambda=240, alpha=2': -0.03590742251292891, 'lambda=240, alpha=3': -0.03786444225065269, 'lambda=240, alpha=4': -0.03469912594704395, 'lambda=240, alpha=5': -0.02929654220054, 'lambda=240, alpha=6': 0.003064066019934611, 'lambda=250, alpha=2': -0.03507888849758968, 'lambda=250, alpha=3': -0.0369876614277801, 'lambda=250, alpha=4': -0.03378510450047251, 'lambda=250, alpha=5': -0.028302257593019468, 'lambda=250, alpha=6': 0.0041929917659341825, 'lambda=260, alpha=2': -0.03507888849758968, 'lambda=260, alpha=3': -0.0369876614277801, 'lambda=260, alpha=4': -0.03378510450047251, 'lambda=260, alpha=5': -0.028302257593019468, 'lambda=260, alpha=6': 0.0041929917659341825, 'lambda=270, alpha=2': -0.03507888849758968, 'lambda=270, alpha=3': -0.0369876614277801, 'lambda=270, alpha=4': -0.03378510450047251, 'lambda=270, alpha=5': -0.028302257593019468, 'lambda=270, alpha=6': 0.0041929917659341825, 'lambda=280, alpha=2': -0.03507888849758968, 'lambda=280, alpha=3': -0.0369876614277801, 'lambda=280, alpha=4': -0.03378510450047251, 'lambda=280, alpha=5': -0.028302257593019468, 'lambda=280, alpha=6': 0.0041929917659341825, 'lambda=290, alpha=2': -0.04174371788511176, 'lambda=290, alpha=3': -0.04324256642675456, 'lambda=290, alpha=4': -0.03941370915750555, 'lambda=290, alpha=5': -0.03300691051787124, 'lambda=290, alpha=6': 0.0009267573939170287, 'lambda=300, alpha=2': -0.04174371788511176, 'lambda=300, alpha=3': -0.04324256642675456, 'lambda=300, alpha=4': -0.03941370915750555, 'lambda=300, alpha=5': -0.03300691051787124, 'lambda=300, alpha=6': 0.0009267573939170287, 'lambda=310, alpha=2': -0.03922147054314448, 'lambda=310, alpha=3': -0.04059173136025286, 'lambda=310, alpha=4': -0.03666800689792882, 'lambda=310, alpha=5': -0.030047777152175468, 'lambda=310, alpha=6': 0.004260162709963705, 'lambda=320, alpha=2': -0.03922147054314448, 'lambda=320, alpha=3': -0.04059173136025286, 'lambda=320, alpha=4': -0.03666800689792882, 'lambda=320, alpha=5': -0.030047777152175468, 'lambda=320, alpha=6': 0.004260162709963705, 'lambda=330, alpha=2': -0.03922147054314448, 'lambda=330, alpha=3': -0.04059173136025286, 'lambda=330, alpha=4': -0.03666800689792882, 'lambda=330, alpha=5': -0.030047777152175468, 'lambda=330, alpha=6': 0.004260162709963705, 'lambda=340, alpha=2': -0.03841104245836807, 'lambda=340, alpha=3': -0.0397399091770919, 'lambda=340, alpha=4': -0.03578503930766618, 'lambda=340, alpha=5': -0.029095010234937404, 'lambda=340, alpha=6': 0.005338118793795648, 'lambda=350, alpha=2': -0.04481224920157611, 'lambda=350, alpha=3': -0.045751422181806146, 'lambda=350, alpha=4': -0.0411982934802815, 'lambda=350, alpha=5': -0.0336261658254276, 'lambda=350, alpha=6': 0.002187160058648028, 'lambda=360, alpha=2': -0.04481224920157611, 'lambda=360, alpha=3': -0.045751422181806146, 'lambda=360, alpha=4': -0.0411982934802815, 'lambda=360, alpha=5': -0.0336261658254276, 'lambda=360, alpha=6': 0.002187160058648028, 'lambda=370, alpha=2': -0.04397754310769683, 'lambda=370, alpha=3': -0.04487921623716801, 'lambda=370, alpha=4': -0.04029951750232409, 'lambda=370, alpha=5': -0.03266476223732485, 'lambda=370, alpha=6': 0.0032649434197253775, 'lambda=380, alpha=2': -0.04481224920157611, 'lambda=380, alpha=3': -0.045751422181806146, 'lambda=380, alpha=4': -0.0411982934802815, 'lambda=380, alpha=5': -0.0336261658254276, 'lambda=380, alpha=6': 0.002187160058648028, 'lambda=390, alpha=2': -0.04481224920157611, 'lambda=390, alpha=3': -0.045751422181806146, 'lambda=390, alpha=4': -0.0411982934802815, 'lambda=390, alpha=5': -0.0336261658254276, 'lambda=390, alpha=6': 0.002187160058648028, 'lambda=400, alpha=2': -0.043157269330390303, 'lambda=400, alpha=3': -0.044022031519580465, 'lambda=400, alpha=4': -0.03941589105093538, 'lambda=400, alpha=5': -0.03171898556189808, 'lambda=400, alpha=6': 0.00432741666964823, 'lambda=410, alpha=2': -0.043157269330390303, 'lambda=410, alpha=3': -0.044022031519580465, 'lambda=410, alpha=4': -0.03941589105093538, 'lambda=410, alpha=5': -0.03171898556189808, 'lambda=410, alpha=6': 0.00432741666964823, 'lambda=420, alpha=2': -0.043157269330390303, 'lambda=420, alpha=3': -0.044022031519580465, 'lambda=420, alpha=4': -0.03941589105093538, 'lambda=420, alpha=5': -0.03171898556189808, 'lambda=420, alpha=6': 0.00432741666964823, 'lambda=430, alpha=2': -0.04397754310769683, 'lambda=430, alpha=3': -0.04487921623716801, 'lambda=430, alpha=4': -0.04029951750232409, 'lambda=430, alpha=5': -0.03266476223732485, 'lambda=430, alpha=6': 0.0032649434197253775, 'lambda=440, alpha=2': -0.043157269330390303, 'lambda=440, alpha=3': -0.044022031519580465, 'lambda=440, alpha=4': -0.03941589105093538, 'lambda=440, alpha=5': -0.03171898556189808, 'lambda=440, alpha=6': 0.00432741666964823, 'lambda=450, alpha=2': -0.04397754310769683, 'lambda=450, alpha=3': -0.04487921623716801, 'lambda=450, alpha=4': -0.04029951750232409, 'lambda=450, alpha=5': -0.03266476223732485, 'lambda=450, alpha=6': 0.00744759043757698, 'lambda=460, alpha=2': -0.04397754310769683, 'lambda=460, alpha=3': -0.04487921623716801, 'lambda=460, alpha=4': -0.040299... [trimmed by ml-core]
+[[init-process] Main process terminated]
