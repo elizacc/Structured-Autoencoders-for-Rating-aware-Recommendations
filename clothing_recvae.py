@@ -4,7 +4,7 @@ import torch.optim as optim
 from model import VAE
 
 from dataprep import full_preproccessing
-from utils import *
+from utils_vae import *
 
 
 def set_random_seed(seed):

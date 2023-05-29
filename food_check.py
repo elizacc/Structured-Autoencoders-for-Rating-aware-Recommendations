@@ -59,9 +59,10 @@ class MVDataset(Dataset):
 
 def main():
     set_random_seed(42)
-    data = pd.read_csv('../../e.makhneva/data/Clothing_Shoes_and_Jewelry/Amazon_Clothing_Shoes_and_Jewelry.csv')
-    data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
-                inplace=True)
+    data = pd.read_csv('../../e.makhneva/data/FoodCom/Food_com.csv')
+    data.rename(columns={'user_id': 'userid', 'recipe_id': 'movieid', "date": "timestamp"}, inplace=True)
+    data['timestamp'] = pd.to_datetime(data['timestamp'])
+    data['rating'] = data['rating'] + 1
 
     # %%
     training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
@@ -153,25 +154,29 @@ def main():
     # %% [markdown]
     # ### Tuning
 
-    # print('Alpha: 2')
-    # h = (512, 3)
-    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-    #                                   varindtriangular_model, h, device, MVDataset, batch_size=512, tensor_model=True)
-
-    print('Alpha: 3')
-    h = (128, 5)	
+    print('Alpha: 2')
+    h = (128, 4)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       varindtriangular_model, h, device, MVDataset, batch_size=16, tensor_model=True)
 
-    print('Alpha: 4')
-    h = (1024, 4)
+    print('Alpha: 3')
+    h = (256, 4)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      varindtriangular_model, h, device, MVDataset, batch_size=64, tensor_model=True)
+                                      varindtriangular_model, h, device, MVDataset, batch_size=128, tensor_model=True)
+
+    print('Alpha: 4')
+    h = (16, 4)
+    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+                                      varindtriangular_model, h, device, MVDataset, batch_size=256, tensor_model=True)
 
     print('Alpha: 5')
-    h = (512, 3)	
+    h = (16, 4)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      varindtriangular_model, h, device, MVDataset, batch_size=32, tensor_model=True)
+                                      varindtriangular_model, h, device, MVDataset, batch_size=256, tensor_model=True)
+    print('Alpha: 6')
+    h = (32, 3)
+    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+                                      varindtriangular_model, h, device, MVDataset, batch_size=256, tensor_model=True)
 
 
 # ## Preprocess data

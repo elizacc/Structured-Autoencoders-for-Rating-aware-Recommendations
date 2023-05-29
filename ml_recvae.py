@@ -4,7 +4,7 @@ import torch.optim as optim
 from model import VAE
 
 from dataprep import full_preproccessing
-from utils import *
+from utils_vae import *
 
 
 def set_random_seed(seed):
@@ -76,7 +76,7 @@ def main():
     # %%
     grid1 = 2 ** np.arange(4, 11)
     grid2 = 2 ** np.arange(4, 11)
-    gamma = 0.001 * np.arange(5, 101, 5)
+    gamma = 0.001 * np.arange(1, 11)
     grid = np.meshgrid(grid2, grid1, gamma)
     grid = list(zip(grid[0].flatten(), grid[1].flatten(), grid[2].flatten()))
 
