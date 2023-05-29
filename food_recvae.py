@@ -23,24 +23,24 @@ class MVDataset(Dataset):
         self.n_items = data_description['n_items']
 
         self.matrix = torch.sparse_coo_tensor(np.array([useridx, itemidx]), torch.tensor(values),
-                                                size=torch.Size(
-                                                    (data_description["n_users"], data_description["n_items"])),
-                                                dtype=torch.float32)
+                                              size=torch.Size(
+                                                  (data_description["n_users"], data_description["n_items"])),
+                                              dtype=torch.float32)
 
     def __len__(self):
         return self.matrix.shape[0]
 
     def __getitem__(self, idx):
         if self.augment:
-            num_noise = np.random.randint(0, int(0.1*self.matrix.shape[1]))
+            num_noise = np.random.randint(0, int(0.1 * self.matrix.shape[1]))
             idxs = torch.randint(0, self.matrix.shape[1], size=(num_noise,))
             noised_input = self.matrix[idx].detach().clone().to_dense()
             noised_input[idxs] = 0
-            
+
             # useridx = np.zeros_like(noised_input.cpu())
             itemidx = np.arange(self.matrix.shape[1])
-            noised_input = torch.sparse_coo_tensor(np.array([itemidx,]), noised_input,
-                                                size=torch.Size((self.n_items,)), dtype=torch.float32)
+            noised_input = torch.sparse_coo_tensor(np.array([itemidx, ]), noised_input,
+                                                   size=torch.Size((self.n_items,)), dtype=torch.float32)
             return noised_input, self.matrix[idx]
         else:
             return self.matrix[idx], self.matrix[idx]
@@ -51,21 +51,24 @@ class MVDataset(Dataset):
 
 def main():
     set_random_seed(42)
-    data = pd.read_csv('../../e.makhneva/data/ml-1m/ml-1m.csv')
-    data.rename(columns = {'userId' : 'userid', 'movieId' : 'movieid'}, inplace = True)
+    data = pd.read_csv('../../e.makhneva/data/FoodCom/Food_com.csv')
+    data.rename(columns={'user_id': 'userid', 'recipe_id': 'movieid', "date": "timestamp"}, inplace=True)
+    data['timestamp'] = pd.to_datetime(data['timestamp'])
+    data['rating'] = data['rating'] + 1
 
     # %%
     training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
     # %%
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print('device:', device)
+
     # %% [markdown]
 
     def recvae(h, data_description, device):
         h1, h2, gamma = h
         ae = VAE(h1, h2, data_description['n_items']).to(device)
         criterion = nn.BCEWithLogitsLoss().to(device)
-        optimizer = optim.Adam(ae.parameters(), lr=5*10e-4)
+        optimizer = optim.Adam(ae.parameters(), lr=5 * 10e-4)
         scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
 
         return ae, criterion, optimizer, scheduler
@@ -81,7 +84,7 @@ def main():
     grid = list(zip(grid[0].flatten(), grid[1].flatten(), grid[2].flatten()))
 
     # %%
-    sizes = [500]#2 ** np.arange(4, 10)
+    sizes = [500]  # 2 ** np.arange(4, 10)
     for batch_size in sizes:
         print('Batch size:', batch_size)
         tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, recvae,
