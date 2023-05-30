@@ -629,10 +629,16 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
     cs5 = []
     ndcgs5 = []
 
+    hrs6 = []
+    mrrs6 = []
+    cs6 = []
+    ndcgs6 = []
+
     prev_matt2 = [0]
     prev_matt3 = [0]
     prev_matt4 = [0]
     prev_matt5 = [0]
+    prev_matt6 = [0]
 
     for epoch in range(1, n_epochs+1):
         train_loss = 0
@@ -684,9 +690,11 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
                                                                  mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
         prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout, data_description, hrs5,
                                                                  mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
+        prev_matt6, hrs6, mrrs6, cs6, ndcgs6 = predict_and_check(model, scores, holdout, data_description, hrs6,
+                                                                 mrrs6, cs6, ndcgs6, 6, prev_matt6, epoch, h)
 
         # stop = epoch if epoch < early_stop else epoch-early_stop
-        if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop:
+        if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop and len(prev_matt6) >= early_stop:
             print(f'Current epoch {epoch}')
             break
 
@@ -699,6 +707,8 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
                val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
     check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description,
                val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
+    check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description,
+               val_num_batches, 6, h, device, batch_size=batch_size, dcg=True)
 
     # our
     # plt.figure(figsize=(10,6))
