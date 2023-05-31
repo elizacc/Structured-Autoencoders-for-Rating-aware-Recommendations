@@ -446,101 +446,101 @@ def main():
     #     tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, twotriangular_model, device,
     #                             grid, MVDataset, batch_size=int(batch_size))
 
-    # %% [markdown]
-    print('Model: encoder and decoder layers different')
-
-    # %%
-    def triu_init(m):
-        if isinstance(m, nn.Linear):
-            with torch.no_grad():
-                m.weight.copy_(torch.tril(m.weight))
-
-    def get_zero_grad_hook(mask):
-        def hook(grad):
-            return grad * mask
-
-        return hook
-
-    # %%
-    class vartriangularAE(nn.Module):
-        def __init__(self, n_items, n_ratings, hid1, hid2):
-            super(vartriangularAE, self).__init__()
-            self.V = nn.Linear(n_items, hid1, bias=False)
-            torch.nn.init.xavier_uniform_(self.V.weight)
-            self.VT = nn.Linear(hid1, n_items, bias=False)
-            torch.nn.init.xavier_uniform_(self.VT.weight)
-            self.W = nn.Linear(n_ratings, hid2, bias=False)
-            torch.nn.init.xavier_uniform_(self.W.weight)
-            self.WT = nn.Linear(hid2, n_ratings, bias=False)
-            torch.nn.init.xavier_uniform_(self.WT.weight)
-            self.L = nn.Linear(n_ratings, n_ratings, bias=False)
-            torch.nn.init.xavier_uniform_(self.L.weight)
-            triu_init(self.L)
-            self.LTinv = nn.Linear(n_ratings, n_ratings, bias=False)
-            torch.nn.init.xavier_uniform_(self.LTinv.weight)
-            triu_init(self.LTinv)
-
-            #         self.norm = nn.LayerNorm(n_ratings)
-            self.vec = nn.Linear(n_ratings, 1)
-            torch.nn.init.xavier_uniform_(self.vec.weight)
-
-            self.relu = nn.ReLU()
-
-        def forward(self, x):
-            # encode
-            x = self.L(x)
-            x = self.relu(x)
-            x = self.W(x)
-            x = self.relu(x)
-            xT = torch.transpose(x, -1, -2)
-            yT = self.V(xT)
-            y = torch.transpose(yT, -1, -2)
-            y = self.relu(y)
-            # decode
-            output = self.WT(y)
-            output = self.relu(output)
-            output = self.LTinv(output)
-            output = self.relu(output)
-            outputT = torch.transpose(output, -1, -2)
-            outputT = self.VT(outputT)
-            output = torch.transpose(outputT, -1, -2)
-
-            #         output = self.relu(output)
-            # vec
-            output = self.vec(output).squeeze(-1)
-            return output
-
-    # %%
-    def vartriangular_model(h, data_description, device):
-        h1, h2 = h
-        ae = vartriangularAE(data_description['n_items'], data_description['n_ratings'], h1, h2).to(device)
-        criterion = nn.BCEWithLogitsLoss().to(device)
-        optimizer = optim.Adam(ae.parameters())
-        scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
-
-        mask = torch.tril(torch.ones_like(ae.L.weight))
-        ae.L.weight.register_hook(get_zero_grad_hook(mask))
-
-        mask = torch.tril(torch.ones_like(ae.LTinv.weight))
-        ae.LTinv.weight.register_hook(get_zero_grad_hook(mask))
-
-        return ae, criterion, optimizer, scheduler
-
-    # %% [markdown]
-    # ### Tuning
-
-    # %%
-    grid1 = 2 ** np.arange(4, 11)
-    grid2 = np.arange(3, 6)
-    grid = np.meshgrid(grid2, grid1)
-    grid = list(zip(grid[1].flatten(), grid[0].flatten()))
-
-    # %%
-    sizes = 2 ** np.arange(8, 10)
-    for batch_size in sizes:
-        print('Batch size:', batch_size)
-        tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, vartriangular_model, device,
-                                grid, MVDataset, batch_size=int(batch_size))
+    # # %% [markdown]
+    # print('Model: encoder and decoder layers different')
+    #
+    # # %%
+    # def triu_init(m):
+    #     if isinstance(m, nn.Linear):
+    #         with torch.no_grad():
+    #             m.weight.copy_(torch.tril(m.weight))
+    #
+    # def get_zero_grad_hook(mask):
+    #     def hook(grad):
+    #         return grad * mask
+    #
+    #     return hook
+    #
+    # # %%
+    # class vartriangularAE(nn.Module):
+    #     def __init__(self, n_items, n_ratings, hid1, hid2):
+    #         super(vartriangularAE, self).__init__()
+    #         self.V = nn.Linear(n_items, hid1, bias=False)
+    #         torch.nn.init.xavier_uniform_(self.V.weight)
+    #         self.VT = nn.Linear(hid1, n_items, bias=False)
+    #         torch.nn.init.xavier_uniform_(self.VT.weight)
+    #         self.W = nn.Linear(n_ratings, hid2, bias=False)
+    #         torch.nn.init.xavier_uniform_(self.W.weight)
+    #         self.WT = nn.Linear(hid2, n_ratings, bias=False)
+    #         torch.nn.init.xavier_uniform_(self.WT.weight)
+    #         self.L = nn.Linear(n_ratings, n_ratings, bias=False)
+    #         torch.nn.init.xavier_uniform_(self.L.weight)
+    #         triu_init(self.L)
+    #         self.LTinv = nn.Linear(n_ratings, n_ratings, bias=False)
+    #         torch.nn.init.xavier_uniform_(self.LTinv.weight)
+    #         triu_init(self.LTinv)
+    #
+    #         #         self.norm = nn.LayerNorm(n_ratings)
+    #         self.vec = nn.Linear(n_ratings, 1)
+    #         torch.nn.init.xavier_uniform_(self.vec.weight)
+    #
+    #         self.relu = nn.ReLU()
+    #
+    #     def forward(self, x):
+    #         # encode
+    #         x = self.L(x)
+    #         x = self.relu(x)
+    #         x = self.W(x)
+    #         x = self.relu(x)
+    #         xT = torch.transpose(x, -1, -2)
+    #         yT = self.V(xT)
+    #         y = torch.transpose(yT, -1, -2)
+    #         y = self.relu(y)
+    #         # decode
+    #         output = self.WT(y)
+    #         output = self.relu(output)
+    #         output = self.LTinv(output)
+    #         output = self.relu(output)
+    #         outputT = torch.transpose(output, -1, -2)
+    #         outputT = self.VT(outputT)
+    #         output = torch.transpose(outputT, -1, -2)
+    #
+    #         #         output = self.relu(output)
+    #         # vec
+    #         output = self.vec(output).squeeze(-1)
+    #         return output
+    #
+    # # %%
+    # def vartriangular_model(h, data_description, device):
+    #     h1, h2 = h
+    #     ae = vartriangularAE(data_description['n_items'], data_description['n_ratings'], h1, h2).to(device)
+    #     criterion = nn.BCEWithLogitsLoss().to(device)
+    #     optimizer = optim.Adam(ae.parameters())
+    #     scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
+    #
+    #     mask = torch.tril(torch.ones_like(ae.L.weight))
+    #     ae.L.weight.register_hook(get_zero_grad_hook(mask))
+    #
+    #     mask = torch.tril(torch.ones_like(ae.LTinv.weight))
+    #     ae.LTinv.weight.register_hook(get_zero_grad_hook(mask))
+    #
+    #     return ae, criterion, optimizer, scheduler
+    #
+    # # %% [markdown]
+    # # ### Tuning
+    #
+    # # %%
+    # grid1 = 2 ** np.arange(4, 11)
+    # grid2 = np.arange(3, 6)
+    # grid = np.meshgrid(grid2, grid1)
+    # grid = list(zip(grid[1].flatten(), grid[0].flatten()))
+    #
+    # # %%
+    # sizes = 2 ** np.arange(8, 10)
+    # for batch_size in sizes:
+    #     print('Batch size:', batch_size)
+    #     tuning_pipeline_augment(training, testset_valid, holdout_valid, data_description, vartriangular_model, device,
+    #                             grid, MVDataset, batch_size=int(batch_size))
 
     # %% [markdown]
     print('Model: encoder and decoder different, individual rating layer')
