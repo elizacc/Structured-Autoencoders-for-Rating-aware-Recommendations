@@ -17,7 +17,7 @@ def set_random_seed(seed):
 class MVDataset(Dataset):
     def __init__(self, data, data_description, augment=False):
         self.augment = augment
-        useridx = data[data_description['users']].values
+        useridx = pd.factorize(data[data_description['users']])[0]
         itemidx = data[data_description['items']].values
         values = np.ones(len(itemidx), dtype=np.float32)
         self.n_items = data_description['n_items']
