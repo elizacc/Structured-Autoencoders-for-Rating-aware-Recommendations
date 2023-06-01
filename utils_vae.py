@@ -602,6 +602,7 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
     val_num_batches = int(np.ceil(target_val.shape[0] / batch_size))
 
     print('Hidden sizes:', h)
+    _, _, gamma = h
 
     model, criterion, optimizer, scheduler = model_init(h, data_description, device)
 
@@ -643,7 +644,7 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
             input_tensor, target = batch
             input_tensor, target = input_tensor.to_dense().to(device), target.to_dense().to(device)
 
-            output = model(input_tensor)
+            output = model(input_tensor, gamma=gamma, calculate_loss=False)
             target.require_grad = False # we don't use it in training
 
             loss = criterion(output, target)
@@ -663,7 +664,7 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
                 input_tensor = user_tensor_val[batch * batch_size: (batch+1) * batch_size].to(device)
                 target = target_val[batch * batch_size: (batch+1) * batch_size].to(device)
 
-                output = model(input_tensor)
+                output = model(input_tensor, gamma=gamma, calculate_loss=False)
                 target.require_grad = False
 
                 test_loss += criterion(output, target)
@@ -692,13 +693,13 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
 
     # Testing the AE
     check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description,
-               val_num_batches, 2, h, device, batch_size=batch_size, dcg=True)
+               val_num_batches, 2, h, device, gamma, batch_size=batch_size, dcg=True)
     check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description,
-               val_num_batches, 3, h, device, batch_size=batch_size, dcg=True)
+               val_num_batches, 3, h, device, gamma, batch_size=batch_size, dcg=True)
     check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description,
-               val_num_batches, 4, h, device, batch_size=batch_size, dcg=True)
+               val_num_batches, 4, h, device, gamma, batch_size=batch_size, dcg=True)
     check_test(model, criterion, user_tensor_val, target_val, testset, holdout, data_description,
-               val_num_batches, 5, h, device, batch_size=batch_size, dcg=True)
+               val_num_batches, 5, h, device, gamma, batch_size=batch_size, dcg=True)
 
     # our
     # plt.figure(figsize=(10,6))

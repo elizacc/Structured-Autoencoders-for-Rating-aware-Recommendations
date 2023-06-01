@@ -80,22 +80,22 @@ def main():
     print('Alpha: 2')
     h = (1024, 256, 0.003)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      recvae, h, device, MVDataset, batch_size=500, tensor_model=True)
+                                      recvae, h, device, MVDataset, batch_size=500)
 
     print('Alpha: 3')
     h = (512, 256, 0.009)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      recvae, h, device, MVDataset, batch_size=500, tensor_model=True)
+                                      recvae, h, device, MVDataset, batch_size=500)
 
     print('Alpha: 4')
     h = (512, 1024, 0.01)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      recvae, h, device, MVDataset, batch_size=500, tensor_model=True)
+                                      recvae, h, device, MVDataset, batch_size=500)
 
     print('Alpha: 5')
     h = (128, 1024, 0.001)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      recvae, h, device, MVDataset, batch_size=500, tensor_model=True)
+                                      recvae, h, device, MVDataset, batch_size=500)
 
 # ## Preprocess data
 if __name__ == '__main__':

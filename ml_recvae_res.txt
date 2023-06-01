@@ -1,0 +1,228 @@
+failed to get console mode for stdout: The handle is invalid.
+Looking in indexes: https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/simple
+Collecting torch==1.13.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/torch/1.13.1/torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 243.9 MB/s eta 0:00:00
+Collecting scipy==1.10.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/scipy/1.10.1/scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.5/34.5 MB 211.2 MB/s eta 0:00:00
+Collecting numpy==1.22.2
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/numpy/1.22.2/numpy-1.22.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 199.5 MB/s eta 0:00:00
+Collecting scikit-learn==1.2.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/scikit-learn/1.2.1/scikit_learn-1.2.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.8/9.8 MB 210.5 MB/s eta 0:00:00
+Collecting tqdm==4.64.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/tqdm/4.64.1/tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 245.7 MB/s eta 0:00:00
+Collecting pandas==1.5.3
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pandas/1.5.3/pandas-1.5.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 188.9 MB/s eta 0:00:00
+Collecting numba>=0.21.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/numba/0.57.0/numba-0.57.0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 186.8 MB/s eta 0:00:00
+Requirement already satisfied: requests>=2.7.0 in /usr/local/lib/python3.8/dist-packages (from -r /home/requirements.txt (line 8)) (2.28.1)
+Collecting ipython==8.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/ipython/8.0.0/ipython-8.0.0-py3-none-any.whl (747 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 747.4/747.4 kB 202.8 MB/s eta 0:00:00
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cublas-cu11/11.10.3.66/nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 201.8 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cudnn-cu11/8.5.0.96/nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 228.9 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cuda-nvrtc-cu11/11.7.99/nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 181.6 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/nvidia-cuda-runtime-cu11/11.7.99/nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 232.6 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from torch==1.13.1->-r /home/requirements.txt (line 1)) (4.4.0)
+Collecting joblib>=1.1.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/joblib/1.2.0/joblib-1.2.0-py3-none-any.whl (297 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.0/298.0 kB 236.9 MB/s eta 0:00:00
+Collecting threadpoolctl>=2.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/threadpoolctl/3.1.0/threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting python-dateutil>=2.8.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/python-dateutil/2.8.2/python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 253.8 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pytz/2023.3/pytz-2023.3-py2.py3-none-any.whl (502 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.3/502.3 kB 253.0 MB/s eta 0:00:00
+Collecting stack-data
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/stack-data/0.6.2/stack_data-0.6.2-py3-none-any.whl (24 kB)
+Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/prompt-toolkit/3.0.38/prompt_toolkit-3.0.38-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.8/385.8 kB 256.5 MB/s eta 0:00:00
+Collecting backcall
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/backcall/0.2.0/backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Collecting matplotlib-inline
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/matplotlib-inline/0.1.6/matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting jedi>=0.16
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/jedi/0.18.2/jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 263.0 MB/s eta 0:00:00
+Collecting decorator
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/decorator/5.1.1/decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting black
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/black/23.3.0/black-23.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 188.9 MB/s eta 0:00:00
+Requirement already satisfied: pygments in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.13.0)
+Requirement already satisfied: pexpect>4.3 in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (4.8.0)
+Collecting traitlets>=5
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/traitlets/5.9.0/traitlets-5.9.0-py3-none-any.whl (117 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.4/117.4 kB 236.1 MB/s eta 0:00:00
+Collecting pickleshare
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pickleshare/0.7.5/pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Requirement already satisfied: setuptools>=18.5 in /usr/local/lib/python3.8/dist-packages (from ipython==8.0.0->-r /home/requirements.txt (line 9)) (65.5.0)
+Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r /home/requirements.txt (line 1)) (0.38.0)
+Collecting llvmlite<0.41,>=0.40.0dev0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/llvmlite/0.40.0/llvmlite-0.40.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 MB 165.0 MB/s eta 0:00:00
+Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.8/dist-packages (from numba>=0.21.0->-r /home/requirements.txt (line 7)) (4.13.0)
+Requirement already satisfied: charset-normalizer<3,>=2 in /usr/local/lib/python3.8/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2.1.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (1.26.12)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2019.11.28)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.7.0->-r /home/requirements.txt (line 8)) (2.8)
+Collecting parso<0.9.0,>=0.8.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/parso/0.8.3/parso-0.8.3-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 246.4 MB/s eta 0:00:00
+Requirement already satisfied: ptyprocess>=0.5 in /usr/local/lib/python3.8/dist-packages (from pexpect>4.3->ipython==8.0.0->-r /home/requirements.txt (line 9)) (0.7.0)
+Collecting wcwidth
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/wcwidth/0.2.6/wcwidth-0.2.6-py2.py3-none-any.whl (29 kB)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.1->pandas==1.5.3->-r /home/requirements.txt (line 6)) (1.14.0)
+Collecting click>=8.0.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/click/8.1.3/click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 232.6 MB/s eta 0:00:00
+Collecting packaging>=22.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/packaging/23.1/packaging-23.1-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 kB 216.1 MB/s eta 0:00:00
+Collecting mypy-extensions>=0.4.3
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/mypy-extensions/1.0.0/mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Collecting tomli>=1.1.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/tomli/2.0.1/tomli-2.0.1-py3-none-any.whl (12 kB)
+Requirement already satisfied: platformdirs>=2 in /usr/local/lib/python3.8/dist-packages (from black->ipython==8.0.0->-r /home/requirements.txt (line 9)) (2.5.2)
+Collecting pathspec>=0.9.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pathspec/0.11.1/pathspec-0.11.1-py3-none-any.whl (29 kB)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.8/dist-packages (from importlib-metadata->numba>=0.21.0->-r /home/requirements.txt (line 7)) (3.10.0)
+Collecting asttokens>=2.1.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/asttokens/2.2.1/asttokens-2.2.1-py2.py3-none-any.whl (26 kB)
+Collecting pure-eval
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/pure-eval/0.2.2/pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting executing>=1.2.0
+  Downloading https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/packages/packages/executing/1.2.0/executing-1.2.0-py2.py3-none-any.whl (24 kB)
+Installing collected packages: wcwidth, pytz, pure-eval, pickleshare, executing, backcall, traitlets, tqdm, tomli, threadpoolctl, python-dateutil, prompt-toolkit, pathspec, parso, packaging, nvidia-cuda-nvrtc-cu11, numpy, mypy-extensions, llvmlite, joblib, decorator, click, asttokens, stack-data, scipy, pandas, nvidia-cuda-runtime-cu11, nvidia-cublas-cu11, numba, matplotlib-inline, jedi, black, scikit-learn, nvidia-cudnn-cu11, ipython, torch
+  Attempting uninstall: packaging
+    Found existing installation: packaging 21.3
+    Uninstalling packaging-21.3:
+      Successfully uninstalled packaging-21.3
+Successfully installed asttokens-2.2.1 backcall-0.2.0 black-23.3.0 click-8.1.3 decorator-5.1.1 executing-1.2.0 ipython-8.0.0 jedi-0.18.2 joblib-1.2.0 llvmlite-0.40.0 matplotlib-inline-0.1.6 mypy-extensions-1.0.0 numba-0.57.0 numpy-1.22.2 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 packaging-23.1 pandas-1.5.3 parso-0.8.3 pathspec-0.11.1 pickleshare-0.7.5 prompt-toolkit-3.0.38 pure-eval-0.2.2 python-dateutil-2.8.2 pytz-2023.3 scikit-learn-1.2.1 scipy-1.10.1 stack-data-0.6.2 threadpoolctl-3.1.0 tomli-2.0.1 torch-1.13.1 tqdm-4.64.1 traitlets-5.9.0 wcwidth-0.2.6
+Looking in indexes: https://artifactory.tcsbank.ru/artifactory/api/pypi/python-all/simple
+Collecting polara
+  Cloning https://github.com/evfro/polara.git (to revision develop) to /tmp/pip-install-lren_sng/polara_a607f37df3c9411688d84dc0f4c03208
+  Resolved https://github.com/evfro/polara.git to commit 8e48cfd88e616ca53f8bbda1702a3e2c8abaf38e
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: polara
+  Building wheel for polara (setup.py): started
+  Building wheel for polara (setup.py): finished with status 'done'
+  Created wheel for polara: filename=polara-0.7.2.dev0-py3-none-any.whl size=89447 sha256=28bddb9f0e46ab11b61497c0e8af8e83dee65109e178b088969ffcb086e36954
+  Stored in directory: /tmp/pip-ephem-wheel-cache-hh48bqb2/wheels/5e/e1/4c/eaa6d1a342974af58b0efac692b6846b8c034f8904e428626b
+Successfully built polara
+Installing collected packages: polara
+Successfully installed polara-0.7.2.dev0
+There are 6040 users
+Filtered 93 invalid observations.
+device: cuda:0
+Alpha: 2
+Hidden sizes: (1024, 256, 0.003)
+Current epoch 56
+Results for alpha=2
+HR@5:0.009205983889528193, MRR@5: 0.003720751822017645, Coverage@5: 0.01851307669703203, NCDG@5: 0.005041657267520128, HR_pos@5: 0.009205983889528193, HR_neg@5: 0.0, MRR_pos@5: 0.003720751822017645, MRR_neg@5: 0.0, NCDG_pos@5: 0.005041657267520128, NDCG_neg@5: 0.0, Matthews@5: 0.02444246347814229
+HR@10:0.020713463751438434, MRR@10: 0.0050765338740022285, Coverage@10: 0.026447252424331474, NCDG@10: 0.008583808323696073, HR_pos@10: 0.020713463751438434, HR_neg@10: 0.0, MRR_pos@10: 0.0050765338740022285, MRR_neg@10: 0.0, NCDG_pos@10: 0.008583808323696073, NDCG_neg@10: 0.0, Matthews@10: 0.036878481443739446
+HR@20:0.043153049482163405, MRR@20: 0.0065654773264806855, Coverage@20: 0.03967087863649721, NCDG@20: 0.014171694720222198, HR_pos@20: 0.04257767548906789, HR_neg@20: 0.0005753739930955121, MRR_pos@20: 0.00653670862682591, MRR_neg@20: 2.8768699654775606e-05, NCDG_pos@20: 0.01404069918012038, NDCG_neg@20: 0.00013099554010181415, Matthews@20: 0.04196542493587354
+Results for alpha=3
+HR@5:0.012082853855005753, MRR@5: 0.005015343306482546, Coverage@5: 0.020863943579194827, NCDG@5: 0.006764067421264988, HR_pos@5: 0.01093210586881473, HR_neg@5: 0.0011507479861910242, MRR_pos@5: 0.004535864978902953, MRR_neg@5: 0.00047947832757959337, NCDG_pos@5: 0.006113359853042054, NDCG_neg@5: 0.0006507075682229329, Matthews@5: 0.02428591532151352
+HR@10:0.028768699654775604, MRR@10: 0.007138062359581346, Coverage@10: 0.03291213635027917, NCDG@10: 0.012055509119537768, HR_pos@10: 0.02761795166858458, HR_neg@10: 0.0011507479861910242, MRR_pos@10: 0.006658584032001754, MRR_neg@10: 0.00047947832757959337, NCDG_pos@10: 0.011404801551314835, NDCG_neg@10: 0.0006507075682229329, Matthews@10: 0.06256589256859997
+HR@20:0.04487917146144994, MRR@20: 0.00825290872327251, Coverage@20: 0.050837496326770495, NCDG@20: 0.016124867613933773, HR_pos@20: 0.04142692750287687, HR_neg@20: 0.0034522439585730723, MRR_pos@20: 0.0076373198373638354, MRR_neg@20: 0.0006155888859086726, NCDG_pos@20: 0.01492199834905678, NDCG_neg@20: 0.0012028692648769915, Matthews@20: 0.05794637556755874
+Results for alpha=4
+HR@5:0.012082853855005755, MRR@5: 0.006434599156118144, Coverage@5: 0.016456068175139584, NCDG@5: 0.007806722433217348, HR_pos@5: 0.009781357882623706, HR_neg@5: 0.0023014959723820483, MRR_pos@5: 0.004948216340621404, MRR_neg@5: 0.0014863828154967396, NCDG_pos@5: 0.006120487359527247, NDCG_neg@5: 0.0016862350736900995, Matthews@5: 0.053824506760230574
+HR@10:0.018411967779056387, MRR@10: 0.007163177891025992, Coverage@10: 0.024684102262709375, NCDG@10: 0.009736800684498108, HR_pos@10: 0.01611047180667434, HR_neg@10: 0.0023014959723820483, MRR_pos@10: 0.005676795075529252, MRR_neg@10: 0.0014863828154967396, NCDG_pos@10: 0.00805056561080801, NDCG_neg@10: 0.0016862350736900995, Matthews@10: 0.08476173351193057
+HR@20:0.03682393555811277, MRR@20: 0.008395335686076796, Coverage@20: 0.03878930355568616, NCDG@20: 0.014335344517332309, HR_pos@20: 0.02819332566168009, HR_neg@20: 0.00863060989643268, MRR_pos@20: 0.0065163565336132994, MRR_neg@20: 0.0018789791524634967, NCDG_pos@20: 0.011107265191059987, NDCG_neg@20: 0.0032280793262723243, Matthews@20: 0.07783264938444996
+Results for alpha=5
+HR@5:0.009781357882623704, MRR@5: 0.0064154200230149595, Coverage@5: 0.022920952101087275, NCDG@5: 0.007248084829261709, HR_pos@5: 0.004602991944764097, HR_neg@5: 0.005178365937859608, MRR_pos@5: 0.0028672803989259685, MRR_neg@5: 0.0035481396240889906, NCDG_pos@5: 0.003282153148758617, NDCG_neg@5: 0.003965931680503092, Matthews@5: 0.05751770302880722
+HR@10:0.018411967779056387, MRR@10: 0.0074748388039527274, Coverage@10: 0.03555686159271231, NCDG@10: 0.0099456249161104, HR_pos@10: 0.01093210586881473, HR_neg@10: 0.007479861910241657, MRR_pos@10: 0.0036472318117887737, MRR_neg@10: 0.0038276069921639537, NCDG_pos@10: 0.005263469806779667, NDCG_neg@10: 0.004682155109330733, Matthews@10: 0.11947473065227063
+HR@20:0.03912543153049482, MRR@20: 0.008915567476704972, Coverage@20: 0.05759623861298854, NCDG@20: 0.015188373823020155, HR_pos@20: 0.01726121979286536, HR_neg@20: 0.02186421173762946, MRR_pos@20: 0.004121176335266229, MRR_neg@20: 0.004794391141438742, NCDG_pos@20: 0.006907359240890269, NDCG_neg@20: 0.008281014582129891, Matthews@20: 0.10262915559164723
+Test loss: 0.1037261039018631
+Train loss: 0.1413063585758209
+
+
+Alpha: 3
+Hidden sizes: (512, 256, 0.009)
+Current epoch 67
+Results for alpha=2
+HR@5:0.009781357882623706, MRR@5: 0.005542769466820099, Coverage@5: 0.024977960622979724, NCDG@5: 0.006559866061451781, HR_pos@5: 0.009781357882623706, HR_neg@5: 0.0, MRR_pos@5: 0.005542769466820099, MRR_neg@5: 0.0, NCDG_pos@5: 0.006559866061451781, NDCG_neg@5: 0.0, Matthews@5: 0.02520203339394493
+HR@10:0.020138089758342925, MRR@10: 0.006943759475405044, Coverage@10: 0.04290332059947106, NCDG@10: 0.009928630578248472, HR_pos@10: 0.020138089758342925, HR_neg@10: 0.0, MRR_pos@10: 0.006943759475405044, MRR_neg@10: 0.0, NCDG_pos@10: 0.009928630578248472, NDCG_neg@10: 0.0, Matthews@10: 0.03635199545201408
+HR@20:0.04430379746835443, MRR@20: 0.008541270167187113, Coverage@20: 0.06494269761974727, NCDG@20: 0.015939417658812717, HR_pos@20: 0.04372842347525892, HR_neg@20: 0.0005753739930955121, MRR_pos@20: 0.008507424638181495, MRR_neg@20: 3.3845529005618355e-05, NCDG_pos@20: 0.015801435802329327, NDCG_neg@20: 0.0001379818564833898, Matthews@20: 0.04285984317321935
+Results for alpha=3
+HR@5:0.01093210586881473, MRR@5: 0.0058112773302646725, Coverage@5: 0.02850426094622392, NCDG@5: 0.00706332216036339, HR_pos@5: 0.009781357882623706, HR_neg@5: 0.0011507479861910242, MRR_pos@5: 0.005475642500958957, MRR_neg@5: 0.0003356348293057153, NCDG_pos@5: 0.006527835072864314, NDCG_neg@5: 0.0005354870874990754, Matthews@5: 0.02034082986353042
+HR@10:0.02416570771001151, MRR@10: 0.007467075821506202, Coverage@10: 0.0449603291213635, NCDG@10: 0.01123254894704667, HR_pos@10: 0.023014959723820484, HR_neg@10: 0.0011507479861910242, MRR_pos@10: 0.007131440992200486, MRR_neg@10: 0.0003356348293057153, NCDG_pos@10: 0.010697061859547597, NDCG_neg@10: 0.0005354870874990754, Matthews@10: 0.05408308451052586
+HR@20:0.05293440736478711, MRR@20: 0.009485168645527873, Coverage@20: 0.06494269761974727, NCDG@20: 0.018531713227659414, HR_pos@20: 0.047756041426927506, HR_neg@20: 0.005178365937859608, MRR_pos@20: 0.008903327657291146, MRR_neg@20: 0.0005818409882367244, NCDG_pos@20: 0.01702059549911614, NDCG_neg@20: 0.0015111177285432765, Matthews@20: 0.05032268331095002
+Results for alpha=4
+HR@5:0.011507479861910242, MRR@5: 0.00621403912543153, Coverage@5: 0.025271818983250073, NCDG@5: 0.007493820390157018, HR_pos@5: 0.009205983889528193, HR_neg@5: 0.0023014959723820483, MRR_pos@5: 0.005092059838895282, MRR_neg@5: 0.0011219792865362484, NCDG_pos@5: 0.006085040689996262, NDCG_neg@5: 0.001408779700160755, Matthews@5: 0.05043735298011108
+HR@10:0.018411967779056387, MRR@10: 0.007071848685772737, Coverage@10: 0.03967087863649721, NCDG@10: 0.009664656277765955, HR_pos@10: 0.01611047180667434, HR_neg@10: 0.0023014959723820483, MRR_pos@10: 0.005949869399236488, MRR_neg@10: 0.0011219792865362484, NCDG_pos@10: 0.0082558765776052, NDCG_neg@10: 0.001408779700160755, Matthews@10: 0.08476173351193057
+HR@20:0.04142692750287687, MRR@20: 0.008580924420698795, Coverage@20: 0.06611813106082869, NCDG@20: 0.015373305922388093, HR_pos@20: 0.0333716915995397, HR_neg@20: 0.00805523590333717, MRR_pos@20: 0.007068949024534783, MRR_neg@20: 0.0015119753961640118, NCDG_pos@20: 0.012521485009518421, NDCG_neg@20: 0.0028518209128696724, Matthews@20: 0.09951199193160602
+Results for alpha=5
+HR@5:0.010356731875719217, MRR@5: 0.005456463367855773, Coverage@5: 0.024684102262709375, NCDG@5: 0.006650183060073363, HR_pos@5: 0.005178365937859608, HR_neg@5: 0.005178365937859608, MRR_pos@5: 0.0028001534330648254, MRR_neg@5: 0.0026563099347909473, NCDG_pos@5: 0.0033827017703986105, NDCG_neg@5: 0.0032674812896747534, Matthews@5: 0.066375731294789
+HR@10:0.02186421173762946, MRR@10: 0.00689033189033189, Coverage@10: 0.04231560387893035, NCDG@10: 0.010269506801310986, HR_pos@10: 0.01093210586881473, HR_neg@10: 0.01093210586881473, MRR_pos@10: 0.0035008767603704307, MRR_neg@10: 0.003389455129961459, NCDG_pos@10: 0.005176231569262973, NDCG_neg@10: 0.005093275232048015, Matthews@10: 0.09700734700183655
+HR@20:0.045454545454545456, MRR@20: 0.008441580228860188, Coverage@20: 0.06317954745812518, NCDG@20: 0.016127216250160246, HR_pos@20: 0.019562715765247412, HR_neg@20: 0.025891829689298044, MRR_pos@20: 0.004060335377937369, MRR_neg@20: 0.004381244850922819, NCDG_pos@20: 0.007309737759277976, NDCG_neg@20: 0.008817478490882272, Matthews@20: 0.10536810395914664
+Test loss: 0.09944412112236023
+Train loss: 0.1335885152220726
+
+
+Alpha: 4
+Hidden sizes: (512, 1024, 0.01)
+Current epoch 51
+Results for alpha=2
+HR@5:0.00863060989643268, MRR@5: 0.0035960874568469504, Coverage@5: 0.015280634734058184, NCDG@5: 0.0048419115635845115, HR_pos@5: 0.00863060989643268, HR_neg@5: 0.0, MRR_pos@5: 0.0035960874568469504, MRR_neg@5: 0.0, NCDG_pos@5: 0.0048419115635845115, NDCG_neg@5: 0.0, Matthews@5: 0.023659444737370975
+HR@10:0.018411967779056387, MRR@10: 0.004903693353060442, Coverage@10: 0.02821040258595357, NCDG@10: 0.008009211578100741, HR_pos@10: 0.018411967779056387, HR_neg@10: 0.0, MRR_pos@10: 0.004903693353060442, MRR_neg@10: 0.0, NCDG_pos@10: 0.008009211578100741, NDCG_neg@10: 0.0, Matthews@10: 0.03472858055117634
+HR@20:0.03222094361334868, MRR@20: 0.00583813836689816, Coverage@20: 0.0467234792829856, NCDG@20: 0.011469823549993721, HR_pos@20: 0.03222094361334868, HR_neg@20: 0.0, MRR_pos@20: 0.00583813836689816, MRR_neg@20: 0.0, NCDG_pos@20: 0.011469823549993721, NDCG_neg@20: 0.0, Matthews@20: 0.04626819688203163
+Results for alpha=3
+HR@5:0.009205983889528193, MRR@5: 0.0034426543920214802, Coverage@5: 0.017043784895680283, NCDG@5: 0.004848727505659406, HR_pos@5: 0.009205983889528193, HR_neg@5: 0.0, MRR_pos@5: 0.0034426543920214802, MRR_neg@5: 0.0, NCDG_pos@5: 0.004848727505659406, NDCG_neg@5: 0.0, Matthews@5: 0.04508799798499661
+HR@10:0.01611047180667434, MRR@10: 0.004354119860448974, Coverage@10: 0.02879811930649427, NCDG@10: 0.0070713030902174396, HR_pos@10: 0.01611047180667434, HR_neg@10: 0.0, MRR_pos@10: 0.004354119860448974, MRR_neg@10: 0.0, NCDG_pos@10: 0.0070713030902174396, NDCG_neg@10: 0.0, Matthews@10: 0.059854732570592664
+HR@20:0.03222094361334868, MRR@20: 0.00545926506656341, Coverage@20: 0.04584190420217455, NCDG@20: 0.011131205075357111, HR_pos@20: 0.03164556962025317, HR_neg@20: 0.0005753739930955121, MRR_pos@20: 0.005427299844724771, MRR_neg@20: 3.1965221838639556e-05, NCDG_pos@20: 0.010995756908863076, NDCG_neg@20: 0.00013544816649403813, Matthews@20: 0.07685906144588453
+Results for alpha=4
+HR@5:0.011507479861910242, MRR@5: 0.003682393555811277, Coverage@5: 0.016456068175139584, NCDG@5: 0.005576832790608906, HR_pos@5: 0.009205983889528193, HR_neg@5: 0.0023014959723820483, MRR_pos@5: 0.0026275412351361715, MRR_neg@5: 0.0010548523206751054, NCDG_pos@5: 0.004218171619062999, NDCG_neg@5: 0.001358661171545907, Matthews@5: 0.05043735298011108
+HR@10:0.018411967779056387, MRR@10: 0.00460755840502676, Coverage@10: 0.02967969438730532, NCDG@10: 0.007814043695545326, HR_pos@10: 0.013233601841196778, HR_neg@10: 0.005178365937859608, MRR_pos@10: 0.003198805413995287, MRR_neg@10: 0.001408752991031472, NCDG_pos@10: 0.005554160959998986, NDCG_neg@10: 0.0022598827355463404, Matthews@10: 0.04155552373842772
+HR@20:0.03279631760644419, MRR@20: 0.005598183359288256, Coverage@20: 0.0455480458419042, NCDG@20: 0.011440331691068893, HR_pos@20: 0.02243958573072497, HR_neg@20: 0.010356731875719217, MRR_pos@20: 0.003862649690765171, MRR_neg@20: 0.0017355336685230837, NCDG_pos@20: 0.007913380259895818, NDCG_neg@20: 0.0035269514311730755, Matthews@20: 0.043031010908747926
+Results for alpha=5
+HR@5:0.009205983889528193, MRR@5: 0.0034810126582278476, Coverage@5: 0.015574493094328533, NCDG@5: 0.004869190751696229, HR_pos@5: 0.005178365937859608, HR_neg@5: 0.004027617951668585, MRR_pos@5: 0.001812428078250863, MRR_neg@5: 0.001668584579976985, NCDG_pos@5: 0.0026270053444702314, NDCG_neg@5: 0.002242185407225998, Matthews@5: 0.07690642656069616
+HR@10:0.017836593785960874, MRR@10: 0.004579474674411383, Coverage@10: 0.02879811930649427, NCDG@10: 0.0076073916886503804, HR_pos@10: 0.006904487917146145, HR_neg@10: 0.01093210586881473, MRR_pos@10: 0.0020377828922132717, MRR_neg@10: 0.0025416917821981114, NCDG_pos@10: 0.0031797883653054662, NDCG_neg@10: 0.004427603323344914, Matthews@10: 0.05116415777437081
+HR@20:0.03222094361334868, MRR@20: 0.005624990816213602, Coverage@20: 0.044372612400822804, NCDG@20: 0.011305303493453992, HR_pos@20: 0.011507479861910242, HR_neg@20: 0.020713463751438434, MRR_pos@20: 0.0023678961272036478, MRR_neg@20: 0.003257094689009954, NCDG_pos@20: 0.004357946865635526, NDCG_neg@20: 0.006947356627818469, Matthews@20: 0.05624550876354548
+Test loss: 0.16076122224330902
+Train loss: 0.3448345884680748
+
+
+Alpha: 5
+Hidden sizes: (128, 1024, 0.001)
+Current epoch 111
+Results for alpha=2
+HR@5:0.02531645569620253, MRR@5: 0.011766398158803221, Coverage@5: 0.18953864237437554, NCDG@5: 0.015100485555028449, HR_pos@5: 0.024165707710011506, HR_neg@5: 0.0011507479861910242, MRR_pos@5: 0.011382815496739546, MRR_neg@5: 0.0003835826620636747, NCDG_pos@5: 0.014525111561932941, NDCG_neg@5: 0.0005753739930955121, Matthews@5: 0.010119411143779055
+HR@10:0.05466052934407365, MRR@10: 0.01558715546057318, Coverage@10: 0.2826917425800764, NCDG@10: 0.024497621832588152, HR_pos@10: 0.053509781357882626, HR_neg@10: 0.0011507479861910242, MRR_pos@10: 0.015203572798509507, MRR_neg@10: 0.0003835826620636747, NCDG_pos@10: 0.02392224783949264, NDCG_neg@10: 0.0005753739930955121, Matthews@10: 0.03972630848641224
+HR@20:0.10759493670886076, MRR@20: 0.01922424916260131, Coverage@20: 0.3867176021157802, NCDG@20: 0.03783488829117322, HR_pos@20: 0.10529344073647871, HR_neg@20: 0.0023014959723820483, MRR_pos@20: 0.018768744751400702, MRR_neg@20: 0.00045550441120061373, NCDG_pos@20: 0.03697798317941461, NDCG_neg@20: 0.0008569051117586032, Matthews@20: 0.0568731847609056
+Results for alpha=3
+HR@5:0.023590333716915997, MRR@5: 0.009647103950901419, Coverage@5: 0.17278871583896563, NCDG@5: 0.013067252919634547, HR_pos@5: 0.02243958573072497, HR_neg@5: 0.0011507479861910242, MRR_pos@5: 0.008879938626774067, MRR_neg@5: 0.0007671653241273494, NCDG_pos@5: 0.012204191929991275, NDCG_neg@5: 0.0008630609896432681, Matthews@5: 0.05294922045348422
+HR@10:0.056962025316455694, MRR@10: 0.014002593749429193, Coverage@10: 0.25830149867763735, NCDG@10: 0.023757582222416175, HR_pos@10: 0.051208285385500575, HR_neg@10: 0.005753739930955121, MRR_pos@10: 0.01256986684201874, MRR_neg@10: 0.0014327269074104515, NCDG_pos@10: 0.021355000548147412, NDCG_neg@10: 0.0024025816742687645, Matthews@10: 0.05027440253533994
+HR@20:0.09838895281933256, MRR@20: 0.016893873230736, Coverage@20: 0.3564501910079342, NCDG@20: 0.0342531012741228, HR_pos@20: 0.08688147295742232, HR_neg@20: 0.011507479861910242, MRR_pos@20: 0.015041969280498316, MRR_neg@20: 0.001851903950237681, NCDG_pos@20: 0.030370943363284168, NDCG_neg@20: 0.003882157910838635, Matthews@20: 0.05384637823596705
+Results for alpha=4
+HR@5:0.025891829689298047, MRR@5: 0.010999232834675871, Coverage@5: 0.13546870408463121, NCDG@5: 0.014619868408163109, HR_pos@5: 0.020138089758342925, HR_neg@5: 0.005753739930955121, MRR_pos@5: 0.008822401227464518, MRR_neg@5: 0.0021768316072113543, NCDG_pos@5: 0.011564740539908693, NDCG_neg@5: 0.003055127868254418, Matthews@5: 0.06889771829280164
+HR@10:0.0477560414269275, MRR@10: 0.013883637459586828, Coverage@10: 0.20129297678518954, NCDG@10: 0.02165729540200888, HR_pos@10: 0.035097813578826235, HR_neg@10: 0.012658227848101266, MRR_pos@10: 0.010842146601640271, MRR_neg@10: 0.0030414908579465545, NCDG_pos@10: 0.016425571695366372, NDCG_neg@10: 0.005231723706642508, Matthews@10: 0.07526920986359721
+HR@20:0.10126582278481011, MRR@20: 0.017453467060569456, Coverage@20: 0.293270643549809, NCDG@20: 0.03500467946577051, HR_pos@20: 0.06731875719217491, HR_neg@20: 0.03394706559263521, MRR_pos@20: 0.013022786579764637, MRR_neg@20: 0.004430680480804818, NCDG_pos@20: 0.024501871403055132, NDCG_neg@20: 0.010502808062715379, Matthews@20: 0.06526754919187792
+Results for alpha=5
+HR@5:0.016685845799769852, MRR@5: 0.00765247410817031, Coverage@5: 0.11871877754922128, NCDG@5: 0.009884297241628414, HR_pos@5: 0.005753739930955121, HR_neg@5: 0.01093210586881473, MRR_pos@5: 0.0033275795934023782, MRR_neg@5: 0.004324894514767932, NCDG_pos@5: 0.003936276397925067, NDCG_neg@5: 0.005948020843703349, Matthews@5: 0.036329849073654025
+HR@10:0.03682393555811277, MRR@10: 0.010189827753118892, Coverage@10: 0.17602115780193947, NCDG@10: 0.016244648603341356, HR_pos@10: 0.014384349827387802, HR_neg@10: 0.02243958573072497, MRR_pos@10: 0.004379692037919886, MRR_neg@10: 0.005810135715199005, NCDG_pos@10: 0.006627539911454659, NDCG_neg@10: 0.009617108691886698, Matthews@10: 0.07588063408272325
+HR@20:0.07479861910241657, MRR@20: 0.012772291332818717, Coverage@20: 0.25124889803114897, NCDG@20: 0.025783386808179865, HR_pos@20: 0.026467203682393557, HR_neg@20: 0.04833141542002301, MRR_pos@20: 0.0052111528783497915, MRR_neg@20: 0.007561138454468926, NCDG_pos@20: 0.009673201272553606, NDCG_neg@20: 0.016110185535626254, Matthews@20: 0.08541190491645333
+Test loss: 0.07795591652393341
+Train loss: 0.10110743269324303
+
+
+[[init-process] Main process terminated]
