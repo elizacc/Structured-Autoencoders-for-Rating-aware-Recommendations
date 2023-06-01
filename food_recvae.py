@@ -79,7 +79,7 @@ def main():
     # %%
     grid1 = 2 ** np.arange(4, 11)
     grid2 = 2 ** np.arange(4, 11)
-    gamma = 0.001 * np.arange(5, 101, 5)
+    gamma = 0.001 * np.arange(1, 11)
     grid = np.meshgrid(grid2, grid1, gamma)
     grid = list(zip(grid[0].flatten(), grid[1].flatten(), grid[2].flatten()))
 
