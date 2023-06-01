@@ -1,8 +1,8 @@
 # %%
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from tqdm.notebook import tqdm
+# import matplotlib.pyplot as plt
+# from tqdm.notebook import tqdm
 
 from polara.lib.tensor import hooi
 from polara.lib.sparse import tensor_outer_at
@@ -106,7 +106,7 @@ config = {
 
 
 config['mlrank'] = (128, 128, 2)
-tf_params = tf_model_build(config, train_val, data_description)
+tf_params = tf_model_build(config, training, data_description)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
@@ -119,7 +119,7 @@ make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
 
 
 config['mlrank'] = (32, 32, 3)
-tf_params = tf_model_build(config, train_val, data_description)
+tf_params = tf_model_build(config, training, data_description)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
