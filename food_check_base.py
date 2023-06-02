@@ -101,27 +101,27 @@ if __name__ == "__main__":
 
 
     # %%
-    print('Alpha: 2')
-    h = 16
-    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      base_model, h, device, MVDataset, batch_size=128, tensor_model=False)
+    # print('Alpha: 2')
+    # h = 16
+    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+    #                                   base_model, h, device, MVDataset, batch_size=128, tensor_model=False)
 
     print('Alpha: 3')
     h = 16
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       base_model, h, device, MVDataset, batch_size=128, tensor_model=False)
 
-    print('Alpha: 4')
-    h = 1024
-    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      base_model, h, device, MVDataset, batch_size=32, tensor_model=False)
-
-    print('Alpha: 5')
-    h = 1024
-    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      base_model, h, device, MVDataset, batch_size=32, tensor_model=False)
-    
-    print('Alpha: 6')
-    h = 64
-    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-                                      base_model, h, device, MVDataset, batch_size=128, tensor_model=False)
+    # print('Alpha: 4')
+    # h = 1024
+    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+    #                                   base_model, h, device, MVDataset, batch_size=32, tensor_model=False)
+    #
+    # print('Alpha: 5')
+    # h = 1024
+    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+    #                                   base_model, h, device, MVDataset, batch_size=32, tensor_model=False)
+    #
+    # print('Alpha: 6')
+    # h = 64
+    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+    #                                   base_model, h, device, MVDataset, batch_size=128, tensor_model=False)
