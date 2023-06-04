@@ -628,7 +628,7 @@ def main():
     # ### Tuning
 
     # %%
-    grid1 = 2 ** np.arange(4, 11)
+    grid1 = 2 ** np.arange(7, 11)
     grid2 = np.arange(3, 6)
     grid = np.meshgrid(grid2, grid1)
     grid = list(zip(grid[1].flatten(), grid[0].flatten()))
