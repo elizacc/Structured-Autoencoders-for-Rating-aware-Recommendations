@@ -85,7 +85,7 @@ def inner_product_at(target='parallel', **kwargs):
 
 # matvec implementation is based on
 # http://stackoverflow.com/questions/18595981/improving-performance-of-multiplication-of-scipy-sparse-matrices
-@njit(nogil=True)
+# @njit(nogil=True)
 def matvec2dense(m_ptr, m_ind, m_val, v_nnz, v_val, out):
     l = len(v_nnz)
     for j in range(l):
@@ -97,7 +97,7 @@ def matvec2dense(m_ptr, m_ind, m_val, v_nnz, v_val, out):
             out[m_ind[ind_start:ind_end]] += m_val[ind_start:ind_end] * v_val[j]
 
 
-@njit(nogil=True)
+# @njit(nogil=True)
 def matvec2sparse(m_ptr, m_ind, m_val, v_nnz, v_val, sizes, indices, data):
     l = len(sizes) - 1
     for j in range(l):
@@ -137,7 +137,7 @@ def csc_matvec(mat_csc, vec, dense_output=True, dtype=None):
     return res
 
 
-@njit
+# @njit
 def _blockify(ind, ptr, major_dim):
     # convenient function to compute only diagonal
     # elements of the product of 2 matrices;
@@ -196,7 +196,7 @@ def tensor_outer_at(vtarget, **kwargs):
     return tensor_outer_wrapped
 
 
-@njit(nogil=True)
+# @njit(nogil=True)
 def dttm_seq(idx, val, u, v, mode0, mode1, mode2, res):
     new_shape1 = u.shape[1]
     new_shape2 = v.shape[1]
@@ -212,7 +212,7 @@ def dttm_seq(idx, val, u, v, mode0, mode1, mode2, res):
                 res[i0, j, k] += vv * uij * vik
 
 
-@njit(parallel=True)
+# @njit(parallel=True)
 def dttm_par(idx, val, mat1, mat2, mode1, mode2, unqs, inds, res):
     r1 = mat1.shape[1]
     r2 = mat2.shape[1]
@@ -229,7 +229,7 @@ def dttm_par(idx, val, mat1, mat2, mode1, mode2, unqs, inds, res):
                 for j2 in range(r2):
                     res[i0, j1, j2] += vp * mat1[i1, j1] * mat2[i2, j2]
 
-@njit
+# @njit
 def fill_missing_sorted(arr, inds, size):    
     filler = inds[0][0:0]
     arr_filled = np.empty(size, dtype=arr.dtype)
@@ -290,7 +290,7 @@ def arrange_indices(idx, mode_mask=None, shape=None):
     return res
 
 
-@njit(parallel=True)
+# @njit(parallel=True)
 def any_reduceat(bool_array, indptr):
     '''Roughly equivalent to `np.logical_or.reduceat` or `np.maximum.reduceat`,
     e.g. as in `np.logical_or.reduceat(matrix.indices==item, matrix.indptr[:-1])`,
