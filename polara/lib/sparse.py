@@ -227,6 +227,7 @@ def dttm_par(idx, val, mat1, mat2, mode1, mode2, unqs, inds, res):
             vp = val[pos]
             for j1 in range(r1):
                 for j2 in range(r2):
+                    print(i0, j1, j2, i1, j1, i2, j2)
                     res[i0, j1, j2] += vp * mat1[i1, j1] * mat2[i2, j2]
 
 # @njit
