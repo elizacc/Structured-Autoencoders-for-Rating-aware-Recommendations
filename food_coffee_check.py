@@ -18,9 +18,10 @@ def set_random_seed(seed):
 set_random_seed(42)
 
     # %%
-data = pd.read_csv('../../e.makhneva/data/Clothing_Shoes_and_Jewelry/Amazon_Clothing_Shoes_and_Jewelry.csv')
-data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
-                inplace=True)
+data = pd.read_csv('../../e.makhneva/data/FoodCom/Food_com.csv')
+data.rename(columns={'user_id': 'userid', 'recipe_id': 'movieid', "date": "timestamp"}, inplace=True)
+data['timestamp'] = pd.to_datetime(data['timestamp'])
+data['rating'] = data['rating'] + 1
 
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
@@ -114,18 +115,31 @@ config = {
 #
 # print('alpha: 2')
 # make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
+#
+# config['mlrank'] = (1024, 1024, 4)
+# tf_params = tf_model_build(config, train_val, data_description)
+# seen_data = testset
+# tf_scores = tf_scoring(tf_params, seen_data, data_description)
+# downvote_seen_items(tf_scores, seen_data, data_description)
+#
 # print('alpha: 3')
 # make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
 
 
 
-config['mlrank'] = (64, 64, 3)
+# config['mlrank'] = (128, 128, 2)
+# tf_params = tf_model_build(config, train_val, data_description)
+# seen_data = testset
+# tf_scores = tf_scoring(tf_params, seen_data, data_description)
+# downvote_seen_items(tf_scores, seen_data, data_description)
+#
+# print('alpha: 4')
+# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=4)
+
+config['mlrank'] = (128, 128, 2)
 tf_params = tf_model_build(config, train_val, data_description)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
-
-print('alpha: 4')
-make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=4)
 print('alpha: 5')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)

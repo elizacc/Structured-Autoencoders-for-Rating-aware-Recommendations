@@ -24,7 +24,7 @@ data.rename(columns={'userId': 'userid', 'movieId': 'movieid'}, inplace=True)
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
 
-train_val = pd.concat((training, testset_valid, holdout_valid)).reset_index(drop=True)
+train_val = pd.read_csv('../../e.makhneva/data/ml-1m/train_val.csv')
 
 data_description = dict(
     users = data_index['users'].name,
