@@ -28,3 +28,20 @@ Amazon_Clothing_Shoes_and_Jewelry.csv
 Food_com.csv
 .ipynb_checkpoints/logs-checkpoint.ipynb
 RecVAE/
+.ipynb_checkpoints/Untitled-checkpoint.ipynb
+.ipynb_checkpoints/logs-checkpoint.ipynb
+best_ae_(128, 3)_2.pt
+best_ae_(128, 3)_3.pt
+best_ae_(128, 3)_5.pt
+best_ae_(128, 5)_3.pt
+best_ae_(128, 5)_5.pt
+best_ae_(256, 4)_2.pt
+best_ae_(128, 5)_6.pt
+best_ae_(256, 4)_3.pt
+best_ae_(256, 4)_5.pt
+best_ae_(256, 4)_6.pt
+best_ae_(128, 3)_4.pt
+best_ae_(128, 3)_6.pt
+best_ae_(128, 5)_4.pt
+best_ae_(256, 4)_4.pt
+best_ae_(128, 5)_2.pt
