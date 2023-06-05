@@ -199,6 +199,7 @@ def tensor_outer_at(vtarget, **kwargs):
 # @njit(nogil=True)
 def dttm_seq(idx, val, u, v, mode0, mode1, mode2, res):
     print(res.shape)
+    print(idx.shape[0])
     print(mode0)
     print(max(idx[:, 0]))
     print(max(idx[:, 1]))
