@@ -585,15 +585,24 @@ def training_testing_pipeline(train_val, testset, holdout, data_description, mod
     print()
 
 def training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description, model_init, h, device, MVDataset, tensor_model=False, batch_size=16, early_stop=50, n_epochs=1000):
+    max_id = training.userid.max()
+    mapping = {user: user + max_id for user in testset_valid.userid.unique()}
+    testset_valid['userid'] = testset_valid['userid'].map(mapping)
+    holdout_valid['userid'] = holdout_valid['userid'].map(mapping)
     train_val = pd.concat((training, testset_valid, holdout_valid))
+
+    train_val[data_description['users']] = pd.factorize(train_val[data_description['users']])[0]
+
     data_description = dict(
-        users = 'userid',
-        items = 'movieid',
-        feedback = 'rating',
-        n_users = train_val.userid.nunique(),
-        n_items = train_val.movieid.nunique(),
-        n_ratings = train_val.rating.nunique(),
-        min_rating = training['rating'].min()
+        users='userid',
+        items='movieid',
+        feedback='rating',
+        n_users=train_val.userid.nunique(),
+        n_items=train_val.movieid.nunique(),
+        n_ratings=train_val['rating'].nunique(),
+        min_rating=train_val['rating'].min(),
+        test_users=holdout['userid'].drop_duplicates().values,
+        n_test_users=holdout['userid'].nunique()
     )
     train_dataset = MVDataset(train_val, data_description, augment=True)
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)

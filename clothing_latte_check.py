@@ -6,11 +6,15 @@ import pandas as pd
 
 from polara.lib.tensor import hooi
 from polara.lib.sparse import tensor_outer_at
+from scipy.sparse import csr_matrix
+from scipy.linalg import solve_triangular
+from sa_hooi import sa_hooi, form_attention_matrix, get_scaling_weights
 
 from dataprep import full_preproccessing
 from utils import *
 # from RecVAE.utils import *
 # from RecVAE.model import VAE as RecVAE
+
 
 # %%
 def set_random_seed(seed):
@@ -20,7 +24,7 @@ set_random_seed(42)
     # %%
 data = pd.read_csv('../../e.makhneva/data/Clothing_Shoes_and_Jewelry/Amazon_Clothing_Shoes_and_Jewelry.csv')
 data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
-                inplace=True)
+            inplace=True)
 
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
@@ -46,13 +50,13 @@ data_description = dict(
 )
 
 # %%
-def tf_model_build(config, data, data_description):
+def tf_model_build(config, data, data_description, attention_matrix=np.array([])):
     userid = data_description["users"]
     itemid = data_description["items"]
     feedback = data_description["feedback"]
 
     idx = data[[userid, itemid, feedback]].values
-    idx[:, -1] = idx[:, -1] - data_description['min_rating'] # works only for integer ratings!
+    idx[:, -1] = idx[:, -1] - data_description['min_rating']  # works only for integer ratings!
     val = np.ones(idx.shape[0], dtype='f8')
 
     n_users = data_description["n_users"]
@@ -62,71 +66,123 @@ def tf_model_build(config, data, data_description):
     core_shape = config['mlrank']
     num_iters = config["num_iters"]
 
-    u0, u1, u2, g = hooi(
-        idx, val, shape, core_shape,
-        num_iters=num_iters,
-        parallel_ttm=False, growth_tol=0.01,
+    if (attention_matrix.shape[0] == 0):
+        attention_matrix = form_attention_matrix(
+            data_description['n_ratings'],
+            **config['params'],
+            format='csr'
+        ).A
+
+    item_popularity = (
+        pd.Series(np.ones((n_items,)))
+        .reindex(range(n_items))
+        .fillna(1)
+        .values
     )
-    return u0, u1, u2
+    scaling_weights = get_scaling_weights(item_popularity, scaling=config["scaling"])
 
-
-def tf_scoring(params, data, data_description):
-    user_factors, item_factors, feedback_factors = params
-    userid = data_description["users"]
-    itemid = data_description["items"]
-    feedback = data_description["feedback"]
-
-    data = data.sort_values(userid)
-    useridx = data[userid].values
-    itemidx = data[itemid].values
-    ratings = data[feedback].values
-    ratings = ratings - data_description['min_rating'] # works only for integer ratings!
-
-    tensor_outer = tensor_outer_at('cpu')
-    # use the fact that test data is sorted by users for reduction:
-    scores = tensor_outer(
-        1.0,
-        item_factors,
-        feedback_factors,
-        itemidx,
-        ratings
+    u0, u1, u2 = sa_hooi(
+        idx, val, shape, config["mlrank"],
+        attention_matrix=attention_matrix,
+        scaling_weights=scaling_weights,
+        max_iters=config["num_iters"],
+        parallel_ttm=False,
+        randomized=config["randomized"],
+        growth_tol=config["growth_tol"],
+        seed=config["seed"],
+        iter_callback=None,
     )
-    scores = np.add.reduceat(scores, np.r_[0, np.where(np.diff(useridx))[0]+1])
-    scores = np.tensordot(
-        scores,
-        feedback_factors[-1, :],
-        axes=(2, 0)
-    ).dot(item_factors.T)
-    return scores
+
+    return u0, u1, u2, attention_matrix
+
 
 # %%
 config = {
     "scaling": 1,
+    "mlrank": (30, 30, 5),
     "n_ratings": data_description['n_ratings'],
     "num_iters": 4,
     "params": None,
     "randomized": True,
     "growth_tol": 1e-4,
     "seed": 42
-    }
+}
 
 
+# %%
+def tf_scoring(params, data, data_description):
+    user_factors, item_factors, feedback_factors, attention_matrix = params
+    userid = data_description["users"]
+    itemid = data_description["items"]
+    feedback = data_description["feedback"]
 
-config['mlrank'] = (1024, 1024, 2)
-tf_params = tf_model_build(config, train_val, data_description)
+    data = data.sort_values(userid)
+    useridx = data[userid]
+    itemidx = data[itemid].values
+    ratings = data[feedback].values
+    ratings = ratings - data_description['min_rating']
+
+    n_users = useridx.nunique()
+    n_items = data_description['n_items']
+    n_ratings = data_description['n_ratings']
+
+    # inv_attention = np.linalg.inv(attention_matrix.A) # change
+    inv_attention = solve_triangular(attention_matrix, np.eye(5), lower=True)
+    # np.testing.assert_almost_equal(inv_attention, inv_attention_)
+
+    tensor_outer = tensor_outer_at('cpu')
+
+    inv_aT_feedback = (inv_attention.T @ feedback_factors)[-1, :]
+
+    scores = tensor_outer(
+        1.0,
+        item_factors,
+        attention_matrix @ feedback_factors,
+        itemidx,
+        ratings
+    )
+    scores = np.add.reduceat(scores, np.r_[0, np.where(np.diff(useridx))[0] + 1])  # sort by users
+    scores = np.tensordot(
+        scores,
+        inv_aT_feedback,
+        axes=(2, 0)
+    ).dot(item_factors.T)
+
+    return scores
+
+print('Eucledian distance matrix')
+eucl_matrix = np.zeros((5, 5))
+
+for i in range(5):
+    for j in range(5):
+        eucl_matrix[i, j] = 1.0 / np.exp(abs(i - j)) if i != j else 1#5 + 1e-2
+
+a = np.linalg.cholesky(eucl_matrix)
+
+#for i in range(5):
+#    a[i, i] = 1e-5
+
+attention_matrix = csr_matrix(a)
+
+config['mlrank'] = (2048, 2048, 2)
+tf_params = tf_model_build(config, train_val, data_description, attention_matrix=attention_matrix.A)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
 
 print('alpha: 2')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
+
+config['mlrank'] = (32, 32, 3)
+tf_params = tf_model_build(config, train_val, data_description, attention_matrix=attention_matrix.A)
+seen_data = testset
+tf_scores = tf_scoring(tf_params, seen_data, data_description)
+downvote_seen_items(tf_scores, seen_data, data_description)
 print('alpha: 3')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
 
-
-
-config['mlrank'] = (64, 64, 3)
-tf_params = tf_model_build(config, train_val, data_description)
+config['mlrank'] = (32, 32, 2)
+tf_params = tf_model_build(config, train_val, data_description, attention_matrix=attention_matrix.A)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)

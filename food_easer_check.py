@@ -28,18 +28,24 @@ data['rating'] = data['rating'] + 1
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
 
+max_id = training.userid.max()
+mapping = {user: user + max_id for user in testset_valid.userid.unique()}
+testset_valid['userid'] = testset_valid['userid'].map(mapping)
+holdout_valid['userid'] = holdout_valid['userid'].map(mapping)
 train_val = pd.concat((training, testset_valid, holdout_valid))
 
+train_val[data_description['users']] = pd.factorize(train_val[data_description['users']])[0]
+
 data_description = dict(
-    users=data_index['users'].name,
-    items=data_index['items'].name,
-    feedback='rating',
-    n_users=len(data_index['users']),
-    n_items=len(data_index['items']),
-    n_ratings=training['rating'].nunique(),
-    min_rating=training['rating'].min(),
-    test_users=holdout[data_index['users'].name].drop_duplicates().values,
-    n_test_users=holdout[data_index['users'].name].nunique()
+    users = data_index['users'].name,
+    items = data_index['items'].name,
+    feedback = 'rating',
+    n_users = train_val.userid.nunique(),
+    n_items = len(data_index['items']),
+    n_ratings = train_val['rating'].nunique(),
+    min_rating = train_val['rating'].min(),
+    test_users = holdout[data_index['users'].name].drop_duplicates().values,
+    n_test_users = holdout[data_index['users'].name].nunique()
 )
 
 

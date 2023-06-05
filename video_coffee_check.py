@@ -31,7 +31,7 @@ testset_valid['userid'] = testset_valid['userid'].map(mapping)
 holdout_valid['userid'] = holdout_valid['userid'].map(mapping)
 train_val = pd.concat((training, testset_valid, holdout_valid))
 
-train_val = pd.factorize(train_val[data_description['users']])[0]
+train_val[data_description['users']] = pd.factorize(train_val[data_description['users']])[0]
 
 data_description = dict(
     users = data_index['users'].name,
