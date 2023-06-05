@@ -208,7 +208,9 @@ def dttm_seq(idx, val, u, v, mode0, mode1, mode2, res):
         for j in range(new_shape1):
             uij = u[i1, j]
             for k in range(new_shape2):
+                print(i2, k, vik)
                 vik = v[i2, k]
+                print(i0, j, k, vv, uij, vik)
                 res[i0, j, k] += vv * uij * vik
 
 
@@ -227,7 +229,6 @@ def dttm_par(idx, val, mat1, mat2, mode1, mode2, unqs, inds, res):
             vp = val[pos]
             for j1 in range(r1):
                 for j2 in range(r2):
-                    print(i0, j1, j2, i1, j1, i2, j2)
                     res[i0, j1, j2] += vp * mat1[i1, j1] * mat2[i2, j2]
 
 # @njit
