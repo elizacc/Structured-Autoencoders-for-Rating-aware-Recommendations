@@ -208,10 +208,12 @@ def dttm_seq(idx, val, u, v, mode0, mode1, mode2, res):
         for j in range(new_shape1):
             uij = u[i1, j]
             for k in range(new_shape2):
-                print(i2, k)
-                vik = v[i2, k]
-                print(i0, j, k, vv, uij, vik)
-                res[i0, j, k] += vv * uij * vik
+                try:
+                    vik = v[i2, k]
+                    res[i0, j, k] += vv * uij * vik
+                except:
+                    print(i2, k)
+                    print(i0, j, k, vv, uij, vik)
 
 
 # @njit(parallel=True)
