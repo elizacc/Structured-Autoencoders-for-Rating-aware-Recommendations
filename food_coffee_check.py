@@ -26,16 +26,22 @@ data['rating'] = data['rating'] + 1
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
 
-train_val = pd.concat((training, testset_valid, holdout_valid)).reset_index(drop=True)
+max_id = training.userid.max()
+mapping = {user: user + max_id for user in testset_valid.userid.unique()}
+testset_valid['userid'] = testset_valid['userid'].map(mapping)
+holdout_valid['userid'] = holdout_valid['userid'].map(mapping)
+train_val = pd.concat((training, testset_valid, holdout_valid))
+
+train_val = pd.factorize(train_val[data_description['users']])[0]
 
 data_description = dict(
     users = data_index['users'].name,
     items = data_index['items'].name,
     feedback = 'rating',
-    n_users = len(data_index['users']),
+    n_users = train_val.userid.nunique(),
     n_items = len(data_index['items']),
-    n_ratings = training['rating'].nunique(),
-    min_rating = training['rating'].min(),
+    n_ratings = train_val['rating'].nunique(),
+    min_rating = train_val['rating'].min(),
     test_users = holdout[data_index['users'].name].drop_duplicates().values,
     n_test_users = holdout[data_index['users'].name].nunique()
 )
@@ -107,39 +113,33 @@ config = {
 
 
 
-# config['mlrank'] = (1024, 1024, 2)
-# tf_params = tf_model_build(config, train_val, data_description)
-# seen_data = testset
-# tf_scores = tf_scoring(tf_params, seen_data, data_description)
-# downvote_seen_items(tf_scores, seen_data, data_description)
-#
-# print('alpha: 2')
-# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
-#
-# config['mlrank'] = (1024, 1024, 4)
-# tf_params = tf_model_build(config, train_val, data_description)
-# seen_data = testset
-# tf_scores = tf_scoring(tf_params, seen_data, data_description)
-# downvote_seen_items(tf_scores, seen_data, data_description)
-#
-# print('alpha: 3')
-# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
-
-
-
-# config['mlrank'] = (128, 128, 2)
-# tf_params = tf_model_build(config, train_val, data_description)
-# seen_data = testset
-# tf_scores = tf_scoring(tf_params, seen_data, data_description)
-# downvote_seen_items(tf_scores, seen_data, data_description)
-#
-# print('alpha: 4')
-# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=4)
-
 config['mlrank'] = (128, 128, 2)
 tf_params = tf_model_build(config, train_val, data_description)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
+
+print('alpha: 2')
+make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
 print('alpha: 5')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)
+
+config['mlrank'] = (128, 128, 4)
+tf_params = tf_model_build(config, train_val, data_description)
+seen_data = testset
+tf_scores = tf_scoring(tf_params, seen_data, data_description)
+downvote_seen_items(tf_scores, seen_data, data_description)
+
+print('alpha: 3')
+make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
+print('alpha: 4')
+make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=4)
+
+
+config['mlrank'] = (256, 256, 4)
+tf_params = tf_model_build(config, train_val, data_description)
+seen_data = testset
+tf_scores = tf_scoring(tf_params, seen_data, data_description)
+downvote_seen_items(tf_scores, seen_data, data_description)
+print('alpha: 6')
+make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=6)
