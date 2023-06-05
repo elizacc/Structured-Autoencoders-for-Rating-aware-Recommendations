@@ -18,8 +18,9 @@ def set_random_seed(seed):
 set_random_seed(42)
 
     # %%
-data = pd.read_csv('../../e.makhneva/data/ml-1m/ml-1m.csv')
-data.rename(columns={'userId': 'userid', 'movieId': 'movieid'}, inplace=True)
+data = pd.read_csv('../../e.makhneva/data/Video_Games/Amazon_Video_Games.csv')
+data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
+                inplace=True)
 
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
@@ -105,20 +106,27 @@ config = {
 
 
 
+# config['mlrank'] = (1024, 1024, 2)
+# tf_params = tf_model_build(config, train_val, data_description)
+# seen_data = testset
+# tf_scores = tf_scoring(tf_params, seen_data, data_description)
+# downvote_seen_items(tf_scores, seen_data, data_description)
+#
+# print('alpha: 2')
+# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
+#
+# config['mlrank'] = (1024, 1024, 4)
+# tf_params = tf_model_build(config, train_val, data_description)
+# seen_data = testset
+# tf_scores = tf_scoring(tf_params, seen_data, data_description)
+# downvote_seen_items(tf_scores, seen_data, data_description)
+#
+# print('alpha: 3')
+# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
+
+
+
 config['mlrank'] = (128, 128, 2)
-tf_params = tf_model_build(config, train_val, data_description)
-seen_data = testset
-tf_scores = tf_scoring(tf_params, seen_data, data_description)
-downvote_seen_items(tf_scores, seen_data, data_description)
-
-print('alpha: 2')
-make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
-print('alpha: 3')
-make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
-
-
-
-config['mlrank'] = (32, 32, 3)
 tf_params = tf_model_build(config, train_val, data_description)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
@@ -126,5 +134,11 @@ downvote_seen_items(tf_scores, seen_data, data_description)
 
 print('alpha: 4')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=4)
-print('alpha: 5')
-make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)
+
+# config['mlrank'] = (64, 64, 3)
+# tf_params = tf_model_build(config, train_val, data_description)
+# seen_data = testset
+# tf_scores = tf_scoring(tf_params, seen_data, data_description)
+# downvote_seen_items(tf_scores, seen_data, data_description)
+# print('alpha: 5')
+# make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)

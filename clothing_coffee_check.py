@@ -18,8 +18,9 @@ def set_random_seed(seed):
 set_random_seed(42)
 
     # %%
-data = pd.read_csv('../../e.makhneva/data/ml-1m/ml-1m.csv')
-data.rename(columns={'userId': 'userid', 'movieId': 'movieid'}, inplace=True)
+data = pd.read_csv('../../e.makhneva/data/Clothing_Shoes_and_Jewelry/Amazon_Clothing_Shoes_and_Jewelry.csv')
+data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
+                inplace=True)
 
 # %%
 training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
