@@ -73,11 +73,6 @@ def main():
 
         return ae, criterion, optimizer, scheduler
 
-    # %% [markdown]
-    # ### Tuning
-
-    # %%
-
     print('Alpha: 2')
     h = (64, 128, 0.01)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,

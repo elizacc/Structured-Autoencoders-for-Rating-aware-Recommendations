@@ -74,10 +74,6 @@ def main():
 
         return ae, criterion, optimizer, scheduler
 
-    # %% [markdown]
-    # ### Tuning
-
-    # %%
 
     print('Alpha: 2')
     h = (1024, 128, 0.01)
