@@ -126,7 +126,7 @@ def tf_scoring(params, data, data_description):
     n_ratings = data_description['n_ratings']
 
     # inv_attention = np.linalg.inv(attention_matrix.A) # change
-    inv_attention = solve_triangular(attention_matrix, np.eye(6), lower=True)
+    inv_attention = solve_triangular(attention_matrix, np.eye(5), lower=True)
     # np.testing.assert_almost_equal(inv_attention, inv_attention_)
 
     tensor_outer = tensor_outer_at('cpu')
@@ -149,32 +149,11 @@ def tf_scoring(params, data, data_description):
 
     return scores
 
-print('Rating distribution matrix')
-rating_dist = []
+print('Exponential decay matrix')
+config["params"] = {'decay_factor': 1, 'exponential_decay': True, 'reverse': False}
 
-total_cnt = train_val.shape[0]
-
-for i in range(6):
-    val = train_val.query(f'rating == {i + 1}').count()[0] / total_cnt
-
-    rating_dist.append(val)
-
-rat_dist_matrix = np.zeros((6, 6))
-
-for i in range(6):
-    for j in range(6):
-        diff = abs(rating_dist[i] - rating_dist[j])
-        rat_dist_matrix[i, j] = diff / np.exp(diff) if i != j else 1. + 1e-1
-
-a = np.linalg.cholesky(rat_dist_matrix)
-
-for i in range(6):
-    a[i, i] = 1e-5
-
-attention_matrix = csr_matrix(a)
-
-config['mlrank'] = (256, 256, 2)
-tf_params = tf_model_build(config, train_val, data_description, attention_matrix=attention_matrix.A)
+config['mlrank'] = (32, 32, 3)
+tf_params = tf_model_build(config, train_val, data_description, attention_matrix=np.array([]))
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
@@ -184,39 +163,31 @@ make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=2)
 print('alpha: 3')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=3)
 
-print('Linear matrix')
-config["params"] = {'decay_factor': 1, 'exponential_decay': False, 'reverse': False}
+print('Eucledian distance matrix')
+eucl_matrix = np.zeros((5, 5))
 
-config['mlrank'] = (256, 256, 4)
-tf_params = tf_model_build(config, train_val, data_description, attention_matrix=np.array([]))
+for i in range(5):
+    for j in range(5):
+        eucl_matrix[i, j] = 1.0 / np.exp(abs(i - j)) if i != j else 1#5 + 1e-2
+
+a = np.linalg.cholesky(eucl_matrix)
+
+
+attention_matrix = csr_matrix(a)
+
+config['mlrank'] = (16, 16, 2)
+tf_params = tf_model_build(config, train_val, data_description, attention_matrix=attention_matrix.A)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
 
 print('alpha: 4')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=4)
-print('alpha: 5')
-make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)
 
-print('Eucledian distance matrix')
-eucl_matrix = np.zeros((6, 6))
-
-for i in range(6):
-    for j in range(6):
-        eucl_matrix[i, j] = 1.0 / np.exp(abs(i - j)) if i != j else 1#5 + 1e-2
-
-a = np.linalg.cholesky(eucl_matrix)
-
-#for i in range(5):
-#    a[i, i] = 1e-5
-
-attention_matrix = csr_matrix(a)
-
-config['mlrank'] = (128, 128, 3)
+config['mlrank'] = (16, 16, 4)
 tf_params = tf_model_build(config, train_val, data_description, attention_matrix=attention_matrix.A)
 seen_data = testset
 tf_scores = tf_scoring(tf_params, seen_data, data_description)
 downvote_seen_items(tf_scores, seen_data, data_description)
-
-print('alpha: 6')
-make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=6)
+print('alpha: 5')
+make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)
