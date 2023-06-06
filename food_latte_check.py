@@ -201,10 +201,10 @@ print('alpha: 5')
 make_prediction(tf_scores, holdout, data_description, dcg=True, alpha=5)
 
 print('Eucledian distance matrix')
-eucl_matrix = np.zeros((5, 5))
+eucl_matrix = np.zeros((6, 6))
 
-for i in range(5):
-    for j in range(5):
+for i in range(6):
+    for j in range(6):
         eucl_matrix[i, j] = 1.0 / np.exp(abs(i - j)) if i != j else 1#5 + 1e-2
 
 a = np.linalg.cholesky(eucl_matrix)
