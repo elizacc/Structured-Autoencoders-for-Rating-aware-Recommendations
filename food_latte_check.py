@@ -128,7 +128,7 @@ def tf_scoring(params, data, data_description):
     n_ratings = data_description['n_ratings']
 
     # inv_attention = np.linalg.inv(attention_matrix.A) # change
-    inv_attention = solve_triangular(attention_matrix, np.eye(5), lower=True)
+    inv_attention = solve_triangular(attention_matrix, np.eye(6), lower=True)
     # np.testing.assert_almost_equal(inv_attention, inv_attention_)
 
     tensor_outer = tensor_outer_at('cpu')
