@@ -51,10 +51,9 @@ class MVDataset(Dataset):
 
 def main():
     set_random_seed(42)
-    data = pd.read_csv('../../e.makhneva/data/FoodCom/Food_com.csv')
-    data.rename(columns={'user_id': 'userid', 'recipe_id': 'movieid', "date": "timestamp"}, inplace=True)
-    data['timestamp'] = pd.to_datetime(data['timestamp'])
-    data['rating'] = data['rating'] + 1
+    data = pd.read_csv('../../e.makhneva/data/Clothing_Shoes_and_Jewelry/Amazon_Clothing_Shoes_and_Jewelry.csv')
+    data.rename(columns={'reviewerID': 'userid', 'asin': 'movieid', "overall": "rating", "unixReviewTime": "timestamp"},
+                inplace=True)
 
     # %%
     training, testset_valid, holdout_valid, testset, holdout, data_description, data_index = full_preproccessing(data)
@@ -74,29 +73,23 @@ def main():
 
         return ae, criterion, optimizer, scheduler
 
+    print('Alpha: 2')
+    h = (128, 32, 0.003)
+    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+                                      recvae, h, device, MVDataset, batch_size=500)
 
-    # print('Alpha: 2')
-    # h = (1024, 128, 0.01)
-    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-    #                                   recvae, h, device, MVDataset, batch_size=500)
-    #
-    # print('Alpha: 3')
-    # h = (1024, 128, 0.007)
-    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-    #                                   recvae, h, device, MVDataset, batch_size=500)
-    #
-    # print('Alpha: 4')
-    # h = (64, 32, 0.001)
-    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-    #                                   recvae, h, device, MVDataset, batch_size=500)
-    #
-    # print('Alpha: 5')
-    # h = (128, 64, 0.008)
-    # training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
-    #                                   recvae, h, device, MVDataset, batch_size=500)
+    print('Alpha: 3')
+    h = (128, 16, 0.001)
+    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+                                      recvae, h, device, MVDataset, batch_size=500)
 
-    print('Alpha: 6')
-    h = (256, 64, 0.004)
+    print('Alpha: 4')
+    h = (128, 16, 0.001)
+    training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
+                                      recvae, h, device, MVDataset, batch_size=500)
+
+    print('Alpha: 5')
+    h = (64, 32, 0.006)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       recvae, h, device, MVDataset, batch_size=500)
 
