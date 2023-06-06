@@ -594,15 +594,15 @@ def training_testing_pipeline_augment(training, testset_valid, holdout_valid, te
     train_val[data_description['users']] = pd.factorize(train_val[data_description['users']])[0]
 
     data_description = dict(
-        users=data_index['users'].name,
-        items=data_index['items'].name,
+        users='userid',
+        items='movieid',
         feedback='rating',
         n_users=train_val.userid.nunique(),
-        n_items=len(data_index['items']),
+        n_items=train_val.movieid.nunique(),
         n_ratings=train_val['rating'].nunique(),
         min_rating=train_val['rating'].min(),
-        test_users=holdout[data_index['users'].name].drop_duplicates().values,
-        n_test_users=holdout[data_index['users'].name].nunique()
+        test_users=holdout['userid'].drop_duplicates().values,
+        n_test_users=holdout['userid'].nunique()
     )
     train_dataset = MVDataset(train_val, data_description, augment=True)
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
