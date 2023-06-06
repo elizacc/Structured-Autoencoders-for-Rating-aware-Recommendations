@@ -98,22 +98,22 @@ def main():
     # %%
 
     print('Alpha: 2')
-    h = (1024, 256, 0.003)
+    h = (64, 128, 0.01)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       recvae, h, device, MVDataset, batch_size=500)
 
     print('Alpha: 3')
-    h = (512, 256, 0.009)
+    h = (128, 64, 0.006)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       recvae, h, device, MVDataset, batch_size=500)
 
     print('Alpha: 4')
-    h = (512, 1024, 0.01)
+    h = (512, 64, 0.08)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       recvae, h, device, MVDataset, batch_size=500)
 
     print('Alpha: 5')
-    h = (128, 1024, 0.001)
+    h = (64, 16, 0.009)
     training_testing_pipeline_augment(training, testset_valid, holdout_valid, testset, holdout, data_description,
                                       recvae, h, device, MVDataset, batch_size=500)
 
