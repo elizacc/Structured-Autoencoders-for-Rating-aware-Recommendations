@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import time
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import torch
 from torch.utils.data import Dataset, DataLoader
 
@@ -140,20 +140,22 @@ def prepare_tensor(data, data_description, tensor_model=False):
     else:
         return target_test, target_test
     
-def predict_and_check(model, scores, holdout, data_description, hrs, mrrs, cs, ndcgs, alpha, prev_matt, epoch, h, disp=False, dcg=True):
+def predict_and_check(model, scores, holdout, data_description, hrs, mrrs, cs, ndcgs, alpha, prev_matt, prev_val, val_history, epoch, h, disp=False, dcg=True):
     mrr10, hr10, c10, ndcg10 = make_prediction(scores, holdout, data_description, disp=disp, dcg=dcg, alpha=alpha)
     hrs.append(hr10)
     mrrs.append(mrr10)
     cs.append(c10)
     ndcgs.append(ndcg10)
 
-    if np.max(prev_matt) < cs[-1] or epoch == 1:
+    if (np.max(prev_matt) < cs[-1] and np.min(prev_val) > val_history[-1]) or epoch == 1:
         prev_matt = [cs[-1]]
+        prev_val = [val_history[-1]]
         torch.save(model.state_dict(), f'best_ae_{h}_{alpha}.pt')
 #     elif prev_matt[-1] < cs[-1]:
 #         prev_matt = [cs[-1]]
     else:
         prev_matt.append(cs[-1])
+        prev_val.append(val_history[-1])
         
     return prev_matt, hrs, mrrs, cs, ndcgs
 
@@ -173,7 +175,7 @@ def check_test(model, criterion, user_tensor_test, target_test, testset, holdout
             test_loss += criterion(output, target)
             scores[batch * batch_size: (batch+1) * batch_size] = output
 
-    test_loss = test_loss / user_tensor_test.shape[0]
+    test_loss = test_loss / user_tensor_test.shape[0] / batch_size
     scores = scores.detach().cpu().numpy()
     downvote_seen_items(scores, testset, data_description)
     print(f'Results for alpha={alpha}')
@@ -284,6 +286,7 @@ def tuning_pipeline(training, testset_valid, holdout_valid, data_description, mo
         plt.figure(figsize=(10,6))
         plt.plot(history, label='train')
         plt.plot(val_history, label='val')
+        plt.plot(prev_val3, label='fact_val')
         plt.legend()
         plt.show()
 
@@ -358,6 +361,12 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
         prev_matt4 = [0]
         prev_matt5 = [0]
         prev_matt6 = [0]
+        
+        prev_val2 = [0.02]
+        prev_val3 = [0.02]
+        prev_val4 = [0.02]
+        prev_val5 = [0.02]
+        prev_val6 = [0.02]
 
         for epoch in range(1, n_epochs+1):
             train_loss = 0
@@ -377,7 +386,7 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
                 train_loss += loss.data.item()
 
             scheduler.step()
-            history.append(train_loss / len(train_dataloader))
+            history.append(train_loss / len(train_dataloader) / batch_size)
 
             test_loss = 0
             scores = torch.zeros((testset_valid.userid.nunique(), data_description['n_items']))
@@ -396,19 +405,19 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
                 model.train()
 
             scores = scores.detach().cpu().numpy()
-            val_loss = test_loss / val_num_batches
+            val_loss = test_loss / val_num_batches / batch_size
             val_history.append(val_loss.item())
 
             downvote_seen_items(scores, testset_valid, data_description)
 
-            prev_matt2, hrs2, mrrs2, cs2, ndcgs2 = predict_and_check(model, scores, holdout_valid, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, epoch, h)
-            prev_matt3, hrs3, mrrs3, cs3, ndcgs3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, epoch, h)
-            prev_matt4, hrs4, mrrs4, cs4, ndcgs4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, epoch, h)
-            prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, epoch, h)
-            prev_matt6, hrs6, mrrs6, cs6, ndcgs6 = predict_and_check(model, scores, holdout_valid, data_description, hrs6, mrrs6, cs6, ndcgs6, 6, prev_matt6, epoch, h)
+            prev_matt2, hrs2, mrrs2, cs2, ndcgs2 = predict_and_check(model, scores, holdout_valid, data_description, hrs2, mrrs2, cs2, ndcgs2, 2, prev_matt2, prev_val2, val_history, epoch, h)
+            prev_matt3, hrs3, mrrs3, cs3, ndcgs3 = predict_and_check(model, scores, holdout_valid, data_description, hrs3, mrrs3, cs3, ndcgs3, 3, prev_matt3, prev_val3, val_history, epoch, h)
+            prev_matt4, hrs4, mrrs4, cs4, ndcgs4 = predict_and_check(model, scores, holdout_valid, data_description, hrs4, mrrs4, cs4, ndcgs4, 4, prev_matt4, prev_val4, val_history, epoch, h)
+            prev_matt5, hrs5, mrrs5, cs5, ndcgs5 = predict_and_check(model, scores, holdout_valid, data_description, hrs5, mrrs5, cs5, ndcgs5, 5, prev_matt5, prev_val5, val_history, epoch, h)
+            prev_matt6, hrs6, mrrs6, cs6, ndcgs6 = predict_and_check(model, scores, holdout_valid, data_description, hrs6, mrrs6, cs6, ndcgs6, 6, prev_matt6, prev_val6, val_history, epoch, h)
 
             # stop = epoch if epoch < early_stop else epoch-early_stop
-            if len(prev_matt2) >= early_stop and len(prev_matt3) >= early_stop and len(prev_matt4) >= early_stop and len(prev_matt5) >= early_stop:# and len(prev_matt6) >= early_stop:
+            if (len(prev_matt2) >= early_stop or len(prev_val2) >= early_stop) and (len(prev_matt3) >= early_stop or len(prev_val3) >= early_stop) and (len(prev_matt4) >= early_stop or len(prev_val4) >= early_stop) and (len(prev_matt5) >= early_stop or len(prev_val5) >= early_stop):# and len(prev_matt6) >= early_stop:
                 print(f'Current epoch {epoch}')
                 break
 
@@ -424,28 +433,29 @@ def tuning_pipeline_augment(training, testset_valid, holdout_valid, data_descrip
 
         print('Time spent:', (end-start) / 60, 'minutes')
         # our
-        # plt.figure(figsize=(10,6))
-        # plt.plot(history, label='train')
-        # plt.plot(val_history, label='val')
-        # plt.legend()
-        # plt.show()
+        plt.figure(figsize=(10,6))
+        plt.plot(history, label='train')
+        plt.plot(val_history, label='val')
+#         plt.plot(prev_val3, label='fact_val')
+        plt.legend()
+        plt.show()
 
-        # hrs = [hrs2, hrs3, hrs4, hrs5]
-        # mrrs = [mrrs2, mrrs3, mrrs4, mrrs5]
-        # cs = [cs2, cs3, cs4, cs5]
-        # ndcgs = [ndcgs2, ndcgs3, ndcgs4, ndcgs5]
+        hrs = [hrs2, hrs3, hrs4, hrs5]
+        mrrs = [mrrs2, mrrs3, mrrs4, mrrs5]
+        cs = [cs2, cs3, cs4, cs5]
+        ndcgs = [ndcgs2, ndcgs3, ndcgs4, ndcgs5]
+        
+        fig = plt.figure(figsize=(24,5))
+        axes = fig.subplots(nrows=1, ncols=4)
+        for i in range(4):
+            axes[i].set_title(f'alpha={i+2}')
+            axes[i].plot(hrs[i], label='HR@10')
+            axes[i].plot(mrrs[i], label='MRR@10')
+            axes[i].plot(cs[i], label='Matthews@10')
+            axes[i].plot(ndcgs[i], label='NDCG@10')
+            axes[i].legend()
         #
-        # fig = plt.figure(figsize=(24,5))
-        # axes = fig.subplots(nrows=1, ncols=4)
-        # for i in range(4):
-        #     axes[i].set_title(f'alpha={i+2}')
-        #     axes[i].plot(hrs[i], label='HR@10')
-        #     axes[i].plot(mrrs[i], label='MRR@10')
-        #     axes[i].plot(cs[i], label='Matthews@10')
-        #     axes[i].plot(ndcgs[i], label='NDCG@10')
-        #     axes[i].legend()
-        # #
-        # plt.show()
+        plt.show()
 
         print('Test loss:', val_history[-min(early_stop, epoch)])
         print('Train loss:', history[-min(early_stop, epoch)])
